@@ -28,10 +28,11 @@ github_username: 3D4EUtah
 repository: 3D4EUtah/3D4EUtah.github.io
 
 # Build settings
-remote_theme: pages-themes/dinky@v0.2.0
+theme: minima
+#remote_theme: pages-themes/dinky@v0.2.0
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme
+  #- jekyll-remote-theme
 
 # Exclude from processing.
 # The following items will not be processed, by default.
