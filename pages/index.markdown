@@ -4,4 +4,4 @@
 layout: custom_page
 title: Home
 ---
-Home coming soon
+3D printing club at the university of Utah
