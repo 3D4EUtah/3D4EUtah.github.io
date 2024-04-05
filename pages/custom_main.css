@@ -70,7 +70,7 @@ table th { background-color: #f0f0f0; border: 1px solid #dedede; border-bottom-c
 table td { border: 1px solid #e8e8e8; }
 
 /** Site header */
-.site-header { border-top: 1px solid #424242; border-bottom: 1px solid #e8e8e8; background-color: #ba0c2f; min-height: 55.95px; position: relative; }
+.site-header { border-top: 1px solid #424242; border-bottom: 1px solid #e8e8e8; background-color: #ba0c2f; min-height: 55.95px; position: relative; z-index: 9999;}
 
 .site-title { font-size: 26px; font-weight: 300; line-height: 54px; letter-spacing: -1px; margin-bottom: 0; float: left; }
 .site-title, .site-title:visited { color: #fff; }
@@ -238,4 +238,55 @@ table td { border: 1px solid #e8e8e8; }
 
 .site-header .wrapper .site-nav {
   margin-left: auto;
+}
+
+/* @media screen and (max-width: 700px) {
+  .site-nav {
+    position: relative;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .site-nav .trigger {
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(186, 12, 47, 0.5);
+    border: none;
+    text-align: left;
+    z-index: 1;
+  }
+
+  .site-nav .trigger .page-link {
+    display: block;
+    padding: 5px 10px;
+    margin: 0;
+    font-size: 14px;
+    color: #fff;
+  }
+
+  .site-nav .trigger .page-link:not(:last-child) {
+    margin-bottom: 5px;
+  }
+} */
+@media screen and (max-width: 700px) {
+  .site-nav {
+    position: relative;
+    top: 0;
+    width: 25%;
+    border: 1px solid rgba(186, 12, 47);
+  }
+
+  .site-nav .trigger {
+    display: block;
+    background-color: rgba(186, 12, 47);
+    text-align: center;
+  }
+  .site-nav .trigger .page-link {
+    display: block;
+    padding: 2px;
+    margin: 0;
+    font-size: 16px;
+  }
 }
