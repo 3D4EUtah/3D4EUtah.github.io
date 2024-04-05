@@ -270,7 +270,7 @@ table td { border: 1px solid #e8e8e8; }
     margin-bottom: 5px;
   }
 } */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
   .site-nav {
     position: relative;
     top: 0;
