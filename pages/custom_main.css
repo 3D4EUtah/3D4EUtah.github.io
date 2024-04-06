@@ -46,7 +46,7 @@ pre { padding: 8px 12px; overflow-x: auto; }
 pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 /** Wrapper */
-.wrapper { width: 75%; margin-right: auto; margin-left: auto; padding-right: 30px; padding-left: 30px; }
+.wrapper { width: 90%; margin-right: auto; margin-left: auto; padding-right: 30px; padding-left: 30px; }
 @media screen and (max-width: 800px) { .wrapper { padding-right: 15px; padding-left: 15px; } }
 
 /** Clearfix */
@@ -290,3 +290,39 @@ table td { border: 1px solid #e8e8e8; }
     font-size: 16px;
   }
 }
+
+.section {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-position: center;
+  background-size: 110%;
+}
+
+.content-box {
+  height: 80%;
+  width: 80%;
+  max-width: 100%;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  text-align: center;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+}
+
+.grid-container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* @media(max-width: 768px) {
+  .content-box {
+    padding: 10px;
+  }
+} */
