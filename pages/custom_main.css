@@ -289,10 +289,6 @@ table td { border: 1px solid #e8e8e8; }
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.content-box h1, .content-box p {
-  margin: 15px 0;
-}
-
 .grid-container {
   height: 100%;
   width: 100%;
@@ -302,7 +298,7 @@ table td { border: 1px solid #e8e8e8; }
 
 /* Parallax container */
 .parallax {
-  height: 75vh; /* Adjust as needed */
+  height: 50vh; /* Adjust as needed */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -349,4 +345,64 @@ table td { border: 1px solid #e8e8e8; }
 .red-box {
   background-color: #ba0c2f;
   color: white; /* Ensure text is readable */
+}
+
+
+.dark-gray-scrolling-box {
+  width: 90%;
+  max-width: 1200px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Keep project boxes in a single line */
+  padding: 20px;
+  background-color: rgba(50, 50, 50, 0.8); /* Dark gray background with transparency */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-box {
+  display: inline-block;
+  width: 300px;
+  margin-right: 20px; /* Space between project boxes */
+  vertical-align: top; /* Align boxes at the top */
+  background-color: #fff; /* Background color for project boxes */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.project-box img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.project-box h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.project-box p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.project-box a {
+  display: inline-block;
+  background-color: #ba0c2f;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.project-box a:hover {
+  background-color: #960a25;
+}
+
+.vertical-scroll-box {
+  max-height: 45vh; /* Adjust the height as needed */
+  overflow-y: auto;
 }
