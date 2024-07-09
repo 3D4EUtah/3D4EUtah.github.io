@@ -1,0 +1,9 @@
+---
+layout: custom_page
+title: 404
+permalink: /404/
+---
+
+## 404
+### Page not found
+The requested page could not be found.
