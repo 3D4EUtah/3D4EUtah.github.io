@@ -12,6 +12,7 @@ body {
   min-height: 100vh;
   flex-direction: column;
 }
+
 /** Set `margin-bottom` to maintain vertical rhythm */
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight { margin-bottom: 15px; }
 
@@ -313,11 +314,15 @@ table td { border: 1px solid #e8e8e8; }
 
 /* Section content */
 .section-content {
-  background-color: rgba(255, 255, 255, 0.8); /* Optional: to overlay a semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: to overlay a semi-transparent background */
   border-radius: 10px;
   text-align: center;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white
+}
+
+.section-content h1 {
+  font-size: 36px; /* Adjust the size as needed */
 }
 
 .section {
@@ -333,10 +338,7 @@ table td { border: 1px solid #e8e8e8; }
 
 .gray-box {
   background-color: gray;
-}
-
-.gold-box {
-  background-color: gold;
+  color: white
 }
 
 .black-box {
