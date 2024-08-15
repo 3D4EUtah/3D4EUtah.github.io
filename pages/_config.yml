@@ -21,7 +21,7 @@
 title: 3D4E Utah
 email: 3d4e.utah@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  The website for the 3D4E (3D for Everyone) 3D printing club at the University of Utah.
+  3D4E (3D for Everyone) 3D printing club at the University of Utah.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://3d4eutah.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: 3D4EUtah
@@ -29,10 +29,8 @@ repository: 3D4EUtah/3D4EUtah.github.io
 
 # Build settings
 theme: minima
-#remote_theme: pages-themes/dinky@v0.2.0
 plugins:
   - jekyll-feed
-  #- jekyll-remote-theme
 
 # Exclude from processing.
 # The following items will not be processed, by default.

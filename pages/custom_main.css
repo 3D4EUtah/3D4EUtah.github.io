@@ -186,6 +186,7 @@ pre>code {
   display: inline-block;
   fill: #828282;
   padding-right: 5px;
+  padding-top: 2px;
   vertical-align: text-top;
 }
 
@@ -779,7 +780,6 @@ table td {
   margin-left: auto;
 }
 
-
 @media screen and (max-width: 600px) {
   .site-nav {
     position: relative;
@@ -802,19 +802,174 @@ table td {
   }
 }
 
-.content-box {
-  height: 75%;
-  width: 75%;
-  max-width: 800px;
-  margin: auto;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
+.parallax {
+  position: relative;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 50px 0;
+}
+
+/* Title Section */
+.title-section {
+  width: 100%;
+  height: auto;
+  background-color: black;
   text-align: center;
+  padding: 30px 0;
+}
+
+.title-section h1 {
+  font-size: 2em;
+  /* Reduced font size */
+  color: white;
+  /* White text color */
+}
+
+.content-section {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 20px;
+  align-items: center;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.content-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  padding: 20px;
+}
+
+.content-box img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #ddd;
+}
+
+.content-box h2 {
+  font-size: 1.4em;
+  /* Slightly reduced font size */
+  margin: 15px 0;
+  color: #333;
+  /* Default color for headings in content boxes */
+}
+
+.content-box p,
+.content-box ul {
+  font-size: 0.9em;
+  /* Slightly smaller font size */
+  color: #333;
+  /* Default color for text */
+  margin: 0;
+}
+
+.content-box ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.content-box ul li {
+  margin: 10px 0;
+  /* Adds spacing between list items */
+}
+
+/* Hover Effect */
+.content-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  /* Enhances shadow on hover */
+}
+
+/* Generic Section */
+.section {
+  width: 100%;
+  height: auto;
+  /* Light gray background */
+  text-align: center;
+  padding: 30px 0;
+  /* Reduced padding for shorter height */
+}
+
+.section h2 {
+  font-size: 1.8em;
+  /* Reduced font size */
+  color: white;
+  /* White text color */
+}
+
+.section p,
+.section ul {
+  color: white;
+  /* White text color */
+}
+
+/* Membership Section */
+.membership-section {
+  width: 100%;
+  height: auto;
+  background-color: #f9f9f9;
+  /* Light background for the membership section */
+  text-align: center;
+  padding: 50px 20px;
+  /* Adequate padding for content */
+}
+
+.membership-section h2 {
+  font-size: 1.8em;
+  /* Adjusted font size */
+  color: #333;
+  /* Darker text color for contrast */
+}
+
+.membership-section ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1em;
+  /* Adjusted font size */
+  color: #333;
+  /* Darker text color for contrast */
+}
+
+.membership-section ul li {
+  margin: 10px 0;
+  /* Adds spacing between list items */
+}
+
+.membership-section p {
+  font-size: 1em;
+  /* Adjusted font size */
+  color: #333;
+  /* Darker text color for contrast */
+}
+
+.membership-section img {
+  max-width: 150px;
+  margin-top: 20px;
+  /* Space above the image */
 }
 
 .grid-container {
@@ -824,80 +979,11 @@ table td {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.parallax {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.section-content {
-  background-color: rgba(0, 0, 0, 0.5);
-  /* Optional: to overlay a semi-transparent background */
-  border-radius: 10px;
-  text-align: center;
-  padding: 20px;
-  color: white
-}
-
-.section-content h1 {
-  font-size: calc(14px + 0.7vw);
-}
-
-.section-content h2 {
-  font-size: calc(12px + 0.5vw);
-}
-
-.section-content a {
-  color: white;
-  /* Ensure link text is white */
-}
-
-.section {
-  padding: 20px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f9f9f9;
-  background-position: center;
-  background-size: 110%;
-}
-
-.section h1 {
-  font-size: calc(12px + 0.7vw);
-}
-
-.section p {
-  font-size: calc(8px + 0.5vw);
-}
-
-.gray-box {
-  background-color: gray;
-  color: white;
-}
-
-.black-box {
-  background-color: black;
-  color: white;
-}
-
-.red-box {
-  background-color: #ba0c2f;
-  color: white;
-
-}
-
 .scroll-box {
   width: 90%;
   overflow-x: auto;
   /* Enable horizontal scrolling */
   white-space: nowrap;
-  /* Keep project boxes in a single line */
   padding: 1vw;
   background-color: rgba(50, 50, 50, 0.8);
   /* Dark gray background with transparency */
@@ -914,16 +1000,24 @@ table td {
 .project-box {
   display: inline-block;
   width: calc(10px + 12vw);
-
   margin-right: 0.5vw;
   /* Space between project boxes */
   vertical-align: top;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 15px;
   border-radius: 5px;
   text-align: left;
-  word-wrap: break-word; /* Ensures long words wrap to next line */
+  word-wrap: break-word;
+  /* Ensures long words wrap to next line */
   white-space: normal;
+
+  transition: transform 0.3s ease;
+  /* Smooth transition effect */
+}
+
+.project-box:hover {
+  transform: translateY(-3px);
+  /* Move the box up by 3px */
 }
 
 .project-box img {
@@ -983,12 +1077,17 @@ table td {
 }
 
 .people-box {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 0.7vw;
   border-radius: 5px;
   text-align: center;
   max-width: 300px;
   width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.people-box:hover {
+  transform: translateY(-3px);
 }
 
 .people-box img {
@@ -1006,4 +1105,60 @@ table td {
   font-size: calc(10px + 0.4vw);
   color: #666;
   margin-bottom: 10px;
+}
+
+.resource-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  padding: 0.7vw;
+  margin: 10px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.resource-box h2 {
+  font-size: 1.4em;
+  /* Slightly reduced font size */
+  margin: 15px 0;
+  /* Space around the heading */
+  color: #333;
+  /* Default color for headings */
+}
+
+.resource-box p,
+.resource-box ul {
+  font-size: 0.9em;
+  /* Slightly smaller font size */
+  color: #333;
+  /* Default color for text */
+  margin: 0;
+  /* Remove default margin */
+}
+
+.resource-box ul {
+  list-style-type: none;
+  /* Remove bullet points */
+  padding: 0;
+  /* Remove default padding */
+}
+
+.resource-box ul li {
+  margin: 10px 0;
+  /* Spacing between list items */
+}
+
+/* Hover Effect */
+.resource-box:hover {
+  transform: translateY(-3px);
+  /* Move the box up by 3px on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  /* Enhance shadow on hover */
 }
