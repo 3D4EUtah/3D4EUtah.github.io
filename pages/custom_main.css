@@ -349,7 +349,7 @@ table td {
 }
 
 .site-footer a {
-  font-size: calc(8px + 0.4vw);
+  font-size: 14px;
 }
 
 .footer-heading {
@@ -828,9 +828,7 @@ table td {
 
 .title-section h1 {
   font-size: 2em;
-  /* Reduced font size */
   color: white;
-  /* White text color */
 }
 
 .content-section {
@@ -845,13 +843,34 @@ table td {
   align-items: center;
 }
 
-.content-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+.content-grid-container {
+  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+  overflow-x: auto;
   padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 90%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 800px) {
+  .content-grid-container {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content-grid-container {
+    padding: 0 5px;
+  }
 }
 
 .content-box {
@@ -862,6 +881,7 @@ table td {
   transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .content-box img {
@@ -872,18 +892,14 @@ table td {
 
 .content-box h2 {
   font-size: 1.4em;
-  /* Slightly reduced font size */
   margin: 15px 0;
   color: #333;
-  /* Default color for headings in content boxes */
 }
 
 .content-box p,
 .content-box ul {
   font-size: 0.9em;
-  /* Slightly smaller font size */
   color: #333;
-  /* Default color for text */
   margin: 0;
 }
 
@@ -894,82 +910,62 @@ table td {
 
 .content-box ul li {
   margin: 10px 0;
-  /* Adds spacing between list items */
 }
 
-/* Hover Effect */
 .content-box:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  /* Enhances shadow on hover */
 }
 
-/* Generic Section */
 .section {
   width: 100%;
   height: auto;
-  /* Light gray background */
   text-align: center;
   padding: 30px 0;
-  /* Reduced padding for shorter height */
 }
 
 .section h2 {
   font-size: 1.8em;
-  /* Reduced font size */
   color: white;
-  /* White text color */
 }
 
 .section p,
 .section ul {
   color: white;
-  /* White text color */
 }
 
-/* Membership Section */
 .membership-section {
   width: 100%;
   height: auto;
   background-color: #f9f9f9;
-  /* Light background for the membership section */
   text-align: center;
   padding: 50px 20px;
-  /* Adequate padding for content */
 }
 
 .membership-section h2 {
   font-size: 1.8em;
-  /* Adjusted font size */
   color: #333;
-  /* Darker text color for contrast */
 }
 
 .membership-section ul {
   list-style-type: none;
   padding: 0;
   font-size: 1em;
-  /* Adjusted font size */
   color: #333;
-  /* Darker text color for contrast */
 }
 
 .membership-section ul li {
   margin: 10px 0;
-  /* Adds spacing between list items */
 }
 
 .membership-section p {
   font-size: 1em;
-  /* Adjusted font size */
   color: #333;
-  /* Darker text color for contrast */
 }
 
 .membership-section img {
   max-width: 150px;
   margin-top: 20px;
-  /* Space above the image */
 }
 
 .grid-container {
@@ -982,11 +978,9 @@ table td {
 .scroll-box {
   width: 90%;
   overflow-x: auto;
-  /* Enable horizontal scrolling */
   white-space: nowrap;
   padding: 1vw;
   background-color: rgba(50, 50, 50, 0.8);
-  /* Dark gray background with transparency */
   border-radius: 10px;
   margin-bottom: 0.25vw;
 
@@ -1001,23 +995,18 @@ table td {
   display: inline-block;
   width: calc(10px + 12vw);
   margin-right: 0.5vw;
-  /* Space between project boxes */
   vertical-align: top;
   background-color: rgba(255, 255, 255, 0.9);
   padding: 15px;
   border-radius: 5px;
   text-align: left;
   word-wrap: break-word;
-  /* Ensures long words wrap to next line */
   white-space: normal;
-
   transition: transform 0.3s ease;
-  /* Smooth transition effect */
 }
 
 .project-box:hover {
   transform: translateY(-3px);
-  /* Move the box up by 3px */
 }
 
 .project-box img {
@@ -1057,7 +1046,6 @@ table td {
 
 .vertical-scroll-box {
   height: 90%;
-  /* Adjust the height as needed */
   overflow-y: auto;
   width: 90%;
 
@@ -1126,39 +1114,27 @@ table td {
 
 .resource-box h2 {
   font-size: 1.4em;
-  /* Slightly reduced font size */
   margin: 15px 0;
-  /* Space around the heading */
   color: #333;
-  /* Default color for headings */
 }
 
 .resource-box p,
 .resource-box ul {
   font-size: 0.9em;
-  /* Slightly smaller font size */
   color: #333;
-  /* Default color for text */
   margin: 0;
-  /* Remove default margin */
 }
 
 .resource-box ul {
   list-style-type: none;
-  /* Remove bullet points */
   padding: 0;
-  /* Remove default padding */
 }
 
 .resource-box ul li {
   margin: 10px 0;
-  /* Spacing between list items */
 }
 
-/* Hover Effect */
 .resource-box:hover {
   transform: translateY(-3px);
-  /* Move the box up by 3px on hover */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  /* Enhance shadow on hover */
 }
