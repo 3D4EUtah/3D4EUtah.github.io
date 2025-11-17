@@ -32,6 +32,16 @@ theme: minima
 plugins:
   - jekyll-feed
 
+collections:
+  current_projects:
+    output: true
+    permalink: /projects/:name/
+  future_projects:
+    output: true
+    permalink: /projects/:name/
+  past_projects:
+    output: true
+    permalink: /projects/:name/
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

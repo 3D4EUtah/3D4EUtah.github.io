@@ -1,0 +1,282 @@
+---
+layout: custom_page
+---
+
+<style>
+  .project-header {
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 3rem 1rem;
+    box-sizing: border-box;
+  }
+  .project-header h1 {
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+  .project-container {
+    max-width: 90%;
+    /* 1. REMOVED TOP MARGIN & 2. CENTERED TEXT */
+    margin: 0 auto 2rem auto; 
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  /* 3. NEW RULE FOR DESCRIPTION TEXT */
+  .project-description p {
+    font-size: 1.2em; /* Made text bigger */
+    padding-top: 0;   /* Removed top padding */
+  }
+
+  /* 4. UPDATED H3 RULE FOR CENTERING */
+  .project-meta h3,
+  .project-gallery h3,
+  .project-videos h3 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+    /* Makes the border only as wide as the text */
+    display: inline-block; 
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .project-meta p {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+  }
+  
+  .project-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+    /* Fixes grid items from being center-aligned */
+    text-align: left; 
+  }
+  .project-gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  .gallery-link {
+    display: block;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  .project-gallery-grid img {
+    transition: transform 0.3s ease;
+  }
+  .gallery-link:hover img {
+    transform: scale(1.05);
+  }
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 10000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .lightbox:target {
+    display: flex;
+  }
+  .lightbox img {
+    height: 80vh; 
+    width: auto;
+    max-width: 90vw;
+    object-fit: contain;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  }
+  
+  .lightbox-close, .lightbox-close:visited,
+  .lightbox-prev, .lightbox-prev:visited,
+  .lightbox-next, .lightbox-next:visited {
+    position: absolute;
+    font-size: 3rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    z-index: 10001;
+  }
+  
+  .lightbox-close:hover,
+  .lightbox-prev:hover,
+  .lightbox-next:hover {
+    opacity: 1;
+    color: white;
+  }
+
+  .lightbox-close {
+    top: 20px;
+    right: 30px;
+  }
+  .lightbox-prev {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 30px;
+  }
+  .lightbox-next {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+  }
+
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+    /* Fixes video wrapper from being center-aligned */
+    text-align: left; 
+  }
+  .video-wrapper iframe,
+  .video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+s</style>
+
+<section class="title-section">
+  <h1>{{ page.title }}</h1>
+</section>
+
+<div class="project-container">
+  <section class="project-description">
+    <p>{{ page.description }}</p>
+
+    {{ content }}
+  </section>
+
+  {% if page.members and page.members.first != "Idea" %}
+    <section class="project-meta">
+      <h3>Members</h3>
+      <p>{{ page.members | join: ", " }}</p>
+    </section>
+  {% endif %}
+
+  {% if page.images and page.images.size > 0 %}
+    <section class="project-gallery">
+      <h3>Gallery</h3>
+      
+      <div class="project-gallery-grid">
+        {% assign gallery_path = "/media/projects/" %}
+        {% for image_filename in page.images %}
+          {% assign full_image_path = gallery_path | append: image_filename %}
+          {% assign img_id = "img-" | append: forloop.index %}
+          
+          <a href="#{{ img_id }}" class="gallery-link">
+            <img src="{{ full_image_path }}" alt="{{ page.title }} gallery image">
+          </a>
+        {% endfor %}
+      </div>
+
+      <div class="lightbox-container">
+        {% assign gallery_path = "/media/projects/" %}
+        {% for image_filename in page.images %}
+          {% assign full_image_path = gallery_path | append: image_filename %}
+          {% assign img_id = "img-" | append: forloop.index %}
+          
+          {% assign prev_index = forloop.index | minus: 1 %}
+          {% assign next_index = forloop.index | plus: 1 %}
+
+          <div class="lightbox" id="{{ img_id }}">
+            <img src="{{ full_image_path }}" alt="{{ page.title }} gallery image">
+            
+            <a href="#" class="lightbox-close" aria-label="Close image viewer">&times;</a>
+
+            {% unless forloop.first %}
+              <a href="#img-{{ prev_index }}" class="lightbox-prev" aria-label="Previous image">&#10094;</a>
+            {% endunless %}
+            
+            {% unless forloop.last %}
+              <a href="#img-{{ next_index }}" class="lightbox-next" aria-label="Next image">&#10095;</a>
+            {% endunless %}
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
+  {% if page.videos and page.videos.size > 0 %}
+    <section class="project-videos">
+      <h3>Videos</h3>
+      {% for video_src in page.videos %}
+        <div class="video-wrapper">
+          {% if video_src contains "http" %}
+            <iframe 
+              src="{{ video_src }}" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          {% else %}
+            <video controls>
+              <source src="{{ video_src }}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </section>
+  {% endif %}
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    const totalImages = {{ page.images.size | default: 0 }};
+
+    document.addEventListener('keydown', function(event) {
+      const currentHash = window.location.hash;
+      if (!currentHash.startsWith('#img-')) {
+        return;
+      }
+      
+      let currentIndex = parseInt(currentHash.replace('#img-', ''));
+
+      if (event.key === 'Escape' || event.key === 'Esc') {
+        window.location.hash = '#';
+      }
+
+      if (event.key === 'ArrowRight') {
+        event.preventDefault(); 
+        if (currentIndex < totalImages) {
+          window.location.hash = '#img-' + (currentIndex + 1);
+        }
+      }
+
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault(); 
+        if (currentIndex > 1) {
+          window.location.hash = '#img-' + (currentIndex - 1);
+        }
+      }
+    });
+
+    var lightboxes = document.querySelectorAll('.lightbox');
+    lightboxes.forEach(function(lightbox) {
+      lightbox.addEventListener('click', function(event) {
+        if (event.target === this) {
+          window.location.hash = '#';
+        }
+      });
+    });
+
+  });
+</script>

@@ -1,98 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ page.title }} | 3D4E Utah</title>
+    <meta name="generator" content="Jekyll v3.9.5" />
+    <meta property="og:title" content="Home" />
+    <meta property="og:locale" content="en_US" />
+    <meta
+      name="description"
+      content="The website for the 3D4E (3D for Everyone) 3D printing club at the University of Utah."
+    />
+    <meta
+      property="og:description"
+      content="The website for the 3D4E (3D for Everyone) 3D printing club at the University of Utah."
+    />
+    <link rel="canonical" href="http://localhost:4000/" />
+    <meta property="og:url" content="http://localhost:4000/" />
+    <meta property="og:site_name" content="3D4E Utah" />
+    <meta property="og:type" content="website" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "description": "The website for the 3D4E (3D for Everyone) 3D printing club at the University of Utah.",
+        "headline": "Home",
+        "name": "3D4E Utah",
+        "url": "http://localhost:4000/"
+      }
+    </script>
+    <link rel="stylesheet" href="/custom_main.css" />
+    <link
+      type="application/atom+xml"
+      rel="alternate"
+      href="http://localhost:4000/feed.xml"
+      title="3D4E Utah"
+    />
+    <link rel="icon" type="image/png" href="/media/faviconRT.png" />
+    <style>
+      .social-media-list a {
+        /* This sets the color for the text (the <span> will inherit it) */
+        color: #828282;
+        text-decoration: none; /* Optional: removes the underline from links */
+      }
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }} | 3D4E Utah</title>
-  <meta name="generator" content="Jekyll v3.9.5" />
-  <meta property="og:title" content="Home" />
-  <meta property="og:locale" content="en_US" />
-  <meta name="description"
-    content="The website for the 3D4E (3D for Everyone) 3D printing club at the University of Utah." />
-  <meta property="og:description"
-    content="The website for the 3D4E (3D for Everyone) 3D printing club at the University of Utah." />
-  <link rel="canonical" href="http://localhost:4000/" />
-  <meta property="og:url" content="http://localhost:4000/" />
-  <meta property="og:site_name" content="3D4E Utah" />
-  <meta property="og:type" content="website" />
-  <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"The website for the 3D4E (3D for Everyone) 3D printing club at the University of Utah.","headline":"Home","name":"3D4E Utah","url":"http://localhost:4000/"}</script>
-  <link rel="stylesheet" href="../custom_main.css">
-  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="3D4E Utah" />
-  <link rel="icon" type="image/png" href="../media/faviconRT.png">
+      .social-media-list .svg-icon {
+        /* This sets the color for the SVG icon */
+        fill: #828282;
+      }
 
-  <style>
-    .social-media-list a {
-      /* This sets the color for the text (the <span> will inherit it) */
-      color: #828282;
-      text-decoration: none; /* Optional: removes the underline from links */
-    }
+      /* This rule changes the color of both the text and icon on hover */
+      .social-media-list a:hover,
+      .social-media-list a:hover .svg-icon {
+        color: #444444;
+        fill: #444444;
+      }
+    </style>
+  </head>
 
-    .social-media-list .svg-icon {
-      /* This sets the color for the SVG icon */
-      fill: #828282;
-    }
+  <body>
+    <header class="site-header" role="banner">
+      <div class="wrapper">
+        <a class="page-link" href="/">
+          <svg class="header-icon">
+            <use xlink:href="/custom-minima-social-icons.svg#3d4eLogo"></use>
+          </svg>
+          <span class="header-link-text">3D4E UTAH</span>
+        </a>
+        <nav class="site-nav">
+          <div class="trigger">
+            <a class="page-link" href="/">HOME</a>
+            <a class="page-link" href="/projects/">PROJECTS</a>
+            <a class="page-link" href="/people/">PEOPLE</a>
+            <a class="page-link" href="/resources/">RESOURCES</a>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-    /* This rule changes the color of both the text and icon on hover */
-    .social-media-list a:hover,
-    .social-media-list a:hover .svg-icon {
-      color: #444444;
-      fill: #444444;
-    }
-  </style>
+    <main class="page-content" aria-label="Content">
+      <div class="page-wrapper">{{ content }}</div>
+    </main>
 
-</head>
-
-<body>
-  <header class="site-header" role="banner">
-    <div class="wrapper">
-      <a class="page-link" href="/">
-        <svg class="header-icon">
-          <use xlink:href="../custom-minima-social-icons.svg#3d4eLogo"></use>
-        </svg>
-        <span class="header-link-text">3D4E UTAH</span>
-      </a>
-      <nav class="site-nav">
-        <div class="trigger">
-          <a class="page-link" href="/">HOME</a>
-          <a class="page-link" href="/projects/">PROJECTS</a>
-          <a class="page-link" href="/people/">PEOPLE</a>
-          <a class="page-link" href="/resources/">RESOURCES</a>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <main class="page-content" aria-label="Content">
-    <div class="page-wrapper">
-      {{ content }}
-    </div>
-  </main>
-
-  <footer class="site-footer h-card">
-    <data class="u-url" href="/"></data>
-    <div class="wrapper">
-      <div class="footer-col-wrapper">
-        <div class="footer-col">
-          <ul class="social-media-list">
-            <li><a href="mailto:3d4e.utah@gmail.com"><svg class="svg-icon">
-                  <use xlink:href="../custom-minima-social-icons.svg#gmail"></use>
-                </svg><span class="username">3d4e.utah@gmail.com</span></a></li>
-            <li><a href="https://discord.gg/WdNJ7QduWY"><svg class="svg-icon">
-                  <use xlink:href="../custom-minima-social-icons.svg#discord"></use>
-                </svg><span class="username">Discord</span></a></li>
-            <li><a href="https://www.instagram.com/3D4EUtah/"><svg class="svg-icon">
-                  <use xlink:href="../custom-minima-social-icons.svg#instagram"></use>
-                </svg><span class="username">Instagram</span></a></li>
-            <li><a href="https://github.com/3D4EUtah"><svg class="svg-icon">
-                  <use xlink:href="../custom-minima-social-icons.svg#github"></use>
-                </svg><span class="username">GitHub</span></a></li>
-          </ul>
+    <footer class="site-footer h-card">
+      <data class="u-url" href="/"></data>
+      <div class="wrapper">
+        <div class="footer-col-wrapper">
+          <div class="footer-col">
+            <ul class="social-media-list">
+              <li>
+                <a href="mailto:3d4e.utah@gmail.com"
+                  ><svg class="svg-icon">
+                    <use
+                      xlink:href="/custom-minima-social-icons.svg#gmail"
+                    ></use></svg
+                  ><span class="username">3d4e.utah@gmail.com</span></a
+                >
+              </li>
+              <li>
+                <a href="https://discord.gg/WdNJ7QduWY"
+                  ><svg class="svg-icon">
+                    <use
+                      xlink:href="/custom-minima-social-icons.svg#discord"
+                    ></use></svg
+                  ><span class="username">Discord</span></a
+                >
+              </li>
+              <li>
+                <a href="https://www.instagram.com/3D4EUtah/"
+                  ><svg class="svg-icon">
+                    <use
+                      xlink:href="/custom-minima-social-icons.svg#instagram"
+                    ></use></svg
+                  ><span class="username">Instagram</span></a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/3D4EUtah"
+                  ><svg class="svg-icon">
+                    <use
+                      xlink:href="/custom-minima-social-icons.svg#github"
+                    ></use></svg
+                  ><span class="username">GitHub</span></a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>

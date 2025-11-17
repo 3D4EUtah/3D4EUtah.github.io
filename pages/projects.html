@@ -4,75 +4,23 @@ title: Projects
 permalink: /projects/
 ---
 
-<style>
-  .project-grid {
-    display: grid;
-    /* This creates a responsive grid that fills the available space */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem; /* Increased gap for better spacing */
-    padding: 1.5rem; /* Added padding around the grid */
-  }
-  .project-box img {
-    /* Ensures images scale correctly within the grid item */
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-</style>
-
-<section class="section" style="background-color: black;">
+<section class="title-section">
   <div>
-    <h2>Current Projects</h2>
+    <h1>Current Projects</h1>
   </div>
 </section>
 
 <section class="parallax" style="background-image: url('/media/groupPhotos/meeting1.jpg');">
-  <div class="scroll-box">
-    <div class="project-box">
-      <h2>Red Bull Soap Box Car</h2>
-      <img src="/media/projects/soapBox.jpg" alt="Car frame">
-      <a href="https://www.redbull.com/us-en/tags/soap-box-race">Learn More</a>
-    </div>
-    <div class="project-box">
-      <h2>Guitar</h2>
-      <img src="/media/projects/guitar.png" alt="Guitar">
-    </div>
-    <div class="project-box">
-      <h2>Climbing Holds</h2>
-      <img src="/media/comingSoon.jpg" alt="Climbing Holds">
-    </div>
-    <div class="project-box">
-      <h2>DinoU</h2>
-      <img src="/media/comingSoon.jpg" alt="DinoU">
-    </div>
-    <div class="project-box">
-      <h2>Human Anatomy Model</h2>
-      <img src="/media/comingSoon.jpg" alt="Human Anatomy Model">
-    </div>
-    <div class="project-box">
-      <h2>Piano</h2>
-      <img src="/media/comingSoon.jpg" alt="Piano">
-    </div>
-    <div class="project-box">
-      <h2>Robotic Arm</h2>
-      <img src="/media/comingSoon.jpg" alt="Robotic Arm">
-    </div>
-    <div class="project-box">
-      <h2>Ski Rack Holders</h2>
-      <img src="/media/comingSoon.jpg" alt="Ski Rack Holders">
-    </div>
-    <div class="project-box">
-      <h2>Chess Set</h2>
-      <img src="/media/comingSoon.jpg" alt="Chess Set">
-    </div>
-    <div class="project-box">
-      <h2>5 Axis Printer</h2>
-      <img src="/media/comingSoon.jpg" alt="5 Axis Printer">
-    </div>
-    <div class="project-box">
-      <h2>Bioprinting</h2>
-      <img src="/media/comingSoon.jpg" alt="Bioprinting">
-    </div>
+  <div class="project-grid">
+    {% for project in site.current_projects %}
+      <div class="project-box">
+        <h3>{{ project.title }}</h3>
+        {% if project.thumbnail %}
+          <img src="{{ project.thumbnail }}" alt="{{ project.title }} thumbnail">
+        {% endif %}
+        <a href="{{ project.url | relative_url }}">See More</a>
+      </div>
+    {% endfor %}
   </div>
 </section>
 
@@ -83,52 +31,12 @@ permalink: /projects/
 </section>
 
 <section class="content-section parallax" style="background-image: url('/media/groupPhotos/meeting1.jpg');">
-  <div class="scroll-box">
-    <div class="project-box">
-      <h2>ASCE Bridge</h2>
-    </div>
-    <div class="project-box">
-      <h2>Heat Sink</h2>
-    </div>
-    <div class="project-box">
-      <h2>Keyboard Wrist Rest</h2>
-    </div>
-    <div class="project-box">
-      <h2>Mouse</h2>
-    </div>
-    <div class="project-box">
-      <h2>Mouse Bungee</h2>
-    </div>
-    <div class="project-box">
-      <h2>Raspberry Pi Case</h2>
-    </div>
-    <div class="project-box">
-      <h2>Keyboard Display Stand</h2>
-    </div>
-    <div class="project-box">
-      <h2>Headphone Stand</h2>
-    </div>
-    <div class="project-box">
-      <h2>Kazoo</h2>
-    </div>
-    <div class="project-box">
-      <h2>Tech Deck</h2>
-    </div>
-    <div class="project-box">
-      <h2>Figurines</h2>
-    </div>
-    <div class="project-box">
-      <h2>Climbing Stuff</h2>
-    </div>
-    <div class="project-box">
-      <h2>Skiing Stuff</h2>
-    </div>
-    <div class="project-box">
-      <h2>Lithophane Art</h2>
-    </div>
-    <div class="project-box">
-      <h2>Ships, Derby Cars</h2>
-    </div>
+  <div class="project-grid">
+    {% for project in site.future_projects %}
+      <div class="project-box">
+        <h3>{{ project.title }}</h3>
+      </div>
+    {% endfor %}
   </div>
 </section>
 
@@ -139,35 +47,15 @@ permalink: /projects/
 </section>
 
 <section class="content-section parallax" style="background-image: url('/media/groupPhotos/meeting1.jpg');">
-  <div class="scroll-box">
-    <div class="project-box">
-      <h2>3D4E Tokens</h2>
-      <p>The 3D4E logo printed on tokens and keychains</p>
-      <img src="/media/projects/token.jpg" alt="Project Image 1">
-    </div>
-    <div class="project-box">
-      <h2>T-Shirt Cannon</h2>
-      <img src="/media/projects/roller.png" alt="Roller for cannon">
-    </div>
-    <div class="project-box">
-      <h2>Model the U</h2>
-      <img src="/media/projects/modelU.jpg" alt="3D printed library">
-    </div>
-    <div class="project-box">
-      <h2>RC Drone</h2>
-      <img src="/media/projects/drone.png" alt="Drone blade">
-    </div>
-    <div class="project-box">
-      <h2>Mechanical Keyboard</h2>
-      <img src="/media/projects/keyboard.png" alt="Keyboard case">
-    </div>
-    <div class="project-box">
-      <h2>Laptop Stand</h2>
-      <img src="/media/projects/laptopStand.png" alt="Laptop stand">
-    </div>
-    <div class="project-box">
-      <h2>Keycaps</h2>
-      <img src="/media/comingSoon.jpg" alt="Keycaps">
-    </div>
+  <div class="project-grid">
+    {% for project in site.past_projects %}
+      <div class="project-box">
+        <h3>{{ project.title }}</h3>
+        {% if project.thumbnail %}
+          <img src="{{ project.thumbnail }}" alt="{{ project.title }} thumbnail">
+        {% endif %}
+        <a href="{{ project.url | relative_url }}">See More</a>
+      </div>
+    {% endfor %}
   </div>
 </section>
