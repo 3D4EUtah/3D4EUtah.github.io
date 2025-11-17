@@ -1,10 +1,12 @@
 ---
 layout: project_page
 title: "Mechanical Keyboard"
-thumbnail: "/media/projects/keyboard.png"
+thumbnail: "/media/projects/mechanical_keyboard/keyboard.png"
 description: "A custom 3D-printed case for a mechanical keyboard."
 members:
-  - "Past Member"
+  - "Alan Mo"
+  - "Brian Yu"
+  - "Brittney Pemberton"
 images:
-  - "/media/projects/keyboard.png"
+  - "mechanical_keyboard/keyboard.png"
 ---

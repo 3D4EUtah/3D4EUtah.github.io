@@ -1199,14 +1199,16 @@ table td {
   max-width: none;
   width: 100%; 
   
-  /* Resets other irrelevant styles */
-  display: block;
+  /* --- MODIFIED/ADDED FOR CENTERING --- */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* This centers vertically */
+  min-height: 75px; /* Gives "Future" boxes a good height */
+  /* ------------------------------------ */
+  
   margin-right: 0;
   vertical-align: baseline;
-
-  /* --- ADD THIS LINE --- */
   box-sizing: border-box; 
-  /* --------------------- */
 }
 
 /* 3. This ensures images scale correctly inside the boxes */

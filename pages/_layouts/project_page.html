@@ -18,61 +18,74 @@ layout: custom_page
   }
   .project-container {
     max-width: 90%;
-    /* 1. REMOVED TOP MARGIN & 2. CENTERED TEXT */
     margin: 0 auto 2rem auto; 
     text-align: center;
     padding: 1rem;
     box-sizing: border-box;
   }
 
-  /* 3. NEW RULE FOR DESCRIPTION TEXT */
   .project-description p {
-    font-size: 1.2em; /* Made text bigger */
-    padding-top: 0;   /* Removed top padding */
+    font-size: 1.2em;
+    padding-top: 0;
   }
 
-  /* 4. UPDATED H3 RULE FOR CENTERING */
-  .project-meta h3,
+  /* --- RULE UPDATED --- */
+  /* Removed .project-meta h3 */
   .project-gallery h3,
   .project-videos h3 {
     border-bottom: 2px solid #eee;
     padding-bottom: 5px;
-    /* Makes the border only as wide as the text */
     display: inline-block; 
     padding-left: 1rem;
     padding-right: 1rem;
+    margin-bottom: 0.5rem;
   }
-  .project-meta p {
+  
+  /* --- RULE UPDATED --- */
+  /* This rule now styles the member list directly */
+  .project-members p {
     font-size: 1.1em;
     margin-bottom: 5px;
   }
+
+  /* --- RULE UPDATED --- */
+  /* 2. Adds 2.5rem of space AFTER each section's content */
+  .project-description,
+  .project-members, /* Was .project-meta */
+  .project-gallery {
+    margin-bottom: 1.5rem; 
+  }
+  /* --- END OF NEW RULE --- */
   
-  .project-gallery-grid {
+  .project-gallery-grid,
+  .project-video-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 250px)); 
+    justify-content: center; 
     gap: 1rem;
-    margin-top: 1rem;
-    /* Fixes grid items from being center-aligned */
+    margin-top: 0.5rem;
     text-align: left; 
   }
+
   .project-gallery-grid img {
     width: 100%;
-    height: 200px;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    cursor: pointer; 
+    transition: transform 0.3s ease;
   }
+  
   .gallery-link {
     display: block;
     overflow: hidden;
     border-radius: 5px;
   }
-  .project-gallery-grid img {
-    transition: transform 0.3s ease;
-  }
   .gallery-link:hover img {
     transform: scale(1.05);
   }
+
   .lightbox {
     position: fixed;
     top: 0;
@@ -85,9 +98,10 @@ layout: custom_page
     justify-content: center;
     align-items: center;
   }
-  .lightbox:target {
-    display: flex;
+  .lightbox-active {
+    display: flex; 
   }
+
   .lightbox img {
     height: 80vh; 
     width: auto;
@@ -108,6 +122,7 @@ layout: custom_page
     opacity: 0.7;
     transition: opacity 0.2s ease;
     z-index: 10001;
+    cursor: pointer;
   }
   
   .lightbox-close:hover,
@@ -138,7 +153,6 @@ layout: custom_page
     height: 0;
     overflow: hidden;
     margin-bottom: 1.25rem;
-    /* Fixes video wrapper from being center-aligned */
     text-align: left; 
   }
   .video-wrapper iframe,
@@ -150,7 +164,7 @@ layout: custom_page
     height: 100%;
     border-radius: 5px;
   }
-s</style>
+</style>
 
 <section class="title-section">
   <h1>{{ page.title }}</h1>
@@ -164,12 +178,10 @@ s</style>
   </section>
 
   {% if page.members and page.members.first != "Idea" %}
-    <section class="project-meta">
-      <h3>Members</h3>
+    <div class="project-members">
       <p>{{ page.members | join: ", " }}</p>
-    </section>
+    </div>
   {% endif %}
-
   {% if page.images and page.images.size > 0 %}
     <section class="project-gallery">
       <h3>Gallery</h3>
@@ -178,11 +190,12 @@ s</style>
         {% assign gallery_path = "/media/projects/" %}
         {% for image_filename in page.images %}
           {% assign full_image_path = gallery_path | append: image_filename %}
-          {% assign img_id = "img-" | append: forloop.index %}
           
-          <a href="#{{ img_id }}" class="gallery-link">
-            <img src="{{ full_image_path }}" alt="{{ page.title }} gallery image">
-          </a>
+          <img 
+            src="{{ full_image_path }}" 
+            alt="{{ page.title }} gallery image" 
+            class="gallery-thumbnail" 
+            data-index="{{ forloop.index }}">
         {% endfor %}
       </div>
 
@@ -190,23 +203,13 @@ s</style>
         {% assign gallery_path = "/media/projects/" %}
         {% for image_filename in page.images %}
           {% assign full_image_path = gallery_path | append: image_filename %}
-          {% assign img_id = "img-" | append: forloop.index %}
           
-          {% assign prev_index = forloop.index | minus: 1 %}
-          {% assign next_index = forloop.index | plus: 1 %}
-
-          <div class="lightbox" id="{{ img_id }}">
+          <div class="lightbox lightbox-item" data-index="{{ forloop.index }}">
             <img src="{{ full_image_path }}" alt="{{ page.title }} gallery image">
             
-            <a href="#" class="lightbox-close" aria-label="Close image viewer">&times;</a>
-
-            {% unless forloop.first %}
-              <a href="#img-{{ prev_index }}" class="lightbox-prev" aria-label="Previous image">&#10094;</a>
-            {% endunless %}
-            
-            {% unless forloop.last %}
-              <a href="#img-{{ next_index }}" class="lightbox-next" aria-label="Next image">&#10095;</a>
-            {% endunless %}
+            <a class="lightbox-close js-lightbox-close" aria-label="Close image viewer">&times;</a>
+            <a class="lightbox-prev js-lightbox-prev" aria-label="Previous image">&#10094;</a>
+            <a class="lightbox-next js-lightbox-next" aria-label="Next image">&#10095;</a>
           </div>
         {% endfor %}
       </div>
@@ -216,23 +219,25 @@ s</style>
   {% if page.videos and page.videos.size > 0 %}
     <section class="project-videos">
       <h3>Videos</h3>
-      {% for video_src in page.videos %}
-        <div class="video-wrapper">
-          {% if video_src contains "http" %}
-            <iframe 
-              src="{{ video_src }}" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowfullscreen>
-            </iframe>
-          {% else %}
-            <video controls>
-              <source src="{{ video_src }}" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          {% endif %}
-        </div>
-      {% endfor %}
+      <div class="project-video-grid">
+        {% for video_src in page.videos %}
+          <div class="video-wrapper">
+            {% if video_src contains "http" %}
+              <iframe 
+                src="{{ video_src }}" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+              </iframe>
+            {% else %}
+              <video controls>
+                <source src="{{ video_src }}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
     </section>
   {% endif %}
 </div>
@@ -241,41 +246,78 @@ s</style>
   document.addEventListener('DOMContentLoaded', function() {
     
     const totalImages = {{ page.images.size | default: 0 }};
+    if (totalImages === 0) return;
 
-    document.addEventListener('keydown', function(event) {
-      const currentHash = window.location.hash;
-      if (!currentHash.startsWith('#img-')) {
+    const thumbnails = document.querySelectorAll('.gallery-thumbnail');
+    const lightboxes = document.querySelectorAll('.lightbox-item');
+    const closeButtons = document.querySelectorAll('.js-lightbox-close');
+    const prevButtons = document.querySelectorAll('.js-lightbox-prev');
+    const nextButtons = document.querySelectorAll('.js-lightbox-next');
+    
+    let currentIndex = 0;
+
+    function showLightbox(index) {
+      if (index < 1 || index > totalImages) {
         return;
       }
+      currentIndex = index;
+
+      lightboxes.forEach(lb => lb.classList.remove('lightbox-active'));
       
-      let currentIndex = parseInt(currentHash.replace('#img-', ''));
+      const activeLightbox = document.querySelector(`.lightbox-item[data-index="${index}"]`);
+      activeLightbox.classList.add('lightbox-active');
+      
+      const prevButton = activeLightbox.querySelector('.js-lightbox-prev');
+      const nextButton = activeLightbox.querySelector('.js-lightbox-next');
+      
+      if (prevButton) prevButton.style.display = (index === 1) ? 'none' : 'block';
+      if (nextButton) nextButton.style.display = (index === totalImages) ? 'none' : 'block';
+    }
 
-      if (event.key === 'Escape' || event.key === 'Esc') {
-        window.location.hash = '#';
-      }
+    function closeLightbox() {
+      lightboxes.forEach(lb => lb.classList.remove('lightbox-active'));
+    }
 
-      if (event.key === 'ArrowRight') {
-        event.preventDefault(); 
-        if (currentIndex < totalImages) {
-          window.location.hash = '#img-' + (currentIndex + 1);
-        }
-      }
+    function showNext() {
+      showLightbox(currentIndex + 1);
+    }
 
-      if (event.key === 'ArrowLeft') {
-        event.preventDefault(); 
-        if (currentIndex > 1) {
-          window.location.hash = '#img-' + (currentIndex - 1);
-        }
-      }
+    function showPrev() {
+      showLightbox(currentIndex - 1);
+    }
+
+    thumbnails.forEach(thumb => {
+      thumb.addEventListener('click', function() {
+        showLightbox(parseInt(this.dataset.index));
+      });
     });
 
-    var lightboxes = document.querySelectorAll('.lightbox');
-    lightboxes.forEach(function(lightbox) {
+    closeButtons.forEach(btn => btn.addEventListener('click', closeLightbox));
+    prevButtons.forEach(btn => btn.addEventListener('click', showPrev));
+    nextButtons.forEach(btn => btn.addEventListener('click', showNext));
+
+    lightboxes.forEach(lightbox => {
       lightbox.addEventListener('click', function(event) {
         if (event.target === this) {
-          window.location.hash = '#';
+          closeLightbox();
         }
       });
+    });
+
+    document.addEventListener('keydown', function(event) {
+      if (currentIndex === 0 || !document.querySelector('.lightbox-active')) {
+        return;
+      }
+
+      if (event.key === 'Escape' || event.key === 'Esc') {
+        closeLightbox();
+      }
+      if (event.key === 'ArrowRight') {
+        showNext();
+      }
+      if (event.key === 'ArrowLeft') {
+        showPrev();
+      }
     });
 
   });
