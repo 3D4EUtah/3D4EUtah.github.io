@@ -18,7 +18,7 @@ layout: custom_page
   }
   .project-container {
     max-width: 90%;
-    margin: 0 auto 2rem auto; 
+    margin: 0 auto 2rem auto;
     text-align: center;
     padding: 1rem;
     box-sizing: border-box;
@@ -29,42 +29,35 @@ layout: custom_page
     padding-top: 0;
   }
 
-  /* --- RULE UPDATED --- */
-  /* Removed .project-meta h3 */
   .project-gallery h3,
   .project-videos h3 {
     border-bottom: 2px solid #eee;
     padding-bottom: 5px;
-    display: inline-block; 
+    display: inline-block;
     padding-left: 1rem;
     padding-right: 1rem;
     margin-bottom: 0.5rem;
   }
-  
-  /* --- RULE UPDATED --- */
-  /* This rule now styles the member list directly */
+
   .project-members p {
     font-size: 1.1em;
     margin-bottom: 5px;
   }
 
-  /* --- RULE UPDATED --- */
-  /* 2. Adds 2.5rem of space AFTER each section's content */
   .project-description,
-  .project-members, /* Was .project-meta */
+  .project-members,
   .project-gallery {
-    margin-bottom: 1.5rem; 
+    margin-bottom: 1.5rem;
   }
-  /* --- END OF NEW RULE --- */
-  
+
   .project-gallery-grid,
   .project-video-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 250px)); 
-    justify-content: center; 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 250px));
+    justify-content: center;
     gap: 1rem;
     margin-top: 0.5rem;
-    text-align: left; 
+    text-align: left;
   }
 
   .project-gallery-grid img {
@@ -72,11 +65,23 @@ layout: custom_page
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    cursor: pointer; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
     transition: transform 0.3s ease;
   }
-  
+
+  /* --- THIS IS THE NEW RULE FOR THE HOVER EFFECT --- */
+  .project-gallery-grid .gallery-thumbnail:hover {
+    transform: scale(1.05);
+  }
+  /* --- END OF NEW RULE --- */
+
+  /* This wrapper is now redundant because the <img>
+    has the transition directly. We can remove it.
+    I've left it here commented out, but it's not needed
+    for the zoom effect anymore.
+  */
+  /*
   .gallery-link {
     display: block;
     overflow: hidden;
@@ -85,6 +90,7 @@ layout: custom_page
   .gallery-link:hover img {
     transform: scale(1.05);
   }
+  */
 
   .lightbox {
     position: fixed;
@@ -99,21 +105,24 @@ layout: custom_page
     align-items: center;
   }
   .lightbox-active {
-    display: flex; 
+    display: flex;
   }
 
   .lightbox img {
-    height: 80vh; 
+    height: 80vh;
     width: auto;
     max-width: 90vw;
     object-fit: contain;
     border-radius: 5px;
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   }
-  
-  .lightbox-close, .lightbox-close:visited,
-  .lightbox-prev, .lightbox-prev:visited,
-  .lightbox-next, .lightbox-next:visited {
+
+  .lightbox-close,
+  .lightbox-close:visited,
+  .lightbox-prev,
+  .lightbox-prev:visited,
+  .lightbox-next,
+  .lightbox-next:visited {
     position: absolute;
     font-size: 3rem;
     color: white;
@@ -124,7 +133,7 @@ layout: custom_page
     z-index: 10001;
     cursor: pointer;
   }
-  
+
   .lightbox-close:hover,
   .lightbox-prev:hover,
   .lightbox-next:hover {
@@ -153,7 +162,7 @@ layout: custom_page
     height: 0;
     overflow: hidden;
     margin-bottom: 1.25rem;
-    text-align: left; 
+    text-align: left;
   }
   .video-wrapper iframe,
   .video-wrapper video {
@@ -178,73 +187,80 @@ layout: custom_page
   </section>
 
   {% if page.members and page.members.first != "Idea" %}
-    <div class="project-members">
-      <p>{{ page.members | join: ", " }}</p>
+  <div class="project-members">
+    <p>{{ page.members | join: ", " }}</p>
+  </div>
+  {% endif %} {% if page.images and page.images.size > 0 %}
+  <section class="project-gallery">
+    <h3>Gallery</h3>
+
+    <div class="project-gallery-grid">
+      {% assign gallery_path = "/media/projects/" %} {% for image_filename in
+      page.images %} {% assign full_image_path = gallery_path | append:
+      image_filename %}
+
+      <img
+        src="{{ full_image_path }}"
+        alt="{{ page.title }} gallery image"
+        class="gallery-thumbnail"
+        data-index="{{ forloop.index }}"
+      />
+      {% endfor %}
     </div>
-  {% endif %}
-  {% if page.images and page.images.size > 0 %}
-    <section class="project-gallery">
-      <h3>Gallery</h3>
-      
-      <div class="project-gallery-grid">
-        {% assign gallery_path = "/media/projects/" %}
-        {% for image_filename in page.images %}
-          {% assign full_image_path = gallery_path | append: image_filename %}
-          
-          <img 
-            src="{{ full_image_path }}" 
-            alt="{{ page.title }} gallery image" 
-            class="gallery-thumbnail" 
-            data-index="{{ forloop.index }}">
-        {% endfor %}
-      </div>
 
-      <div class="lightbox-container">
-        {% assign gallery_path = "/media/projects/" %}
-        {% for image_filename in page.images %}
-          {% assign full_image_path = gallery_path | append: image_filename %}
-          
-          <div class="lightbox lightbox-item" data-index="{{ forloop.index }}">
-            <img src="{{ full_image_path }}" alt="{{ page.title }} gallery image">
-            
-            <a class="lightbox-close js-lightbox-close" aria-label="Close image viewer">&times;</a>
-            <a class="lightbox-prev js-lightbox-prev" aria-label="Previous image">&#10094;</a>
-            <a class="lightbox-next js-lightbox-next" aria-label="Next image">&#10095;</a>
-          </div>
-        {% endfor %}
-      </div>
-    </section>
-  {% endif %}
+    <div class="lightbox-container">
+      {% assign gallery_path = "/media/projects/" %} {% for image_filename in
+      page.images %} {% assign full_image_path = gallery_path | append:
+      image_filename %}
 
-  {% if page.videos and page.videos.size > 0 %}
-    <section class="project-videos">
-      <h3>Videos</h3>
-      <div class="project-video-grid">
-        {% for video_src in page.videos %}
-          <div class="video-wrapper">
-            {% if video_src contains "http" %}
-              <iframe 
-                src="{{ video_src }}" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-              </iframe>
-            {% else %}
-              <video controls>
-                <source src="{{ video_src }}" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            {% endif %}
-          </div>
-        {% endfor %}
+      <div class="lightbox lightbox-item" data-index="{{ forloop.index }}">
+        <img src="{{ full_image_path }}" alt="{{ page.title }} gallery image" />
+
+        <a
+          class="lightbox-close js-lightbox-close"
+          aria-label="Close image viewer"
+          >&times;</a
+        >
+        <a class="lightbox-prev js-lightbox-prev" aria-label="Previous image"
+          >&#10094;</a
+        >
+        <a class="lightbox-next js-lightbox-next" aria-label="Next image"
+          >&#10095;</a
+        >
       </div>
-    </section>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %} {% if page.videos and page.videos.size > 0 %}
+  <section class="project-videos">
+    <h3>Videos</h3>
+    <div class="project-video-grid">
+      {% for video_src in page.videos %}
+      <div class="video-wrapper">
+        {% if video_src contains "http" %}
+        <iframe
+          src="{{ video_src }}"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe>
+        {% else %}
+        <video controls>
+          <source src="{{ video_src }}" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
   {% endif %}
 </div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    
+
     const totalImages = {{ page.images.size | default: 0 }};
     if (totalImages === 0) return;
 
@@ -253,7 +269,7 @@ layout: custom_page
     const closeButtons = document.querySelectorAll('.js-lightbox-close');
     const prevButtons = document.querySelectorAll('.js-lightbox-prev');
     const nextButtons = document.querySelectorAll('.js-lightbox-next');
-    
+
     let currentIndex = 0;
 
     function showLightbox(index) {
@@ -263,13 +279,13 @@ layout: custom_page
       currentIndex = index;
 
       lightboxes.forEach(lb => lb.classList.remove('lightbox-active'));
-      
+
       const activeLightbox = document.querySelector(`.lightbox-item[data-index="${index}"]`);
       activeLightbox.classList.add('lightbox-active');
-      
+
       const prevButton = activeLightbox.querySelector('.js-lightbox-prev');
       const nextButton = activeLightbox.querySelector('.js-lightbox-next');
-      
+
       if (prevButton) prevButton.style.display = (index === 1) ? 'none' : 'block';
       if (nextButton) nextButton.style.display = (index === totalImages) ? 'none' : 'block';
     }

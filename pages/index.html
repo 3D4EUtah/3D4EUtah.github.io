@@ -2,18 +2,21 @@
 layout: custom_page
 title: Home
 ---
-<!-- Title Section -->
+
 <section class="title-section">
   <div>
     <h1>Why Join 3D Printing Club?</h1>
   </div>
 </section>
 
-<section class="content-section parallax" style="background-image: url('media/groupPhotos/meeting3.jpg');">
+<section
+  class="content-section parallax"
+  style="background-image: url('media/groupPhotos/meeting3.jpg')"
+>
   <div class="content-grid">
     <div class="content-box">
       <h2>No Experience? No Problem!</h2>
-      <img src="media/cad.jpg" alt="Educational Workshops">
+      <img src="media/cad.jpg" alt="Educational Workshops" />
       <ul>
         <li>Weekly CAD workshops for all skill levels.</li>
         <li>Learn how to use industry tools and software.</li>
@@ -22,20 +25,19 @@ title: Home
 
     <div class="content-box">
       <h2>Industry Certifications</h2>
-      <img src="media/blankCertificate.png" alt="Industry Certifications">
+      <img src="media/blankCertificate.png" alt="Industry Certifications" />
       <ul>
-        <li>
-          Free Access to CSWA Exam
-        </li>
-        <li>
-          One attempt per semester
-        </li>
+        <li>Free Access to CSWA Exam</li>
+        <li>One attempt per semester</li>
       </ul>
     </div>
 
     <div class="content-box">
       <h2>Increase Career Prospects</h2>
-      <img src="media/groupPhotos/tabling1.jpg" alt="Increase Career Prospects">
+      <img
+        src="media/groupPhotos/tabling1.jpg"
+        alt="Increase Career Prospects"
+      />
       <ul>
         <li>Working in a team environment</li>
         <li>Additive manufacturing conferences</li>
@@ -45,15 +47,49 @@ title: Home
   </div>
 </section>
 
-<section class="section" style="background-color: gray;">
+<section class="section" style="background-color: #ba0c2f">
+  <div>
+    <h2>See What We're Building</h2>
+  </div>
+</section>
+
+<section
+  class="content-section parallax"
+  style="background-image: url('media/groupPhotos/meeting3.jpg')"
+>
+  <div class="project-grid">
+    {% assign random_projects = site.current_projects | sample: 5 %} {% for
+    project in random_projects %}
+    <div class="project-box">
+      <h3>{{ project.title }}</h3>
+      {% if project.thumbnail %}
+      <a href="{{ project.url | relative_url }}" class="project-image-link">
+        <img
+          src="{{ project.thumbnail }}"
+          alt="{{ project.title }} thumbnail"
+        />
+      </a>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+
+  <a href="/projects/" class="btn-red" style="margin-top: 2rem">
+    See All Projects...
+  </a>
+</section>
+
+<section class="section" style="background-color: gray">
   <div>
     <h2>Join Us!</h2>
   </div>
 </section>
 
-<section class="content-section parallax" style="background-image: url('media/groupPhotos/meeting3.jpg');">
+<section
+  class="content-section parallax"
+  style="background-image: url('media/groupPhotos/meeting3.jpg')"
+>
   <div class="content-grid">
-
     <div class="content-box">
       <h2>Membership Includes:</h2>
       <ul>
@@ -61,14 +97,29 @@ title: Home
         <li>CAD workshops</li>
         <li>Career building</li>
         <li>Solidworks CSWA exam vouchers</li>
-        <p>Contact links can be found in the footer of the page.</p>
       </ul>
+      <p>Contact links can be found in the footer of the page.</p>
     </div>
 
     <div class="content-box">
       <h2>For More Info:</h2>
       <p>Join our Discord using the QR code below!</p>
-      <img src="media/480.png" alt="Join our Discord" style="max-width: 150px; margin-top: 20px;">
+      <img
+        src="media/480.png"
+        alt="Join our Discord"
+        style="max-width: 150px; margin-top: 20px"
+      />
+    </div>
+    <div class="content-box">
+      <h2>Ready to Join?</h2>
+      <p>Click the link below to sign up on Campus Connect.</p>
+      <a
+        href="https://campusconnect.utah.edu/3D4E/club_signup"
+        class="btn-red"
+        style="margin-top: 1rem"
+      >
+        Join on Campus Connect
+      </a>
     </div>
   </div>
 </section>

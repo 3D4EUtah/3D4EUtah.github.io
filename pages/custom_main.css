@@ -894,15 +894,21 @@ table td {
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
-  text-align: center;
   padding: 20px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* This centers vertically */
+  align-items: center; /* This centers horizontally */
+  text-align: center;
 }
 
 .content-box img {
-  width: 100%;
-  height: auto;
+  max-width: 100%; /* Keep image from overflowing */
+  width: auto; /* Let image scale naturally */
+  max-height: 350px; /* NEW: Constrains tall images */
   border-bottom: 2px solid #ddd;
+  margin-bottom: 10px; /* NEW: Adds space below image */
 }
 
 .content-box h2 {
@@ -924,8 +930,8 @@ table td {
 }
 
 .content-box ul li {
-  font-size: 1.2em;
-  margin: 10px 0;
+  font-size: 1.1em; /* Slightly reduced for balance */
+  margin-bottom: 5px; /* A bit more space */
 }
 
 .content-box:hover {
@@ -1081,10 +1087,13 @@ table td {
 .people-grid {
   width: 90%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2vw;
-  row-gap: 0.5vw;
-  padding: 0.5vw;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  gap: 3vw;
+  row-gap: 2vw;
+  padding: 3vw;
+  padding-top: 0%;
+  padding-bottom: 0%;
 }
 
 .people-box {
@@ -1092,7 +1101,7 @@ table td {
   padding: 0.7vw;
   border-radius: 5px;
   text-align: center;
-  max-width: 300px;
+  max-width: 400px;
   width: 100%;
   transition: transform 0.3s ease;
 }
@@ -1102,8 +1111,8 @@ table td {
 }
 
 .people-box img {
-  width: 95%;
-  height: 300px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 10px;
@@ -1190,25 +1199,25 @@ table td {
 
   /* FIX: Makes the grid container fill its parent */
   width: 100%;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 /* 2. This overrides old .project-box styles when inside the grid */
 .project-grid .project-box {
   /* Resets the old width/max-width from the scroll-box style */
   max-width: none;
-  width: 100%; 
-  
+  width: 100%;
+
   /* --- MODIFIED/ADDED FOR CENTERING --- */
   display: flex;
   flex-direction: column;
   justify-content: center; /* This centers vertically */
   min-height: 75px; /* Gives "Future" boxes a good height */
   /* ------------------------------------ */
-  
+
   margin-right: 0;
   vertical-align: baseline;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 /* 3. This ensures images scale correctly inside the boxes */
@@ -1216,4 +1225,275 @@ table td {
   max-width: 100%;
   height: auto;
   display: block;
+}
+/* --- Styles for Projects Page (Fixed Specificity) --- */
+
+/* This rule is now specific enough to override the old button styles */
+.project-box a.project-image-link {
+  display: block;
+  overflow: hidden;
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 0 auto 15px auto;
+
+  /* Overrides for the old .project-box a */
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+/* This overrides the red hover/focus states */
+.project-box a.project-image-link:hover,
+.project-box a.project-image-link:focus,
+.project-box a.project-image-link:active {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+/* This overrides the default .project-box img styles */
+.project-box a.project-image-link img {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 0;
+  transition: transform 0.3s ease;
+}
+
+/* This is the zoom-on-hover effect */
+.project-box a.project-image-link:hover img {
+  transform: scale(1.1);
+}
+
+/* --- Reusable Red Button Style --- */
+.btn-red,
+.btn-red:visited {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #ba0c2f;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 5px;
+  font-size: calc(10px + 0.5vw);
+  font-weight: 400;
+  transition: background-color 0.3s ease;
+}
+
+/* This replaces the 'onmouseover' and 'onmouseout' */
+.btn-red:hover,
+.btn-red:active {
+  background-color: #960a25;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* --- New Style for People Page --- */
+.person-title {
+  font-size: calc(11px + 0.4vw);
+  font-weight: bold;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* --- STYLES FROM project_page.html --- */
+.project-header {
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 3rem 1rem;
+  box-sizing: border-box;
+}
+.project-header h1 {
+  font-size: 2.5em;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+.project-container {
+  max-width: 90%;
+  margin: 0 auto 2rem auto;
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.project-description p {
+  font-size: 1.2em;
+  padding-top: 0;
+}
+
+.project-gallery h3,
+.project-videos h3 {
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+  display: inline-block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-members p {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+.project-description,
+.project-members,
+.project-gallery {
+  margin-bottom: 1.5rem;
+}
+
+.project-gallery-grid,
+.project-video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 250px));
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+.project-gallery-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.project-gallery-grid .gallery-thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.gallery-link {
+  display: block;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 10000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.lightbox-active {
+  display: flex;
+}
+
+.lightbox img {
+  height: 80vh;
+  width: auto;
+  max-width: 90vw;
+  object-fit: contain;
+  border-radius: 5px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close,
+.lightbox-close:visited,
+.lightbox-prev,
+.lightbox-prev:visited,
+.lightbox-next,
+.lightbox-next:visited {
+  position: absolute;
+  font-size: 3rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  z-index: 10001;
+  cursor: pointer;
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  opacity: 1;
+  color: white;
+}
+
+.lightbox-close {
+  top: 20px;
+  right: 30px;
+}
+.lightbox-prev {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 30px;
+}
+.lightbox-next {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+.video-wrapper iframe,
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* --- STYLES FROM resources.html --- */
+.document-view {
+  max-width: 90vw;
+  padding: 2rem;
+  box-sizing: border-box;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+}
+
+.document-view hr {
+  border: 0;
+  height: 1px;
+  background-color: #e8e8e8;
+  margin: 1rem 0;
+}
+
+.document-view h3 {
+  margin-top: 1rem;
+}
+
+.document-view a {
+  color: #2a7ae2;
+}
+
+.document-view a:visited {
+  color: #2a7ae2;
+}
+
+.document-view a:hover {
+  color: #1756a9;
+  text-decoration: underline;
+}
+
+.resources-background {
+  background-image: url("/media/city.jpg");
+  min-height: 80vh;
 }
