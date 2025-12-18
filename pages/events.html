@@ -1,0 +1,347 @@
+---
+layout: custom_page
+title: Events
+permalink: /events/
+---
+
+<style>
+  /* --- Layout for Sidebar + Content --- */
+  .events-wrapper {
+    display: flex;
+    min-height: 80vh;
+    background-image: url("/media/groupPhotos/meeting3.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+  }
+
+  .events-overlay {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    max-width: 1400px;
+    margin: 2rem auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* --- Sidebar Styles --- */
+  .year-sidebar {
+    width: 20%;
+    background-color: #1a1a1a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  .year-btn {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1.5rem 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 5px solid transparent;
+    width: 100%;
+    text-align: center;
+  }
+
+  .year-btn:hover {
+    color: white;
+    background-color: #333;
+  }
+
+  .year-btn.active-year {
+    color: white;
+    background-color: #ba0c2f;
+    border-left: 5px solid white;
+  }
+
+  /* --- Main Content Area --- */
+  .events-content {
+    width: 80%;
+    padding: 2rem;
+    overflow-y: auto;
+  }
+
+  .year-section {
+    display: none;
+    animation: fadeIn 0.5s;
+  }
+
+  .year-section.active-content {
+    display: block;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* --- Accordion Styles --- */
+  .event-accordion {
+    background-color: #eee;
+    color: #333;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: 0.4s;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+  }
+
+  .event-accordion:hover {
+    background-color: #ccc;
+  }
+
+  .event-accordion.active-accordion {
+    background-color: #ba0c2f;
+    color: white;
+  }
+
+  .event-accordion:after {
+    content: "\002B";
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+
+  .event-accordion.active-accordion:after {
+    content: "\2212";
+  }
+
+  .event-panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    margin-bottom: 10px;
+    border-left: 3px solid #ba0c2f;
+  }
+
+  /* --- Gallery Grid --- */
+  .event-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 20px 0;
+  }
+
+  .event-gallery-grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .event-gallery-grid img:hover {
+    transform: scale(1.05);
+  }
+
+  /* --- Lightbox Styles --- */
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .lightbox-active {
+    display: flex;
+  }
+  .lightbox img {
+    max-height: 85vh;
+    max-width: 90vw;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  .lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    .events-overlay {
+      flex-direction: column;
+      width: 95%;
+    }
+    .year-sidebar {
+      width: 100%;
+      flex-direction: row;
+      overflow-x: auto;
+      padding: 0;
+    }
+    .year-btn {
+      padding: 1rem;
+      border-left: none;
+      border-bottom: 5px solid transparent;
+    }
+    .year-btn.active-year {
+      border-left: none;
+      border-bottom: 5px solid white;
+    }
+    .events-content {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+</style>
+
+<section class="title-section">
+  <div>
+    <h1>Events</h1>
+  </div>
+</section>
+
+<div class="events-wrapper">
+  <div class="events-overlay">
+    <div class="year-sidebar">
+      <button class="year-btn" onclick="openYear('2026')">2026</button>
+      <button class="year-btn" onclick="openYear('2025')">2025</button>
+      <button class="year-btn" onclick="openYear('2024')">2024</button>
+    </div>
+
+    <div class="events-content">
+      {% for year in (2024..2026) reversed %}
+      <div id="year-{{ year }}" class="year-section">
+        <h2>{{ year }} Events</h2>
+        <hr style="margin-bottom: 20px; border: 1px solid #ddd" />
+
+        {% assign year_string = year | append: "" %} {% assign has_events =
+        false %} {% assign sorted_events = site.events | sort: 'date' | reverse
+        %} {% for event in sorted_events %} {% assign event_year = event.date |
+        date: "%Y" %} {% if event_year == year_string %} {% assign has_events =
+        true %}
+
+        <button class="event-accordion">
+          {{ event.date | date: "%m/%d/%Y" }} - {{ event.title }}
+        </button>
+
+        <div class="event-panel">
+          {% if event.images and event.images.size > 0 %}
+          <div class="event-gallery-grid">
+            {% assign base_path = "/media/events/" %} {% for img_name in
+            event.images %}
+            <img
+              src="{{ base_path }}{{ event.folder }}/{{ img_name }}"
+              alt="{{ event.title }}"
+              class="lightbox-trigger"
+            />
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          <div style="padding: 15px; color: #555">{{ event.content }}</div>
+        </div>
+        {% endif %} {% endfor %} {% if has_events == false %}
+        <p>No events archived for {{ year }} yet.</p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div id="lightbox" class="lightbox">
+  <button class="lightbox-close">&times;</button>
+  <img id="lightbox-img" src="" alt="Full screen event image" />
+</div>
+
+<script>
+  function openYear(year) {
+    var sections = document.getElementsByClassName("year-section");
+    for (var i = 0; i < sections.length; i++) {
+      sections[i].classList.remove("active-content");
+    }
+
+    var btns = document.getElementsByClassName("year-btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].classList.remove("active-year");
+    }
+
+    var section = document.getElementById("year-" + year);
+    if (section) {
+      section.classList.add("active-content");
+    }
+
+    for (var i = 0; i < btns.length; i++) {
+      if (btns[i].textContent.includes(year)) {
+        btns[i].classList.add("active-year");
+      }
+    }
+  }
+
+  var acc = document.getElementsByClassName("event-accordion");
+  for (var i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active-accordion");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+
+  var lightbox = document.getElementById("lightbox");
+  var lightboxImg = document.getElementById("lightbox-img");
+  var closeBtn = document.querySelector(".lightbox-close");
+  var triggers = document.querySelectorAll(".lightbox-trigger");
+
+  triggers.forEach((img) => {
+    img.addEventListener("click", () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add("lightbox-active");
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    lightbox.classList.remove("lightbox-active");
+  });
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove("lightbox-active");
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    openYear("2025");
+  });
+</script>

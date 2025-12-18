@@ -4,106 +4,244 @@ title: Resources
 permalink: /resources/
 ---
 
-<section
-  class="parallax"
-  style="background-image: url('/media/city.jpg'); min-height: 80vh"
->
-  <div class="document-view">
+<style>
+  /* Accordion Styles */
+  .accordion-container {
+    max-width: 90vw;
+    width: 800px;
+    margin: 0 auto;
+    padding: 1rem 0;
+  }
+
+  .accordion {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: 0.4s;
+    border-bottom: 1px solid #ddd;
+    border-radius: 5px 5px 0 0;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .accordion:last-of-type {
+    border-bottom: none;
+  }
+
+  .active, .accordion:hover {
+    background-color: #ba0c2f; /* University Red */
+    color: white;
+  }
+
+  .panel {
+    padding: 0 18px;
+    background-color: rgba(255, 255, 255, 0.95);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    margin-bottom: 0;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .panel-content {
+    padding: 20px 0;
+  }
+
+  /* --- SPACING FIXES START --- */
+  
+  /* Style the Headers inside the dropdowns */
+  .panel-content h3 {
+    margin-top: 2rem;      /* MORE space before a new header */
+    margin-bottom: 0.2rem; /* LESS space between header and its content */
+    color: #333;
+    font-size: 1.1rem;
+  }
+
+  /* Ensure the very first header doesn't have a big gap above it */
+  .panel-content h3:first-child {
+    margin-top: 0;
+  }
+
+  /* Standardize paragraph and list spacing */
+  .panel-content p,
+  .panel-content ul {
+    margin-top: 0;
+    margin-bottom: 1rem; /* Standard space after content blocks */
+    color: #333;
+  }
+  
+  /* --- SPACING FIXES END --- */
+
+  .panel a {
+    color: #ba0c2f;
+    font-weight: 600;
+  }
+
+  .accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+
+  .active:after {
+    content: "\2212";
+    color: white;
+  }
+  
+  .accordion:hover:after {
+    color: white;
+  }
+
+  h1.page-title {
+    color: white;
+    text-align: center;
+    background-color: black;
+    padding: 3rem 0;
+    margin: 0;
+  }
+</style>
+
+<section class="title-section">
+  <div>
     <h1>Resources</h1>
-    <hr />
-
-    <h2>Weekly Club Meetings</h2>
-    <p>
-      <strong>When:</strong> Every Monday at 5:30 pm
-      <br />
-      <strong>Where:</strong> The GIS room
-      <br />
-      <em
-        >(This is the room with the big screen in the Marriott Library
-        Protospace)</em
-      >
-    </p>
-    <hr />
-
-    <h2>Software Links</h2>
-
-    <h3>Install Solidworks</h3>
-    <ul>
-      <li>
-        <a
-          href="https://www.cade.utah.edu/faqs/can-i-get-a-student-version-of-solidworks-for-my-home-computerlaptop/"
-        >
-          Students in Price College of Engineering
-        </a>
-      </li>
-      <li>
-        <a href="https://uofu.box.com/v/coe-solidworks">
-          Any student (Student Premium Version)
-        </a>
-      </li>
-    </ul>
-
-    <h3>Install Prusa Slicer</h3>
-    <ul>
-      <li>
-        <a href="https://www.prusa3d.com/page/prusaslicer_424/">
-          Prusa Slicer Download
-        </a>
-      </li>
-    </ul>
-
-    <hr />
-
-    <h2>Solidworks Workshops Recordings</h2>
-    <ul>
-      <li>
-        <a
-          href="https://www.youtube.com/playlist?list=PLj0oX0SU9Yb_5owS9Qdvnwa8B8CEAxUY1"
-        >
-          Youtube playlist
-        </a>
-      </li>
-    </ul>
-    <blockquote>
-      <p>
-        You must be signed into the account associated with the one which you
-        paid dues.
-      </p>
-    </blockquote>
-
-    <hr />
-
-    <h2>Stay Up to Date</h2>
-
-    <h3>Public Club Google Calendar</h3>
-    <p>
-      Keep track of all the events and activities by using our
-      <a
-        href="https://calendar.google.com/calendar/u/5?cid=YThiZjk0YTc4ZjBhODBlYjFhYTVhMDc4NjVhMmQ1ZWE2M2FhNmFiMmNkZGJkNTAzMDQ2ZjdiN2Q1ODBiZjM3NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        public Google calendar link</a
-      >.
-    </p>
-
-    <h3>Join Campus Connect</h3>
-    <p>
-      Visit our
-      <a href="https://campusconnect.utah.edu/3D4E/club_signup"
-        >Campus Connect</a
-      >
-      page to join.
-    </p>
-
-    <h3>Find Us Online</h3>
-    <p>Email us regarding any questions, comments, or concerns.</p>
-    <p>
-      Join the Discord to engage with others in the club and get updates for
-      social events, workshops, meetings, etc.
-    </p>
-    <p>Follow us on Instagram for updates on social events, and flyers.</p>
-    <p>Check out our GitHub for project files and models.</p>
-    <p><strong>All links found at the footer of the page.</strong></p>
   </div>
 </section>
+
+<section
+  class="parallax"
+  style="background-image: url('/media/city.jpg'); min-height: 50vh; align-items: flex-start;"
+>
+  <div class="accordion-container">
+    
+    <button class="accordion">Weekly Club Meetings</button>
+    <div class="panel">
+      <div class="panel-content">
+        <p>
+          <strong>When:</strong> Every Monday at 5:30 pm
+          <br />
+          <strong>Where:</strong> The GIS room
+        </p>
+        <p>
+          <em>(This is the room with the big screen in the Marriott Library Protospace)</em>
+        </p>
+      </div>
+    </div>
+
+    <button class="accordion">Software Installation Links</button>
+    <div class="panel">
+      <div class="panel-content">
+        <h3>Install Solidworks</h3>
+        <ul>
+          <li>
+            <a
+              href="https://www.cade.utah.edu/faqs/can-i-get-a-student-version-of-solidworks-for-my-home-computerlaptop/"
+              target="_blank"
+            >
+              Students in Price College of Engineering
+            </a>
+          </li>
+          <li>
+            <a href="https://uofu.box.com/v/coe-solidworks" target="_blank">
+              Any student (Student Premium Version)
+            </a>
+          </li>
+        </ul>
+
+        <h3>Install Prusa Slicer</h3>
+        <ul>
+          <li>
+            <a href="https://www.prusa3d.com/page/prusaslicer_424/" target="_blank">
+              Prusa Slicer Download
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="accordion">Solidworks Workshop Recordings</button>
+    <div class="panel">
+      <div class="panel-content">
+        <p>Missed a workshop? Catch up on our YouTube playlist.</p>
+        <ul>
+          <li>
+            <a
+              href="https://www.youtube.com/playlist?list=PLj0oX0SU9Yb_5owS9Qdvnwa8B8CEAxUY1"
+              target="_blank"
+            >
+              View YouTube Playlist
+            </a>
+          </li>
+        </ul>
+        <blockquote>
+          <p style="font-size: 0.9em; font-style: italic; color: #666;">
+            Note: You must be signed into the account associated with the one which you paid dues.
+          </p>
+        </blockquote>
+      </div>
+    </div>
+
+    <button class="accordion">Stay Up to Date</button>
+    <div class="panel">
+      <div class="panel-content">
+        <h3>Public Club Google Calendar</h3>
+        <p>
+          Keep track of all the events and activities by using our
+          <a
+            href="https://calendar.google.com/calendar/u/5?cid=YThiZjk0YTc4ZjBhODBlYjFhYTVhMDc4NjVhMmQ1ZWE2M2FhNmFiMmNkZGJkNTAzMDQ2ZjdiN2Q1ODBiZjM3NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            public Google calendar link</a
+          >.
+        </p>
+
+        <h3>Join Campus Connect</h3>
+        <p>
+          Visit our
+          <a href="https://campusconnect.utah.edu/3D4E/club_signup" target="_blank"
+            >Campus Connect</a
+          >
+          page to join.
+        </p>
+
+        <h3>Find Us Online</h3>
+        <p>
+          Join the <strong>Discord</strong> to engage with others in the club and get updates for
+          social events, workshops, meetings, etc.
+        </p>
+        <p>Follow us on <strong>Instagram</strong> for updates on social events, and flyers.</p>
+        <p>Check out our <strong>GitHub</strong> for project files and models.</p>
+        <p><em>(All links found at the footer of the page)</em></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      } 
+    });
+  }
+</script>

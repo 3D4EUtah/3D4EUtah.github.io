@@ -4,10 +4,10 @@ title: "RC Drone"
 thumbnail: "/media/projects/rc_drone/drone.png"
 description: "A remote-controlled drone with a 3D-printed frame and blades."
 members:
-  - "Evan Falconer"
-  - "Nandhini Ramanathan"
-  - "Adon Sharp"
-  - "Oscar Lopez"
+  - evan_falconer
+  - nandhini_ramanathan
+  - adon_sharp
+  - oscar_lopez
 images:
   - "rc_drone/drone.png"
   - "rc_drone/drone2.png"

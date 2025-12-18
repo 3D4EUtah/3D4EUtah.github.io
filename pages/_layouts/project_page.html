@@ -39,10 +39,29 @@ layout: custom_page
     margin-bottom: 0.5rem;
   }
 
+  /* --- UPDATED MEMBER LINK STYLING --- */
   .project-members p {
     font-size: 1.1em;
     margin-bottom: 5px;
   }
+
+  /* This targets the link in all states (normal, visited, active) */
+  .member-link,
+  .member-link:visited,
+  .member-link:active,
+  .member-link:focus {
+    color: #ba0c2f !important; /* Force University Red */
+    font-weight: 600;
+    text-decoration: none;
+    transition: text-decoration 0.2s ease;
+  }
+
+  /* On hover, keep the red color but add the underline */
+  .member-link:hover {
+    color: #ba0c2f !important;
+    text-decoration: underline;
+  }
+  /* ----------------------------------- */
 
   .project-description,
   .project-members,
@@ -50,18 +69,24 @@ layout: custom_page
     margin-bottom: 1.5rem;
   }
 
+  /* Gallery Grid */
   .project-gallery-grid,
   .project-video-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 250px));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     justify-content: center;
     gap: 1rem;
     margin-top: 0.5rem;
     text-align: left;
   }
 
+  .project-gallery-grid {
+    justify-items: center;
+  }
+
   .project-gallery-grid img {
     width: 100%;
+    height: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 5px;
@@ -70,28 +95,11 @@ layout: custom_page
     transition: transform 0.3s ease;
   }
 
-  /* --- THIS IS THE NEW RULE FOR THE HOVER EFFECT --- */
   .project-gallery-grid .gallery-thumbnail:hover {
     transform: scale(1.05);
   }
-  /* --- END OF NEW RULE --- */
 
-  /* This wrapper is now redundant because the <img>
-    has the transition directly. We can remove it.
-    I've left it here commented out, but it's not needed
-    for the zoom effect anymore.
-  */
-  /*
-  .gallery-link {
-    display: block;
-    overflow: hidden;
-    border-radius: 5px;
-  }
-  .gallery-link:hover img {
-    transform: scale(1.05);
-  }
-  */
-
+  /* Lightbox Styling */
   .lightbox {
     position: fixed;
     top: 0;
@@ -118,11 +126,8 @@ layout: custom_page
   }
 
   .lightbox-close,
-  .lightbox-close:visited,
   .lightbox-prev,
-  .lightbox-prev:visited,
-  .lightbox-next,
-  .lightbox-next:visited {
+  .lightbox-next {
     position: absolute;
     font-size: 3rem;
     color: white;
@@ -132,13 +137,15 @@ layout: custom_page
     transition: opacity 0.2s ease;
     z-index: 10001;
     cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
   }
 
   .lightbox-close:hover,
   .lightbox-prev:hover,
   .lightbox-next:hover {
     opacity: 1;
-    color: white;
   }
 
   .lightbox-close {
@@ -156,6 +163,7 @@ layout: custom_page
     right: 30px;
   }
 
+  /* Video Wrapper */
   .video-wrapper {
     position: relative;
     padding-bottom: 56.25%;
@@ -163,6 +171,7 @@ layout: custom_page
     overflow: hidden;
     margin-bottom: 1.25rem;
     text-align: left;
+    width: 100%;
   }
   .video-wrapper iframe,
   .video-wrapper video {
@@ -182,15 +191,23 @@ layout: custom_page
 <div class="project-container">
   <section class="project-description">
     <p>{{ page.description }}</p>
-
     {{ content }}
   </section>
 
-  {% if page.members and page.members.first != "Idea" %}
+  {% if page.members and page.members.size > 0 %} {% unless page.members
+  contains "Idea" %}
   <div class="project-members">
-    <p>{{ page.members | join: ", " }}</p>
+    <p>
+      <strong>Team:</strong>
+      {% for member_id in page.members %} {% assign member_page = site.members |
+      where: "slug", member_id | first %} {% if member_page %}
+      <a href="{{ member_page.url }}" class="member-link"
+        >{{ member_page.title }}</a
+      >{% unless forloop.last %}, {% endunless %} {% else %} {{ member_id }}{%
+      unless forloop.last %}, {% endunless %} {% endif %} {% endfor %}
+    </p>
   </div>
-  {% endif %} {% if page.images and page.images.size > 0 %}
+  {% endunless %} {% endif %} {% if page.images and page.images.size > 0 %}
   <section class="project-gallery">
     <h3>Gallery</h3>
 
@@ -216,17 +233,21 @@ layout: custom_page
       <div class="lightbox lightbox-item" data-index="{{ forloop.index }}">
         <img src="{{ full_image_path }}" alt="{{ page.title }} gallery image" />
 
-        <a
+        <button
           class="lightbox-close js-lightbox-close"
           aria-label="Close image viewer"
-          >&times;</a
         >
-        <a class="lightbox-prev js-lightbox-prev" aria-label="Previous image"
-          >&#10094;</a
+          &times;
+        </button>
+        <button
+          class="lightbox-prev js-lightbox-prev"
+          aria-label="Previous image"
         >
-        <a class="lightbox-next js-lightbox-next" aria-label="Next image"
-          >&#10095;</a
-        >
+          &#10094;
+        </button>
+        <button class="lightbox-next js-lightbox-next" aria-label="Next image">
+          &#10095;
+        </button>
       </div>
       {% endfor %}
     </div>
@@ -281,13 +302,15 @@ layout: custom_page
       lightboxes.forEach(lb => lb.classList.remove('lightbox-active'));
 
       const activeLightbox = document.querySelector(`.lightbox-item[data-index="${index}"]`);
-      activeLightbox.classList.add('lightbox-active');
+      if(activeLightbox) {
+        activeLightbox.classList.add('lightbox-active');
 
-      const prevButton = activeLightbox.querySelector('.js-lightbox-prev');
-      const nextButton = activeLightbox.querySelector('.js-lightbox-next');
+        const prevButton = activeLightbox.querySelector('.js-lightbox-prev');
+        const nextButton = activeLightbox.querySelector('.js-lightbox-next');
 
-      if (prevButton) prevButton.style.display = (index === 1) ? 'none' : 'block';
-      if (nextButton) nextButton.style.display = (index === totalImages) ? 'none' : 'block';
+        if (prevButton) prevButton.style.display = (index === 1) ? 'none' : 'block';
+        if (nextButton) nextButton.style.display = (index === totalImages) ? 'none' : 'block';
+      }
     }
 
     function closeLightbox() {
@@ -309,8 +332,8 @@ layout: custom_page
     });
 
     closeButtons.forEach(btn => btn.addEventListener('click', closeLightbox));
-    prevButtons.forEach(btn => btn.addEventListener('click', showPrev));
-    nextButtons.forEach(btn => btn.addEventListener('click', showNext));
+    prevButtons.forEach(btn => btn.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); }));
+    nextButtons.forEach(btn => btn.addEventListener('click', (e) => { e.stopPropagation(); showNext(); }));
 
     lightboxes.forEach(lightbox => {
       lightbox.addEventListener('click', function(event) {
@@ -321,7 +344,7 @@ layout: custom_page
     });
 
     document.addEventListener('keydown', function(event) {
-      if (currentIndex === 0 || !document.querySelector('.lightbox-active')) {
+      if (!document.querySelector('.lightbox-active')) {
         return;
       }
 

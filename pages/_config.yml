@@ -42,6 +42,11 @@ collections:
   past_projects:
     output: true
     permalink: /projects/:name/
+  members:
+    output: true
+    permalink: /people/:name/
+  events:
+    output: false # We only list them on the main events page
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

@@ -1,0 +1,79 @@
+---
+layout: custom_page
+---
+
+<style>
+  .member-profile-container {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .member-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .member-name {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+
+  .member-role {
+    font-size: 1.2rem;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 2rem;
+  }
+
+  .member-bio {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 600px;
+  }
+
+  .contact-section {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid #eee;
+    width: 100%;
+  }
+</style>
+
+<div class="member-profile-container">
+  <img
+    src="{{ page.image | default: '/media/pfp.png' }}"
+    alt="{{ page.title }}"
+    class="member-image"
+  />
+
+  <h1 class="member-name">{{ page.title }}</h1>
+
+  {% if page.role %}
+  <p class="member-role">{{ page.role }}</p>
+  {% endif %}
+
+  <div class="member-bio">{{ content }}</div>
+
+  {% if page.contact_link %}
+  <div class="contact-section">
+    <h3>Contact</h3>
+    <a href="{{ page.contact_link }}" class="btn-red" target="_blank">
+      {{ page.contact_text | default: "Connect" }}
+    </a>
+  </div>
+  {% endif %}
+</div>

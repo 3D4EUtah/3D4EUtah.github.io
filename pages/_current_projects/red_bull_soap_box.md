@@ -4,8 +4,8 @@ title: "Red Bull Soap Box Car"
 thumbnail: "/media/projects/red_bull_soap_box/pose4.jpg"
 description: "Designing and building a 3D-printed car for the Red Bull Soap Box Race."
 members:
-  - "Lucas Bolster"
-  - "Eden Yau"
+  - lucas_bolster
+  - eden_yau
 images:
   - "red_bull_soap_box/pose.jpg"
   - "red_bull_soap_box/pose1.jpg"

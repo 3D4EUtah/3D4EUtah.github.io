@@ -1,0 +1,4252 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+_config.yml
+_current_projects/5_axis_printer.md
+_current_projects/chess_set.md
+_current_projects/climbing_holds.md
+_current_projects/dinou.md
+_current_projects/guitar.md
+_current_projects/human_anatomy_model.md
+_current_projects/piano.md
+_current_projects/red_bull_soap_box.md
+_current_projects/robotic_arm.md
+_current_projects/ski_rack_holders.md
+_events/2024-11-01-halloween-hangout
+_events/2024-11-11-teamsgiving-potluck
+_events/2025-11-01-antelope-island-fall-social
+_events/2025-12-01-pi-pizza-dinner.md
+_future_projects/asce_bridge.md
+_future_projects/bioprinting.md
+_future_projects/figurines.md
+_future_projects/headphone_stand.md
+_future_projects/heat_sink.md
+_future_projects/keyboard_display_stand.md
+_future_projects/keyboard_wrist_rest.md
+_future_projects/lithophane_art.md
+_future_projects/mouse_bungee.md
+_future_projects/mouse.md
+_future_projects/raspberry_pi_case.md
+_future_projects/ships_derby_cars.md
+_future_projects/tech_deck.md
+_layouts/custom_page.html
+_layouts/member_page.html
+_layouts/project_page.html
+_members/adon_sharp.md
+_members/alan_mo.md
+_members/alex_venezie.md
+_members/alex_webb.md
+_members/brian_yu.md
+_members/brittney_pemberton.md
+_members/davin_werntz.md
+_members/eden_yau.md
+_members/evan_falconer.md
+_members/isaac_cao.md
+_members/jackson_moller.md
+_members/james_delacluyse.md
+_members/jus_zavbi.md
+_members/lance_petrisko.md
+_members/lucas_bolster.md
+_members/nandhini_ramanathan.md
+_members/nathan_li.md
+_members/oscar_lopez.md
+_members/ryan_slater.md
+_members/zachary_au.md
+_past_projects/laptop_stand.md
+_past_projects/mechanical_keyboard.md
+_past_projects/model_the_u.md
+_past_projects/rc_drone.md
+_past_projects/t_shirt_cannon.md
+_past_projects/tech_deck.md
+.gitignore
+404.markdown
+custom_main.css
+custom-minima-social-icons.svg
+events.html
+Gemfile
+index.html
+media/480.png
+media/blankCertificate.png
+media/cad.jpg
+media/city.jpg
+media/comingSoon.jpg
+media/events/antelope_island/comingSoon.jpg
+media/events/halloween_hangout/comingSoon.jpg
+media/events/pi_pizza_dinner/comingSoon.jpg
+media/events/teamsgiving_potluck/comingSoon.jpg
+media/faviconRT.png
+media/faviconWT.png
+media/groupPhotos/meeting1.jpg
+media/groupPhotos/meeting3.jpg
+media/groupPhotos/tabling1.jpg
+media/headshots/alan.jpg
+media/headshots/alex.jpg
+media/headshots/auri.jpg
+media/headshots/brian.jpg
+media/headshots/DSC06824.jpg
+media/headshots/eden.jpg
+media/headshots/evan.jpg
+media/headshots/lucas.jpg
+media/headshots/nathan.jpg
+media/headshots/onWall.jpg
+media/headshots/pan.jpg
+media/headshots/wang.jpg
+media/pfp.png
+media/projects/climbing_holds/climbing_hold1.jpg
+media/projects/dino_u/dino.jpg
+media/projects/dino_u/dino2.jpg
+media/projects/dino_u/dino3.jpg
+media/projects/dino_u/dino4.jpg
+media/projects/guitar/guitar.png
+media/projects/guitar/guitar2.jpg
+media/projects/guitar/guitar3.jpg
+media/projects/human_anatomy_model/heart1.jpg
+media/projects/human_anatomy_model/heart2.jpg
+media/projects/human_anatomy_model/heartThumbnail.jpg
+media/projects/human_anatomy_model/vertebrae1.jpg
+media/projects/human_anatomy_model/vertebrae2.jpg
+media/projects/human_anatomy_model/vertebrae3.jpg
+media/projects/laptop_stand/laptopStand.png
+media/projects/mechanical_keyboard/keyboard.png
+media/projects/model_the_u/modelU.jpg
+media/projects/model_the_u/modelU2.jpg
+media/projects/model_the_u/modelU3.jpg
+media/projects/rc_drone/blade.png
+media/projects/rc_drone/drone.png
+media/projects/rc_drone/drone2.png
+media/projects/rc_drone/drone3.png
+media/projects/rc_drone/evanDrone.png
+media/projects/red_bull_soap_box/pose.jpg
+media/projects/red_bull_soap_box/pose1.jpg
+media/projects/red_bull_soap_box/pose2.jpg
+media/projects/red_bull_soap_box/pose3.jpg
+media/projects/red_bull_soap_box/pose4.jpg
+media/projects/red_bull_soap_box/pose5.jpg
+media/projects/red_bull_soap_box/ride1.jpg
+media/projects/red_bull_soap_box/ride2.jpg
+media/projects/red_bull_soap_box/ride3.jpg
+media/projects/red_bull_soap_box/ride4.jpg
+media/projects/red_bull_soap_box/ride5.jpg
+media/projects/red_bull_soap_box/steer.jpg
+media/projects/t_shirt_cannon/housing.png
+media/projects/t_shirt_cannon/housing2.png
+media/projects/t_shirt_cannon/roller.png
+media/projects/tech_deck/tech1.png
+media/projects/tech_deck/tech2.png
+media/projects/tech_deck/tech3.png
+media/projects/tech_deck/tech4.png
+media/rt.png
+optimize_images.py
+people.html
+projects.html
+resources.html
+unusedProjects/3d4e_tokens.md
+unusedProjects/kazoo.md
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="_config.yml">
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: 3D4E Utah
+email: 3d4e.utah@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  3D4E (3D for Everyone) 3D printing club at the University of Utah.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://3d4eutah.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+github_username: 3D4EUtah
+repository: 3D4EUtah/3D4EUtah.github.io
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+
+collections:
+  current_projects:
+    output: true
+    permalink: /projects/:name/
+  future_projects:
+    output: true
+    permalink: /projects/:name/
+  past_projects:
+    output: true
+    permalink: /projects/:name/
+  members:
+    output: true
+    permalink: /people/:name/
+  events:
+    output: false # We only list them on the main events page
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+</file>
+
+<file path="_current_projects/5_axis_printer.md">
+---
+layout: project_page
+title: "5 Axis Printer"
+thumbnail: "/media/comingSoon.jpg"
+description: "Developing and building a 5-axis 3D printer for complex geometry printing."
+members:
+  - "Project Lead"
+images:
+  - "/media/comingSoon.jpg"
+---
+</file>
+
+<file path="_current_projects/chess_set.md">
+---
+layout: project_page
+title: "Chess Set"
+thumbnail: "/media/comingSoon.jpg"
+description: "A unique, custom-designed 3D-printed chess set."
+members:
+  - "Project Lead"
+images:
+  - "/media/comingSoon.jpg"
+---
+</file>
+
+<file path="_current_projects/climbing_holds.md">
+---
+layout: project_page
+title: "Climbing Holds"
+thumbnail: "/media/projects/climbing_holds/climbing_hold1.jpg"
+description: "Designing and testing custom 3D-printed climbing holds for various wall angles."
+members:
+  - "Project Lead"
+images:
+  - "/climbing_holds/climbing_hold1.jpg"
+---
+</file>
+
+<file path="_current_projects/dinou.md">
+---
+layout: project_page
+title: "DinoU"
+thumbnail: "/media/projects/dino_u/dino2.jpg"
+description: "Project details coming soon!"
+members:
+  - nathan_li
+  - isaac_cao
+images:
+  - "dino_u/dino2.jpg"
+  - "dino_u/dino.jpg"
+  - "dino_u/dino3.jpg"
+  - "dino_u/dino4.jpg"
+---
+</file>
+
+<file path="_current_projects/guitar.md">
+---
+layout: project_page
+title: "Guitar"
+thumbnail: "/media/projects/guitar/guitar.png"
+description: "A custom-built 3D-printed electric guitar."
+members:
+  - alex_venezie
+  - jackson_moller
+  - james_delacluyse
+images:
+  - "guitar/guitar.png"
+  - "guitar/guitar2.jpg"
+  - "guitar/guitar3.jpg"
+---
+</file>
+
+<file path="_current_projects/human_anatomy_model.md">
+---
+layout: project_page
+title: "Human Anatomy Model"
+thumbnail: "/media/projects/human_anatomy_model/heartThumbnail.jpg"
+description: "The Human Anatomy Team is building a to-scale educational anatomical model from real patient MRI, CT, and ultrasound data. Alex has spent hours segmenting and processing medical data in 3D Slicer and Blender, after which models are printed with elastic materials to mimic tissue properties and then assembled in a design that allows organs to be removed and replaced easily.
+"
+members:
+  - lucas_bolster
+  - alex_webb
+  - jus_zavbi
+images:
+  - "human_anatomy_model/heart1.jpg"
+  - "human_anatomy_model/heart2.jpg"
+  - "human_anatomy_model/vertebrae1.jpg"
+  - "human_anatomy_model/vertebrae2.jpg"
+  - "human_anatomy_model/vertebrae3.jpg"
+---
+</file>
+
+<file path="_current_projects/piano.md">
+---
+layout: project_page
+title: "Piano"
+thumbnail: "/media/comingSoon.jpg"
+description: "Building a 3D-printed playable keyboard or piano mechanism."
+members:
+  - "Project Lead"
+images:
+  - "/media/comingSoon.jpg"
+---
+</file>
+
+<file path="_current_projects/red_bull_soap_box.md">
+---
+layout: project_page
+title: "Red Bull Soap Box Car"
+thumbnail: "/media/projects/red_bull_soap_box/pose4.jpg"
+description: "Designing and building a 3D-printed car for the Red Bull Soap Box Race."
+members:
+  - lucas_bolster
+  - eden_yau
+images:
+  - "red_bull_soap_box/pose.jpg"
+  - "red_bull_soap_box/pose1.jpg"
+  - "red_bull_soap_box/pose2.jpg"
+  - "red_bull_soap_box/pose3.jpg"
+  - "red_bull_soap_box/pose4.jpg"
+  - "red_bull_soap_box/pose5.jpg"
+  - "red_bull_soap_box/ride1.jpg"
+  - "red_bull_soap_box/ride2.jpg"
+  - "red_bull_soap_box/ride3.jpg"
+  - "red_bull_soap_box/ride4.jpg"
+  - "red_bull_soap_box/ride5.jpg"
+  - "red_bull_soap_box/steer.jpg"
+videos:
+  - "https://www.youtube.com/embed/iCt675W9-IQ?si=xFAH7YMgQ4Tw3K6C"
+  - "https://www.youtube.com/embed/jilR9EwG0mg?si=UFZLllMAYH_29_vJ"
+  - "https://www.youtube.com/embed/0AyzlHmsNE4"
+---
+</file>
+
+<file path="_current_projects/robotic_arm.md">
+---
+layout: project_page
+title: "Robotic Arm"
+thumbnail: "/media/comingSoon.jpg"
+description: "A multi-axis 3D-printed robotic arm."
+members:
+  - "Project Lead"
+images:
+  - "/media/comingSoon.jpg"
+---
+</file>
+
+<file path="_current_projects/ski_rack_holders.md">
+---
+layout: project_page
+title: "Ski Rack Holders"
+thumbnail: "/media/comingSoon.jpg"
+description: "Designing custom 3D-printed holders for a ski rack."
+members:
+  - "Project Lead"
+images:
+  - "/media/comingSoon.jpg"
+---
+</file>
+
+<file path="_events/2024-11-01-halloween-hangout">
+---
+title: "Robotics Halloween Hangout"
+date: 2024-11-01
+folder: "halloween_hangout"
+images: 
+    - "comingSoon.jpg"
+---
+
+We hung out with robotics team
+</file>
+
+<file path="_events/2024-11-11-teamsgiving-potluck">
+---
+title: "Teamsgiving Potluck"
+date: 2024-11-11
+folder: "teamsgiving_potluck"
+images: 
+    - "comingSoon.jpg"
+---
+
+We had a teamsgiving
+</file>
+
+<file path="_events/2025-11-01-antelope-island-fall-social">
+---
+title: "Antelope Island Fall Social"
+date: 2025-11-01
+folder: "antelope_island"
+images: 
+    - "comingSoon.jpg"
+---
+
+We went to Antelope Island
+</file>
+
+<file path="_events/2025-12-01-pi-pizza-dinner.md">
+---
+title: "Pi Pizza Dinner"
+date: 2025-12-01
+folder: "pi_pizza_dinner"
+images: 
+    - "comingSoon.jpg"
+---
+
+An event where we gathered for a pizza dinner.
+</file>
+
+<file path="_future_projects/asce_bridge.md">
+---
+layout: project_page
+title: "ASCE Bridge"
+thumbnail: "/media/comingSoon.jpg"
+description: "Future project idea: A 3D-printed bridge for the ASCE competition."
+members:
+  - "Idea"
+images:
+  - "/media/comingSoon.jpg"
+---
+</file>
+
+<file path="_future_projects/bioprinting.md">
+---
+layout: project_page
+title: "Bioprinting"
+thumbnail: "/media/comingSoon.jpg"
+description: "Research and development into bioprinting techniques and materials."
+members:
+  - "Project Lead"
+images:
+  - "/media/comingSoon.jpg"
+---
+</file>
+
+<file path="_future_projects/figurines.md">
+---
+layout: project_page
+title: "Figurines"
+thumbnail: "/media/comingSoon.jpg"
+description: "Future project idea: Designing and printing custom figurines."
+members:
+  - "Idea"
+images:
+  - "/media/comingSoon.jpg"
+---
+</file>
+
+<file path="_future_projects/headphone_stand.md">
+---
+layout: project_page
+title: "Headphone Stand"
+thumbnail: "/media/comingSoon.jpg"
+description: "Future project idea: A custom 3D-printed headphone stand."
+members:
+  - "Idea"
+images:
+  - "/media/comingSoon.jpg"
+---
+</file>
+
+<file path="_future_projects/heat_sink.md">
+---
+layout: project_page
+title: "Heat Sink"
+thumbnail: "/media/comingSoon.jpg"
+description: "Future project idea: Designing a 3D-printed heat sink with optimized geometry."
+members:
+  - "Idea"
+images:
+  - "/media/comingSoon.jpg"
+---
+</file>
+
+<file path="_future_projects/keyboard_display_stand.md">
+---
+layout: project_page
+title: "Keyboard Display Stand"
+thumbnail: "/media/comingSoon.jpg"
+description: "Future project idea: 3D-printed stands for displaying mechanical keyboards."
+members:
+  - "Idea"
+images:
+  - "/media/comingSoon.jpg"
+---
+</file>
+
+<file path="_future_projects/keyboard_wrist_rest.md">
+---
+layout: project_page
+title: "Keyboard Wrist Rest"
+thumbnail: "/media/comingSoon.jpg"
+description: "Future project idea: A custom, ergonomic 3D-printed wrist rest."
+members:
+  - "Idea"
+images:
+  - "/media/comingSoon.jpg"
+---
+</file>
+
+<file path="_future_projects/lithophane_art.md">
+---
+layout: project_page
+title: "Lithophane Art"
+thumbnail: "/media/comingSoon.jpg"
+description: "Future project idea: Creating custom 3D-printed lithophanes from photos."
+members:
+  - "Idea"
+images:
+  - "/media/comingSoon.jpg"
+---
+</file>
+
+<file path="_future_projects/mouse_bungee.md">
+---
+layout: project_page
+title: "Mouse Bungee"
+thumbnail: "/media/comingSoon.jpg"
+description: "Future project idea: A 3D-printed mouse bungee for gaming."
+members:
+  - "Idea"
+images:
+  - "/media/comingSoon.jpg"
+---
+</file>
+
+<file path="_future_projects/mouse.md">
+---
+layout: project_page
+title: "Mouse"
+thumbnail: "/media/comingSoon.jpg"
+description: "Future project idea: A 3D-printed ergonomic computer mouse shell."
+members:
+  - "Idea"
+images:
+  - "/media/comingSoon.jpg"
+---
+</file>
+
+<file path="_future_projects/raspberry_pi_case.md">
+---
+layout: project_page
+title: "Raspberry Pi Case"
+thumbnail: "/media/comingSoon.jpg"
+description: "Future project idea: A custom 3D-printed case for a Raspberry Pi."
+members:
+  - "Idea"
+images:
+  - "/media/comingSoon.jpg"
+---
+</file>
+
+<file path="_future_projects/ships_derby_cars.md">
+---
+layout: project_page
+title: "Ships, Derby Cars"
+thumbnail: "/media/comingSoon.jpg"
+description: "Future project idea: 3D-printed models of ships or cars."
+members:
+  - "Idea"
+images:
+  - "/media/comingSoon.jpg"
+---
+</file>
+
+<file path="_future_projects/tech_deck.md">
+---
+layout: project_page
+title: "Tech Deck"
+thumbnail: "/media/comingSoon.jpg"
+description: "Future project idea: 3D-printed fingerboards or skate park obstacles."
+members:
+  - "Idea"
+images:
+  - "/media/comingSoon.jpg"
+---
+</file>
+
+<file path="_layouts/custom_page.html">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ page.title }} | 3D4E Utah</title>
+    <meta name="generator" content="Jekyll v3.9.5" />
+    <meta property="og:title" content="Home" />
+    <meta property="og:locale" content="en_US" />
+    <meta
+      name="description"
+      content="The website for the 3D4E (3D for Everyone) 3D printing club at the University of Utah."
+    />
+    <meta
+      property="og:description"
+      content="The website for the 3D4E (3D for Everyone) 3D printing club at the University of Utah."
+    />
+    <link rel="canonical" href="http://localhost:4000/" />
+    <meta property="og:url" content="http://localhost:4000/" />
+    <meta property="og:site_name" content="3D4E Utah" />
+    <meta property="og:type" content="website" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "description": "The website for the 3D4E (3D for Everyone) 3D printing club at the University of Utah.",
+        "headline": "Home",
+        "name": "3D4E Utah",
+        "url": "http://localhost:4000/"
+      }
+    </script>
+    <link rel="stylesheet" href="/custom_main.css" />
+    <link
+      type="application/atom+xml"
+      rel="alternate"
+      href="http://localhost:4000/feed.xml"
+      title="3D4E Utah"
+    />
+    <link rel="icon" type="image/png" href="/media/faviconRT.png" />
+    <style>
+      .social-media-list a {
+        /* This sets the color for the text (the <span> will inherit it) */
+        color: #828282;
+        text-decoration: none; /* Optional: removes the underline from links */
+      }
+
+      .social-media-list .svg-icon {
+        /* This sets the color for the SVG icon */
+        fill: #828282;
+      }
+
+      /* This rule changes the color of both the text and icon on hover */
+      .social-media-list a:hover,
+      .social-media-list a:hover .svg-icon {
+        color: #444444;
+        fill: #444444;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="site-header" role="banner">
+      <div class="wrapper">
+        <a class="page-link" href="/">
+          <svg class="header-icon">
+            <use xlink:href="/custom-minima-social-icons.svg#3d4eLogo"></use>
+          </svg>
+          <span class="header-link-text">3D4E UTAH</span>
+        </a>
+        <nav class="site-nav">
+          <div class="trigger">
+            <a class="page-link" href="/">HOME</a>
+            <a class="page-link" href="/projects/">PROJECTS</a>
+            <a class="page-link" href="/events/">EVENTS</a>
+            <a class="page-link" href="/people/">PEOPLE</a>
+            <a class="page-link" href="/resources/">RESOURCES</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="page-wrapper">{{ content }}</div>
+    </main>
+
+    <footer class="site-footer h-card">
+      <data class="u-url" href="/"></data>
+      <div class="wrapper">
+        <div class="footer-col-wrapper">
+          <div class="footer-col">
+            <ul class="social-media-list">
+              <li>
+                <a href="mailto:3d4e.utah@gmail.com"
+                  ><svg class="svg-icon">
+                    <use
+                      xlink:href="/custom-minima-social-icons.svg#gmail"
+                    ></use></svg
+                  ><span class="username">3d4e.utah@gmail.com</span></a
+                >
+              </li>
+              <li>
+                <a href="https://discord.gg/WdNJ7QduWY"
+                  ><svg class="svg-icon">
+                    <use
+                      xlink:href="/custom-minima-social-icons.svg#discord"
+                    ></use></svg
+                  ><span class="username">Discord</span></a
+                >
+              </li>
+              <li>
+                <a href="https://www.instagram.com/3D4EUtah/"
+                  ><svg class="svg-icon">
+                    <use
+                      xlink:href="/custom-minima-social-icons.svg#instagram"
+                    ></use></svg
+                  ><span class="username">Instagram</span></a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/3D4EUtah"
+                  ><svg class="svg-icon">
+                    <use
+                      xlink:href="/custom-minima-social-icons.svg#github"
+                    ></use></svg
+                  ><span class="username">GitHub</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+</file>
+
+<file path="_layouts/member_page.html">
+---
+layout: custom_page
+---
+
+<style>
+  .member-profile-container {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .member-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .member-name {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+
+  .member-role {
+    font-size: 1.2rem;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 2rem;
+  }
+
+  .member-bio {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 600px;
+  }
+
+  .contact-section {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid #eee;
+    width: 100%;
+  }
+</style>
+
+<div class="member-profile-container">
+  <img
+    src="{{ page.image | default: '/media/pfp.png' }}"
+    alt="{{ page.title }}"
+    class="member-image"
+  />
+
+  <h1 class="member-name">{{ page.title }}</h1>
+
+  {% if page.role %}
+  <p class="member-role">{{ page.role }}</p>
+  {% endif %}
+
+  <div class="member-bio">{{ content }}</div>
+
+  {% if page.contact_link %}
+  <div class="contact-section">
+    <h3>Contact</h3>
+    <a href="{{ page.contact_link }}" class="btn-red" target="_blank">
+      {{ page.contact_text | default: "Connect" }}
+    </a>
+  </div>
+  {% endif %}
+</div>
+</file>
+
+<file path="_layouts/project_page.html">
+---
+layout: custom_page
+---
+
+<style>
+  .project-header {
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 3rem 1rem;
+    box-sizing: border-box;
+  }
+  .project-header h1 {
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+  .project-container {
+    max-width: 90%;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .project-description p {
+    font-size: 1.2em;
+    padding-top: 0;
+  }
+
+  .project-gallery h3,
+  .project-videos h3 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+    display: inline-block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* --- UPDATED MEMBER LINK STYLING --- */
+  .project-members p {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+  }
+
+  /* This targets the link in all states (normal, visited, active) */
+  .member-link,
+  .member-link:visited,
+  .member-link:active,
+  .member-link:focus {
+    color: #ba0c2f !important; /* Force University Red */
+    font-weight: 600;
+    text-decoration: none;
+    transition: text-decoration 0.2s ease;
+  }
+
+  /* On hover, keep the red color but add the underline */
+  .member-link:hover {
+    color: #ba0c2f !important;
+    text-decoration: underline;
+  }
+  /* ----------------------------------- */
+
+  .project-description,
+  .project-members,
+  .project-gallery {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Gallery Grid */
+  .project-gallery-grid,
+  .project-video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    text-align: left;
+  }
+
+  .project-gallery-grid {
+    justify-items: center;
+  }
+
+  .project-gallery-grid img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .project-gallery-grid .gallery-thumbnail:hover {
+    transform: scale(1.05);
+  }
+
+  /* Lightbox Styling */
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 10000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .lightbox-active {
+    display: flex;
+  }
+
+  .lightbox img {
+    height: 80vh;
+    width: auto;
+    max-width: 90vw;
+    object-fit: contain;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .lightbox-close,
+  .lightbox-prev,
+  .lightbox-next {
+    position: absolute;
+    font-size: 3rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    z-index: 10001;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .lightbox-close:hover,
+  .lightbox-prev:hover,
+  .lightbox-next:hover {
+    opacity: 1;
+  }
+
+  .lightbox-close {
+    top: 20px;
+    right: 30px;
+  }
+  .lightbox-prev {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 30px;
+  }
+  .lightbox-next {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+  }
+
+  /* Video Wrapper */
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+    text-align: left;
+    width: 100%;
+  }
+  .video-wrapper iframe,
+  .video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+</style>
+
+<section class="title-section">
+  <h1>{{ page.title }}</h1>
+</section>
+
+<div class="project-container">
+  <section class="project-description">
+    <p>{{ page.description }}</p>
+    {{ content }}
+  </section>
+
+  {% if page.members and page.members.size > 0 %} {% unless page.members
+  contains "Idea" %}
+  <div class="project-members">
+    <p>
+      <strong>Team:</strong>
+      {% for member_id in page.members %} {% assign member_page = site.members |
+      where: "slug", member_id | first %} {% if member_page %}
+      <a href="{{ member_page.url }}" class="member-link"
+        >{{ member_page.title }}</a
+      >{% unless forloop.last %}, {% endunless %} {% else %} {{ member_id }}{%
+      unless forloop.last %}, {% endunless %} {% endif %} {% endfor %}
+    </p>
+  </div>
+  {% endunless %} {% endif %} {% if page.images and page.images.size > 0 %}
+  <section class="project-gallery">
+    <h3>Gallery</h3>
+
+    <div class="project-gallery-grid">
+      {% assign gallery_path = "/media/projects/" %} {% for image_filename in
+      page.images %} {% assign full_image_path = gallery_path | append:
+      image_filename %}
+
+      <img
+        src="{{ full_image_path }}"
+        alt="{{ page.title }} gallery image"
+        class="gallery-thumbnail"
+        data-index="{{ forloop.index }}"
+      />
+      {% endfor %}
+    </div>
+
+    <div class="lightbox-container">
+      {% assign gallery_path = "/media/projects/" %} {% for image_filename in
+      page.images %} {% assign full_image_path = gallery_path | append:
+      image_filename %}
+
+      <div class="lightbox lightbox-item" data-index="{{ forloop.index }}">
+        <img src="{{ full_image_path }}" alt="{{ page.title }} gallery image" />
+
+        <button
+          class="lightbox-close js-lightbox-close"
+          aria-label="Close image viewer"
+        >
+          &times;
+        </button>
+        <button
+          class="lightbox-prev js-lightbox-prev"
+          aria-label="Previous image"
+        >
+          &#10094;
+        </button>
+        <button class="lightbox-next js-lightbox-next" aria-label="Next image">
+          &#10095;
+        </button>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %} {% if page.videos and page.videos.size > 0 %}
+  <section class="project-videos">
+    <h3>Videos</h3>
+    <div class="project-video-grid">
+      {% for video_src in page.videos %}
+      <div class="video-wrapper">
+        {% if video_src contains "http" %}
+        <iframe
+          src="{{ video_src }}"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe>
+        {% else %}
+        <video controls>
+          <source src="{{ video_src }}" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+    const totalImages = {{ page.images.size | default: 0 }};
+    if (totalImages === 0) return;
+
+    const thumbnails = document.querySelectorAll('.gallery-thumbnail');
+    const lightboxes = document.querySelectorAll('.lightbox-item');
+    const closeButtons = document.querySelectorAll('.js-lightbox-close');
+    const prevButtons = document.querySelectorAll('.js-lightbox-prev');
+    const nextButtons = document.querySelectorAll('.js-lightbox-next');
+
+    let currentIndex = 0;
+
+    function showLightbox(index) {
+      if (index < 1 || index > totalImages) {
+        return;
+      }
+      currentIndex = index;
+
+      lightboxes.forEach(lb => lb.classList.remove('lightbox-active'));
+
+      const activeLightbox = document.querySelector(`.lightbox-item[data-index="${index}"]`);
+      if(activeLightbox) {
+        activeLightbox.classList.add('lightbox-active');
+
+        const prevButton = activeLightbox.querySelector('.js-lightbox-prev');
+        const nextButton = activeLightbox.querySelector('.js-lightbox-next');
+
+        if (prevButton) prevButton.style.display = (index === 1) ? 'none' : 'block';
+        if (nextButton) nextButton.style.display = (index === totalImages) ? 'none' : 'block';
+      }
+    }
+
+    function closeLightbox() {
+      lightboxes.forEach(lb => lb.classList.remove('lightbox-active'));
+    }
+
+    function showNext() {
+      showLightbox(currentIndex + 1);
+    }
+
+    function showPrev() {
+      showLightbox(currentIndex - 1);
+    }
+
+    thumbnails.forEach(thumb => {
+      thumb.addEventListener('click', function() {
+        showLightbox(parseInt(this.dataset.index));
+      });
+    });
+
+    closeButtons.forEach(btn => btn.addEventListener('click', closeLightbox));
+    prevButtons.forEach(btn => btn.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); }));
+    nextButtons.forEach(btn => btn.addEventListener('click', (e) => { e.stopPropagation(); showNext(); }));
+
+    lightboxes.forEach(lightbox => {
+      lightbox.addEventListener('click', function(event) {
+        if (event.target === this) {
+          closeLightbox();
+        }
+      });
+    });
+
+    document.addEventListener('keydown', function(event) {
+      if (!document.querySelector('.lightbox-active')) {
+        return;
+      }
+
+      if (event.key === 'Escape' || event.key === 'Esc') {
+        closeLightbox();
+      }
+      if (event.key === 'ArrowRight') {
+        showNext();
+      }
+      if (event.key === 'ArrowLeft') {
+        showPrev();
+      }
+    });
+
+  });
+</script>
+</file>
+
+<file path="_members/adon_sharp.md">
+---
+layout: member_page
+title: Adon Sharp
+role: Club Member
+group: current_member
+image: 
+contact_link: 
+contact_text: 
+---
+Member of the 3D4E Utah team.
+</file>
+
+<file path="_members/alan_mo.md">
+---
+layout: member_page
+title: Alan Mo
+role: Social Chair
+order: 5
+group: board
+image: /media/headshots/alan.jpg
+contact_link: https://www.linkedin.com/in/alanmo24/
+contact_text: LinkedIn
+---
+
+Alan is a Senior undergrad pursuing a 5-year BSMS in Software Development and Computer Science. His career goals include Computational Neurobiology, aiming to use technology for advancements in medicine. He developed 3D design as a hobby from the ME EN 1000 class. In his free time, Alan enjoys swimming, music, and playing with tech.
+</file>
+
+<file path="_members/alex_venezie.md">
+---
+layout: member_page
+title: Alex Venezie
+role: Vice President
+order: 3
+group: board
+image: /media/headshots/alex.jpg
+contact_link:
+contact_text:
+---
+
+Alex Venezie is a Senior Mechanical Engineering Major with a Biomedical Engineering Minor. In the past, Alex has participated in research, interned for startups, and participated in many organizations where 3D printing was a critical aspect in his daily life. Alex is greatly fascinated in 3D printed instruments, medical innovation, and cool tinker items.
+</file>
+
+<file path="_members/alex_webb.md">
+---
+layout: member_page
+title: Alex Webb
+role: Club Member
+group: current_member
+image: 
+contact_link: 
+contact_text: 
+---
+Member of the 3D4E Utah team.
+</file>
+
+<file path="_members/brian_yu.md">
+---
+layout: member_page
+title: Brian Yu
+role: Treasurer
+order: 4
+group: board
+image: /media/headshots/brian.jpg
+contact_link:
+contact_text:
+---
+
+Brian Yu is a Junior Data Science major studying towards a QAMO minor, coming from Utah most of his life but born in South Carolina. After getting inspiration from his brother with an Ender Pro printer, he wants to expand his knowledge on 3d modeling with Solidworks. His interests include statistics, tennis, computer science, rock climbing, boxing, and bowling, while aiming to develop a startup app.
+</file>
+
+<file path="_members/brittney_pemberton.md">
+---
+layout: member_page
+title: Brittney Pemberton
+role: Past Member
+group: past_member
+image: 
+contact_link: 
+contact_text: 
+---
+Member of the 3D4E Utah team.
+</file>
+
+<file path="_members/davin_werntz.md">
+---
+layout: member_page
+title: Davin Werntz
+role: Past Member
+group: past_member
+image: 
+contact_link: 
+contact_text: 
+---
+Member of the 3D4E Utah team.
+</file>
+
+<file path="_members/eden_yau.md">
+---
+layout: member_page
+title: Eden Yau
+role: Technical Lead
+order: 7
+group: board
+image: /media/headshots/eden.jpg
+contact_link:
+contact_text:
+---
+
+Eden is studying Material Science at the University of Utah with a particular interest in additive manufacturing. He has over 6 year of experience with 3d printing and has over 3 years of CAD experience. In his personal time, he likes to model and make iron man cosplays to wear.
+</file>
+
+<file path="_members/evan_falconer.md">
+---
+layout: member_page
+title: Evan Falconer
+role: Technical Lead
+order: 6
+group: board
+image: /media/headshots/evan.jpg
+contact_link:
+contact_text:
+---
+
+Excited by the idea of tearing apart old equipment, and finding useful components for future projects, Evan finds fun in stitching together new devices from old ones. Still new to 3D printing, Evan makes up for it with 3D modeling. Always eager to help, he wants to make sure people can design anything they imagine.
+</file>
+
+<file path="_members/isaac_cao.md">
+---
+layout: member_page
+title: Isaac Cao
+role: Club Member
+group: current_member
+image: 
+contact_link: 
+contact_text: 
+---
+Member of the 3D4E Utah team.
+</file>
+
+<file path="_members/jackson_moller.md">
+---
+layout: member_page
+title: Jackson Moller
+role: Club Member
+group: current_member
+image: 
+contact_link: 
+contact_text: 
+---
+Member of the 3D4E Utah team.
+</file>
+
+<file path="_members/james_delacluyse.md">
+---
+layout: member_page
+title: James DeLacluyse
+role: Club Member
+group: current_member
+image: 
+contact_link: 
+contact_text: 
+---
+Member of the 3D4E Utah team.
+</file>
+
+<file path="_members/jus_zavbi.md">
+---
+layout: member_page
+title: Jus Zavbi
+role: Club Member
+group: current_member
+image: 
+contact_link: 
+contact_text: 
+---
+Member of the 3D4E Utah team.
+</file>
+
+<file path="_members/lance_petrisko.md">
+---
+layout: member_page
+title: Lance Petrisko
+role: Past Member
+group: past_member
+image: 
+contact_link: 
+contact_text: 
+---
+Member of the 3D4E Utah team.
+</file>
+
+<file path="_members/lucas_bolster.md">
+---
+layout: member_page
+title: Lucas Bolster
+role: President
+order: 1
+group: board
+image: /media/headshots/lucas.jpg
+contact_link: https://www.linkedin.com/in/lucas-bolster/
+contact_text: LinkedIn
+---
+
+Lucas is a Senior Mechanical Engineering major. He became fascinated with 3D printing after designing a water pump for ME EN 1000. When he isn't in the Protospace, you can find him skipping legs at the gym, keeping up his Duolingo streak, or being a foosball try-hard with his roommates.
+</file>
+
+<file path="_members/nandhini_ramanathan.md">
+---
+layout: member_page
+title: Nandhini Ramanathan
+role: Club Member
+group: current_member
+image: 
+contact_link: 
+contact_text: 
+---
+Member of the 3D4E Utah team.
+</file>
+
+<file path="_members/nathan_li.md">
+---
+layout: member_page
+title: Nathan Li
+role: Vice President
+order: 2
+group: board
+image: /media/headshots/nathan.jpg
+contact_link:
+contact_text:
+---
+
+Nathan Li, a Junior Physics major at the University of Utah, originally from Shanghai, China, cultivated a passion for photography during high school. At the U, he expanded his interests to cycling and hiking. As a non-technical officer, he anticipates fruitful collaboration and continued learning this semester.
+</file>
+
+<file path="_members/oscar_lopez.md">
+---
+layout: member_page
+title: Oscar Lopez
+role: Club Member
+group: current_member
+image: 
+contact_link: 
+contact_text: 
+---
+Member of the 3D4E Utah team.
+</file>
+
+<file path="_members/ryan_slater.md">
+---
+layout: member_page
+title: Ryan Slater
+role: Past Member
+group: past_member
+image: 
+contact_link: 
+contact_text: 
+---
+Member of the 3D4E Utah team.
+</file>
+
+<file path="_members/zachary_au.md">
+---
+layout: member_page
+title: Zachary Au
+role: Past Member
+group: past_member
+image: 
+contact_link: 
+contact_text: 
+---
+Member of the 3D4E Utah team.
+</file>
+
+<file path="_past_projects/laptop_stand.md">
+---
+layout: project_page
+title: "Laptop Stand"
+thumbnail: "/media/projects/laptop_stand/laptopStand.png"
+description: "Adjustable laptop stand for ergonomics and cooling."
+members:
+  - jus_zavbi
+  - zachary_au
+images:
+  - "/laptop_stand/laptopStand.png"
+---
+</file>
+
+<file path="_past_projects/mechanical_keyboard.md">
+---
+layout: project_page
+title: "Mechanical Keyboard"
+thumbnail: "/media/projects/mechanical_keyboard/keyboard.png"
+description: "A custom 3D-printed case for a mechanical keyboard."
+members:
+  - alan_mo
+  - brian_yu
+  - brittney_pemberton
+images:
+  - "mechanical_keyboard/keyboard.png"
+---
+</file>
+
+<file path="_past_projects/model_the_u.md">
+---
+layout: project_page
+title: "Model the U"
+thumbnail: "/media/projects//model_the_u/modelU.jpg"
+description: "A large-scale 3D-printed model of the University of Utah campus, including the library."
+members:
+  - nathan_li
+  - lance_petrisko
+images:
+  - "/model_the_u/modelU.jpg"
+  - "/model_the_u/modelU2.jpg"
+  - "/model_the_u/modelU3.jpg"
+---
+</file>
+
+<file path="_past_projects/rc_drone.md">
+---
+layout: project_page
+title: "RC Drone"
+thumbnail: "/media/projects/rc_drone/drone.png"
+description: "A remote-controlled drone with a 3D-printed frame and blades."
+members:
+  - evan_falconer
+  - nandhini_ramanathan
+  - adon_sharp
+  - oscar_lopez
+images:
+  - "rc_drone/drone.png"
+  - "rc_drone/drone2.png"
+  - "rc_drone/drone3.png"
+  - "rc_drone/blade.png"
+  - "rc_drone/evanDrone.png"
+---
+</file>
+
+<file path="_past_projects/t_shirt_cannon.md">
+---
+layout: project_page
+title: "T-Shirt Cannon"
+thumbnail: "/media/projects/t_shirt_cannon/housing.png"
+description: "A 3D-printed T-Shirt cannon, including a custom roller mechanism."
+members:
+  - lucas_bolster
+  - ryan_slater
+  - davin_werntz
+images:
+  - "/t_shirt_cannon/roller.png"
+  - "/t_shirt_cannon/housing.png"
+  - "/t_shirt_cannon/housing2.png"
+---
+</file>
+
+<file path="_past_projects/tech_deck.md">
+---
+layout: project_page
+title: "Tech Deck"
+thumbnail: "/media/projects/tech_deck/tech2.png"
+description: "Tech Deck"
+members:
+  - alex_venezie
+images:
+  - "tech_deck/tech1.png"
+  - "tech_deck/tech2.png"
+  - "tech_deck/tech3.png"
+  - "tech_deck/tech4.png"
+---
+</file>
+
+<file path=".gitignore">
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+Gemfile.lock
+</file>
+
+<file path="404.markdown">
+---
+layout: custom_page
+title: 404
+permalink: /404/
+---
+
+## 404
+### Page not found
+The requested page could not be found.
+</file>
+
+<file path="custom_main.css">
+/** Reset some basic elements */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+/** Basic styling */
+body {
+  font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-family: "Montserrat", sans-serif;
+  color: #111;
+  background-color: #fdfdfd;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  padding-top: 3px;
+}
+
+/** Set `margin-bottom` to maintain vertical rhythm */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure,
+.highlight {
+  margin-bottom: 15px;
+}
+
+/** `main` element */
+main {
+  display: block;
+  /* Default value of `display` of `main` element is 'inline' in IE 11. */
+}
+
+/** Images */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/** Figures */
+figure > img {
+  display: block;
+}
+
+figcaption {
+  font-size: 14px;
+}
+
+/** Lists */
+ul,
+ol {
+  margin-left: 30px;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+}
+
+/** Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+/** Links */
+a {
+  color: #2a7ae2;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1756a9;
+}
+
+a:hover {
+  color: #111;
+  text-decoration: underline;
+}
+
+.social-media-list a:hover {
+  text-decoration: none;
+}
+
+.social-media-list a:hover .username {
+  text-decoration: underline;
+}
+
+/** Blockquotes */
+blockquote {
+  color: #828282;
+  border-left: 4px solid #e8e8e8;
+  padding-left: 15px;
+  font-size: 18px;
+  letter-spacing: -1px;
+  font-style: italic;
+}
+
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+/** Code formatting */
+pre,
+code {
+  font-size: 15px;
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  background-color: #eef;
+}
+
+code {
+  padding: 1px 5px;
+}
+
+pre {
+  padding: 8px 12px;
+  overflow-x: auto;
+}
+
+pre > code {
+  border: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/** Wrapper */
+.wrapper {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+/** Clearfix */
+.wrapper:after,
+.footer-col-wrapper:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.page-wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/** Icons */
+.svg-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  fill: #828282;
+  padding-right: 5px;
+  vertical-align: text-top;
+}
+
+.header-icon {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  fill: #fff;
+  vertical-align: text-top;
+}
+
+.header-link-text {
+  margin-left: 5px;
+  color: white;
+  font-size: 12pt;
+}
+
+.social-media-list li + li {
+  padding-top: 5px;
+}
+
+/** Tables */
+table {
+  margin-bottom: 30px;
+  width: 100%;
+  text-align: left;
+  color: #3f3f3f;
+  border-collapse: collapse;
+  border: 1px solid #e8e8e8;
+}
+
+table tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+table th,
+table td {
+  padding: 10px 15px;
+}
+
+table th {
+  background-color: #f0f0f0;
+  border: 1px solid #dedede;
+  border-bottom-color: #c9c9c9;
+}
+
+table td {
+  border: 1px solid #e8e8e8;
+}
+
+/** Site header */
+.site-header {
+  background-color: #ba0c2f;
+  min-height: 55px;
+  position: relative;
+  z-index: 9999;
+  padding: 0.2vw;
+}
+
+.site-title {
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 54px;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+  float: left;
+}
+
+.site-title,
+.site-title:visited {
+  color: #fff;
+}
+
+.site-nav {
+  float: right;
+  line-height: 54px;
+}
+
+.site-nav .nav-trigger {
+  display: none;
+}
+
+.site-nav .menu-icon {
+  display: none;
+}
+
+.site-nav .page-link {
+  color: #fff;
+  line-height: 1.5;
+}
+
+.site-nav .page-link:not(:last-child) {
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .site-nav {
+    position: absolute;
+    top: 9px;
+    right: 15px;
+    background-color: #fdfdfd;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    text-align: right;
+  }
+
+  .site-nav label[for="nav-trigger"] {
+    display: block;
+    float: right;
+    width: 36px;
+    height: 36px;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .site-nav .menu-icon {
+    display: block;
+    float: right;
+    width: 36px;
+    height: 26px;
+    line-height: 0;
+    padding-top: 10px;
+    text-align: center;
+  }
+
+  .site-nav .menu-icon > svg {
+    fill: #424242;
+  }
+
+  .site-nav input ~ .trigger {
+    clear: both;
+    display: none;
+  }
+
+  .site-nav input:checked ~ .trigger {
+    display: block;
+    padding-bottom: 5px;
+  }
+
+  .site-nav .page-link {
+    display: block;
+    padding: 5px 10px;
+    margin-left: 20px;
+  }
+
+  .site-nav .page-link:not(:last-child) {
+    margin-right: 0;
+  }
+}
+
+/** Site footer */
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #d8d8d8;
+  padding: 0.5vw;
+  min-height: 30px;
+}
+
+.site-footer a {
+  font-size: 14px;
+}
+
+.footer-heading {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.contact-list,
+.social-media-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-col-wrapper {
+  font-size: 15px;
+  color: #828282;
+  max-width: 1200px;
+}
+
+.footer-col {
+  margin-bottom: 10px;
+  padding-left: 15px;
+}
+
+.footer-col-1,
+.footer-col-2,
+.footer-col-3 {
+  width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  .footer-col-1,
+  .footer-col-2,
+  .footer-col-3 {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-col {
+    float: none;
+    width: -webkit-calc(100% - (30px / 2));
+    width: calc(100% - (30px / 2));
+  }
+}
+
+.page-heading {
+  font-size: 32px;
+}
+
+.post-list-heading {
+  font-size: 28px;
+}
+
+.post-list {
+  margin-left: 0;
+  list-style: none;
+}
+
+.post-list > li {
+  margin-bottom: 30px;
+}
+
+.post-meta {
+  font-size: 14px;
+  color: #828282;
+}
+
+.post-link {
+  display: block;
+  font-size: 24px;
+}
+
+/** Posts */
+.post-header {
+  margin-bottom: 30px;
+}
+
+.post-title {
+  font-size: 42px;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+@media screen and (max-width: 800px) {
+  .post-title {
+    font-size: 36px;
+  }
+}
+
+.post-content {
+  margin-bottom: 30px;
+}
+
+.post-content h2 {
+  font-size: 32px;
+}
+
+@media screen and (max-width: 800px) {
+  .post-content h2 {
+    font-size: 28px;
+  }
+}
+
+.post-content h3 {
+  font-size: 26px;
+}
+
+@media screen and (max-width: 800px) {
+  .post-content h3 {
+    font-size: 22px;
+  }
+}
+
+.post-content h4 {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .post-content h4 {
+    font-size: 18px;
+  }
+}
+
+/** Syntax highlighting styles */
+.highlight {
+  background: #fff;
+}
+
+.highlighter-rouge .highlight {
+  background: #eef;
+}
+
+.highlight .c {
+  color: #998;
+  font-style: italic;
+}
+
+.highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+
+.highlight .k {
+  font-weight: bold;
+}
+
+.highlight .o {
+  font-weight: bold;
+}
+
+.highlight .cm {
+  color: #998;
+  font-style: italic;
+}
+
+.highlight .cp {
+  color: #999;
+  font-weight: bold;
+}
+
+.highlight .c1 {
+  color: #998;
+  font-style: italic;
+}
+
+.highlight .cs {
+  color: #999;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.highlight .gd {
+  color: #000;
+  background-color: #fdd;
+}
+
+.highlight .gd .x {
+  color: #000;
+  background-color: #faa;
+}
+
+.highlight .ge {
+  font-style: italic;
+}
+
+.highlight .gr {
+  color: #a00;
+}
+
+.highlight .gh {
+  color: #999;
+}
+
+.highlight .gi {
+  color: #000;
+  background-color: #dfd;
+}
+
+.highlight .gi .x {
+  color: #000;
+  background-color: #afa;
+}
+
+.highlight .go {
+  color: #888;
+}
+
+.highlight .gp {
+  color: #555;
+}
+
+.highlight .gs {
+  font-weight: bold;
+}
+
+.highlight .gu {
+  color: #aaa;
+}
+
+.highlight .gt {
+  color: #a00;
+}
+
+.highlight .kc {
+  font-weight: bold;
+}
+
+.highlight .kd {
+  font-weight: bold;
+}
+
+.highlight .kp {
+  font-weight: bold;
+}
+
+.highlight .kr {
+  font-weight: bold;
+}
+
+.highlight .kt {
+  color: #458;
+  font-weight: bold;
+}
+
+.highlight .m {
+  color: #099;
+}
+
+.highlight .s {
+  color: #d14;
+}
+
+.highlight .na {
+  color: #008080;
+}
+
+.highlight .nb {
+  color: #0086b3;
+}
+
+.highlight .nc {
+  color: #458;
+  font-weight: bold;
+}
+
+.highlight .no {
+  color: #008080;
+}
+
+.highlight .ni {
+  color: #800080;
+}
+
+.highlight .ne {
+  color: #900;
+  font-weight: bold;
+}
+
+.highlight .nf {
+  color: #900;
+  font-weight: bold;
+}
+
+.highlight .nn {
+  color: #555;
+}
+
+.highlight .nt {
+  color: #000080;
+}
+
+.highlight .nv {
+  color: #008080;
+}
+
+.highlight .ow {
+  font-weight: bold;
+}
+
+.highlight .w {
+  color: #bbb;
+}
+
+.highlight .mf {
+  color: #099;
+}
+
+.highlight .mh {
+  color: #099;
+}
+
+.highlight .mi {
+  color: #099;
+}
+
+.highlight .mo {
+  color: #099;
+}
+
+.highlight .sb {
+  color: #d14;
+}
+
+.highlight .sc {
+  color: #d14;
+}
+
+.highlight .sd {
+  color: #d14;
+}
+
+.highlight .s2 {
+  color: #d14;
+}
+
+.highlight .se {
+  color: #d14;
+}
+
+.highlight .sh {
+  color: #d14;
+}
+
+.highlight .si {
+  color: #d14;
+}
+
+.highlight .sx {
+  color: #d14;
+}
+
+.highlight .sr {
+  color: #009926;
+}
+
+.highlight .s1 {
+  color: #d14;
+}
+
+.highlight .ss {
+  color: #990073;
+}
+
+.highlight .bp {
+  color: #999;
+}
+
+.highlight .vc {
+  color: #008080;
+}
+
+.highlight .vg {
+  color: #008080;
+}
+
+.highlight .vi {
+  color: #008080;
+}
+
+.highlight .il {
+  color: #099;
+}
+
+/**Added by Alan*/
+.social-media-list li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.page-link {
+  display: flex;
+  align-items: center;
+  font-size: calc(10px + 0.5vw);
+}
+
+.header-link-text {
+  margin-left: 7px;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: calc(18px + 0.7vw);
+}
+
+.header-link-text:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.page-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.site-nav .trigger {
+  display: flex;
+}
+
+.site-header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header .wrapper .site-nav {
+  margin-left: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .site-nav {
+    position: relative;
+    top: 0;
+    width: 25%;
+    border: 1px solid rgba(186, 12, 47);
+  }
+
+  .site-nav .trigger {
+    display: block;
+    background-color: rgba(186, 12, 47);
+    text-align: center;
+  }
+
+  .site-nav .trigger .page-link {
+    display: block;
+    padding: 2px;
+    margin: 0;
+    font-size: calc(9px + 0.7vw);
+  }
+}
+
+.parallax {
+  position: relative;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 50px 0;
+}
+
+/* Title Section */
+.title-section {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-section h1 {
+  font-size: 2em;
+  color: white;
+  margin: 0;
+}
+
+.content-section {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-grid-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 90%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 800px) {
+  .content-grid-container {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content-grid-container {
+    padding: 0 5px;
+  }
+}
+
+.content-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* This centers vertically */
+  align-items: center; /* This centers horizontally */
+  text-align: center;
+}
+
+.content-box img {
+  max-width: 100%; /* Keep image from overflowing */
+  width: auto; /* Let image scale naturally */
+  max-height: 350px; /* NEW: Constrains tall images */
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 10px; /* NEW: Adds space below image */
+}
+
+.content-box h2 {
+  font-size: 1.4em;
+  margin: 15px 0;
+  color: #333;
+}
+
+.content-box p,
+.content-box ul {
+  font-size: 0.9em;
+  color: #333;
+  margin: 0;
+}
+
+.content-box ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.content-box ul li {
+  font-size: 1.1em; /* Slightly reduced for balance */
+  margin-bottom: 5px; /* A bit more space */
+}
+
+.content-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.section {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.section h2 {
+  font-size: 1.8em;
+  color: white;
+  margin: 0;
+}
+
+.section p,
+.section ul {
+  color: white;
+}
+
+.membership-section {
+  width: 100%;
+  height: auto;
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.membership-section h2 {
+  font-size: 1.8em;
+  color: #333;
+}
+
+.membership-section ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1em;
+  color: #333;
+}
+
+.membership-section ul li {
+  margin: 10px 0;
+}
+
+.membership-section p {
+  font-size: 1em;
+  color: #333;
+}
+
+.membership-section img {
+  max-width: 150px;
+  margin-top: 20px;
+}
+
+.grid-container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.scroll-box {
+  width: 90%;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 1vw;
+  background-color: rgba(50, 50, 50, 0.7);
+  border-radius: 10px;
+  margin-bottom: 0.25vw;
+}
+
+.scroll-box h1 {
+  color: white;
+  font-size: calc(11px + 0.6vw);
+  margin: 0;
+}
+.scroll-box p {
+  color: white;
+  font-size: calc(8px + 0.5vw);
+}
+
+.project-box {
+  display: inline-block;
+  width: auto;
+  max-width: calc(10px + 12vw);
+  margin-right: 0.5vw;
+  vertical-align: top;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  word-wrap: break-word;
+  white-space: normal;
+  transition: transform 0.3s ease;
+}
+
+.project-box:hover {
+  transform: translateY(-3px);
+}
+
+/* 3. This ensures images scale correctly inside the boxes */
+.project-box img {
+  max-width: 95%; /* Restored from old .project-box img rule */
+  height: auto;
+  display: block;
+  border-radius: 8px; /* Restored from old .project-box img rule */
+  margin: 0 auto; /* Re-adds centering */
+  margin-bottom: 15px; /* Adds space below image */
+}
+
+.project-box h3 {
+  font-size: calc(10px + 0.5vw);
+  padding: 0;
+  margin: 0;
+}
+
+.project-box p {
+  font-size: calc(7px + 0.5vw);
+  margin: 0;
+  color: #666;
+}
+
+.project-box a {
+  display: inline-block;
+  background-color: #ba0c2f;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: calc(6px + 0.4vw);
+}
+
+.project-box a:hover {
+  background-color: #960a25;
+}
+
+.vertical-scroll-box {
+  height: 90%;
+  overflow-y: auto;
+  width: 90%;
+}
+
+.vertical-scroll-box h1 {
+  color: white;
+}
+
+.people-grid {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  gap: 3vw;
+  row-gap: 2vw;
+  padding: 3vw;
+  padding-top: 0%;
+  padding-bottom: 0%;
+}
+
+.people-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.7vw;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.people-box:hover {
+  transform: translateY(-3px);
+}
+
+.people-box img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.people-box h2 {
+  font-size: calc(12px + 0.5vw);
+  margin-bottom: 10px;
+}
+
+.people-box p {
+  font-size: calc(10px + 0.4vw);
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.people-box a {
+  display: inline-block;
+  background-color: #ba0c2f;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: calc(6px + 0.4vw);
+}
+
+.people-box a:hover {
+  background-color: #960a25;
+}
+
+.resource-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  padding: 0.7vw;
+  margin: 10px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.resource-box h2 {
+  font-size: 1.4em;
+  margin: 15px 0;
+  color: #333;
+}
+
+.resource-box p,
+.resource-box ul {
+  font-size: 0.9em;
+  color: #333;
+  margin: 0;
+}
+
+.resource-box ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.resource-box ul li {
+  margin: 10px 0;
+}
+
+.resource-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Styles for New Project Grid --- */
+
+/* 1. This defines the responsive grid container */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem;
+
+  /* FIX: Makes the grid container fill its parent */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 2. This overrides old .project-box styles when inside the grid */
+.project-grid .project-box {
+  /* Resets the old width/max-width from the scroll-box style */
+  max-width: none;
+  width: 100%;
+
+  /* --- MODIFIED/ADDED FOR CENTERING --- */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* This centers vertically */
+  min-height: 75px; /* Gives "Future" boxes a good height */
+  /* ------------------------------------ */
+
+  margin-right: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+/* 3. This ensures images scale correctly inside the boxes */
+.project-box img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/* --- Styles for Projects Page (Fixed Specificity) --- */
+
+/* This rule is now specific enough to override the old button styles */
+.project-box a.project-image-link {
+  display: block;
+  overflow: hidden;
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 0 auto 15px auto;
+
+  /* Overrides for the old .project-box a */
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+/* This overrides the red hover/focus states */
+.project-box a.project-image-link:hover,
+.project-box a.project-image-link:focus,
+.project-box a.project-image-link:active {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+/* This overrides the default .project-box img styles */
+.project-box a.project-image-link img {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 0;
+  transition: transform 0.3s ease;
+}
+
+/* This is the zoom-on-hover effect */
+.project-box a.project-image-link:hover img {
+  transform: scale(1.1);
+}
+
+/* --- Reusable Red Button Style --- */
+.btn-red,
+.btn-red:visited {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #ba0c2f;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 5px;
+  font-size: calc(10px + 0.5vw);
+  font-weight: 400;
+  transition: background-color 0.3s ease;
+}
+
+/* This replaces the 'onmouseover' and 'onmouseout' */
+.btn-red:hover,
+.btn-red:active {
+  background-color: #960a25;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* --- New Style for People Page --- */
+.person-title {
+  font-size: calc(11px + 0.4vw);
+  font-weight: bold;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* --- STYLES FROM project_page.html --- */
+.project-header {
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 3rem 1rem;
+  box-sizing: border-box;
+}
+.project-header h1 {
+  font-size: 2.5em;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+.project-container {
+  max-width: 90%;
+  margin: 0 auto 2rem auto;
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.project-description p {
+  font-size: 1.2em;
+  padding-top: 0;
+}
+
+.project-gallery h3,
+.project-videos h3 {
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+  display: inline-block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-members p {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+.project-description,
+.project-members,
+.project-gallery {
+  margin-bottom: 1.5rem;
+}
+
+.project-gallery-grid,
+.project-video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 250px));
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+.project-gallery-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.project-gallery-grid .gallery-thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.gallery-link {
+  display: block;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 10000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.lightbox-active {
+  display: flex;
+}
+
+.lightbox img {
+  height: 80vh;
+  width: auto;
+  max-width: 90vw;
+  object-fit: contain;
+  border-radius: 5px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close,
+.lightbox-close:visited,
+.lightbox-prev,
+.lightbox-prev:visited,
+.lightbox-next,
+.lightbox-next:visited {
+  position: absolute;
+  font-size: 3rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  z-index: 10001;
+  cursor: pointer;
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  opacity: 1;
+  color: white;
+}
+
+.lightbox-close {
+  top: 20px;
+  right: 30px;
+}
+.lightbox-prev {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 30px;
+}
+.lightbox-next {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+.video-wrapper iframe,
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* --- STYLES FROM resources.html --- */
+.document-view {
+  max-width: 90vw;
+  padding: 2rem;
+  box-sizing: border-box;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+}
+
+.document-view hr {
+  border: 0;
+  height: 1px;
+  background-color: #e8e8e8;
+  margin: 1rem 0;
+}
+
+.document-view h3 {
+  margin-top: 1rem;
+}
+
+.document-view a {
+  color: #2a7ae2;
+}
+
+.document-view a:visited {
+  color: #2a7ae2;
+}
+
+.document-view a:hover {
+  color: #1756a9;
+  text-decoration: underline;
+}
+
+.resources-background {
+  background-image: url("/media/city.jpg");
+  min-height: 80vh;
+}
+</file>
+
+<file path="custom-minima-social-icons.svg">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<symbol id="dribbble" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 16c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm6.747-6.905c-.234-.074-2.115-.635-4.257-.292.894 2.456 1.258 4.456 1.328 4.872 1.533-1.037 2.624-2.68 2.93-4.58zM10.67 14.3c-.102-.6-.5-2.688-1.46-5.18l-.044.014C5.312 10.477 3.93 13.15 3.806 13.4c1.158.905 2.614 1.444 4.194 1.444.947 0 1.85-.194 2.67-.543zm-7.747-1.72c.155-.266 2.03-3.37 5.555-4.51.09-.03.18-.056.27-.08-.173-.39-.36-.778-.555-1.16-3.413 1.02-6.723.977-7.023.97l-.003.208c0 1.755.665 3.358 1.756 4.57zM1.31 6.61c.307.005 3.122.017 6.318-.832-1.132-2.012-2.353-3.705-2.533-3.952-1.912.902-3.34 2.664-3.784 4.785zM6.4 1.368c.188.253 1.43 1.943 2.548 4 2.43-.91 3.46-2.293 3.582-2.468C11.323 1.827 9.736 1.176 8 1.176c-.55 0-1.087.066-1.6.19zm6.89 2.322c-.145.194-1.29 1.662-3.816 2.694.16.325.31.656.453.99.05.117.1.235.147.352 2.274-.286 4.533.172 4.758.22-.015-1.613-.59-3.094-1.543-4.257z"/></symbol>
+
+<symbol id="facebook" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M15.117 0H.883C.395 0 0 .395 0 .883v14.234c0 .488.395.883.883.883h7.663V9.804H6.46V7.39h2.086V5.607c0-2.066 1.262-3.19 3.106-3.19.883 0 1.642.064 1.863.094v2.16h-1.28c-1 0-1.195.48-1.195 1.18v1.54h2.39l-.31 2.42h-2.08V16h4.077c.488 0 .883-.395.883-.883V.883C16 .395 15.605 0 15.117 0" fill-rule="nonzero"/></symbol>
+
+<symbol id="flickr" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M0 8c0 2.05 1.662 3.71 3.71 3.71 2.05 0 3.713-1.66 3.713-3.71S5.76 4.29 3.71 4.29C1.663 4.29 0 5.95 0 8zm8.577 0c0 2.05 1.662 3.71 3.712 3.71C14.33 11.71 16 10.05 16 8s-1.662-3.71-3.71-3.71c-2.05 0-3.713 1.66-3.713 3.71z"/></symbol>
+
+<symbol id="github" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.09-.202-.36-1.015.07-2.117 0 0 .67-.215 2.2.82.64-.178 1.32-.266 2-.27.68.004 1.36.092 2 .27 1.52-1.035 2.19-.82 2.19-.82.43 1.102.16 1.915.08 2.117.51.56.82 1.274.82 2.147 0 3.073-1.87 3.75-3.65 3.947.28.24.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.14.46.55.38C13.71 14.53 16 11.53 16 8c0-4.418-3.582-8-8-8"/></symbol>
+
+<symbol id="googleplus" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M5.09 7.273v1.745h2.89c-.116.75-.873 2.197-2.887 2.197-1.737 0-3.155-1.44-3.155-3.215S3.353 4.785 5.09 4.785c.99 0 1.652.422 2.03.786l1.382-1.33c-.887-.83-2.037-1.33-3.41-1.33C2.275 2.91 0 5.19 0 8s2.276 5.09 5.09 5.09c2.94 0 4.888-2.065 4.888-4.974 0-.334-.036-.59-.08-.843H5.09zm10.91 0h-1.455V5.818H13.09v1.455h-1.454v1.454h1.455v1.455h1.46V8.727H16"/></symbol>
+
+<symbol id="instagram" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 0C5.827 0 5.555.01 4.702.048 3.85.088 3.27.222 2.76.42c-.526.204-.973.478-1.417.923-.445.444-.72.89-.923 1.417-.198.51-.333 1.09-.372 1.942C.008 5.555 0 5.827 0 8s.01 2.445.048 3.298c.04.852.174 1.433.372 1.942.204.526.478.973.923 1.417.444.445.89.72 1.417.923.51.198 1.09.333 1.942.372.853.04 1.125.048 3.298.048s2.445-.01 3.298-.048c.852-.04 1.433-.174 1.942-.372.526-.204.973-.478 1.417-.923.445-.444.72-.89.923-1.417.198-.51.333-1.09.372-1.942.04-.853.048-1.125.048-3.298s-.01-2.445-.048-3.298c-.04-.852-.174-1.433-.372-1.942-.204-.526-.478-.973-.923-1.417-.444-.445-.89-.72-1.417-.923-.51-.198-1.09-.333-1.942-.372C10.445.008 10.173 0 8 0zm0 1.44c2.136 0 2.39.01 3.233.048.78.036 1.203.166 1.485.276.374.145.64.318.92.598.28.28.453.546.598.92.11.282.24.705.276 1.485.038.844.047 1.097.047 3.233s-.01 2.39-.05 3.233c-.04.78-.17 1.203-.28 1.485-.15.374-.32.64-.6.92-.28.28-.55.453-.92.598-.28.11-.71.24-1.49.276-.85.038-1.1.047-3.24.047s-2.39-.01-3.24-.05c-.78-.04-1.21-.17-1.49-.28-.38-.15-.64-.32-.92-.6-.28-.28-.46-.55-.6-.92-.11-.28-.24-.71-.28-1.49-.03-.84-.04-1.1-.04-3.23s.01-2.39.04-3.24c.04-.78.17-1.21.28-1.49.14-.38.32-.64.6-.92.28-.28.54-.46.92-.6.28-.11.7-.24 1.48-.28.85-.03 1.1-.04 3.24-.04zm0 2.452c-2.27 0-4.108 1.84-4.108 4.108 0 2.27 1.84 4.108 4.108 4.108 2.27 0 4.108-1.84 4.108-4.108 0-2.27-1.84-4.108-4.108-4.108zm0 6.775c-1.473 0-2.667-1.194-2.667-2.667 0-1.473 1.194-2.667 2.667-2.667 1.473 0 2.667 1.194 2.667 2.667 0 1.473-1.194 2.667-2.667 2.667zm5.23-6.937c0 .53-.43.96-.96.96s-.96-.43-.96-.96.43-.96.96-.96.96.43.96.96z"/></symbol>
+
+<symbol id="linkedin" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M13.632 13.635h-2.37V9.922c0-.886-.018-2.025-1.234-2.025-1.235 0-1.424.964-1.424 1.96v3.778h-2.37V6H8.51v1.04h.03c.318-.6 1.092-1.233 2.247-1.233 2.4 0 2.845 1.58 2.845 3.637v4.188zM3.558 4.955c-.762 0-1.376-.617-1.376-1.377 0-.758.614-1.375 1.376-1.375.76 0 1.376.617 1.376 1.375 0 .76-.617 1.377-1.376 1.377zm1.188 8.68H2.37V6h2.376v7.635zM14.816 0H1.18C.528 0 0 .516 0 1.153v13.694C0 15.484.528 16 1.18 16h13.635c.652 0 1.185-.516 1.185-1.153V1.153C16 .516 15.467 0 14.815 0z" fill-rule="nonzero"/></symbol>
+
+<symbol id="pinterest" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 0C3.582 0 0 3.582 0 8c0 3.39 2.108 6.285 5.084 7.45-.07-.633-.133-1.604.028-2.295.146-.625.938-3.977.938-3.977s-.24-.48-.24-1.188c0-1.11.646-1.943 1.448-1.943.683 0 1.012.513 1.012 1.127 0 .687-.436 1.713-.662 2.664-.19.797.4 1.445 1.185 1.445 1.42 0 2.514-1.498 2.514-3.662 0-1.91-1.376-3.25-3.342-3.25-2.276 0-3.61 1.71-3.61 3.47 0 .69.263 1.43.593 1.83.066.08.075.15.057.23-.06.25-.196.8-.223.91-.035.15-.115.18-.268.11C3.516 10.46 2.89 9 2.89 7.82c0-2.52 1.834-4.84 5.287-4.84 2.774 0 4.932 1.98 4.932 4.62 0 2.76-1.74 4.98-4.16 4.98-.81 0-1.57-.42-1.84-.92l-.5 1.9c-.18.698-.67 1.57-1 2.1.75.23 1.54.357 2.37.357 4.41 0 8-3.58 8-8s-3.59-8-8-8z" fill-rule="nonzero"/></symbol>
+
+<symbol id="rss" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M12.8 16C12.8 8.978 7.022 3.2 0 3.2V0c8.777 0 16 7.223 16 16h-3.2zM2.194 11.61c1.21 0 2.195.985 2.195 2.196 0 1.21-.99 2.194-2.2 2.194C.98 16 0 15.017 0 13.806c0-1.21.983-2.195 2.194-2.195zM10.606 16h-3.11c0-4.113-3.383-7.497-7.496-7.497v-3.11c5.818 0 10.606 4.79 10.606 10.607z"/></symbol>
+
+<symbol id="stackoverflow" class="svg-icon" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M12.658 14.577v-4.27h1.423V16H1.23v-5.693h1.42v4.27h10.006zm-8.583-1.423h7.16V11.73h-7.16v1.424zm.173-3.235l6.987 1.46.3-1.38L4.55 8.54l-.302 1.38zm.906-3.37l6.47 3.02.602-1.3-6.47-3.02-.602 1.29zm1.81-3.19l5.478 4.57.906-1.08L7.87 2.28l-.9 1.078zM10.502 0L9.338.863l4.27 5.735 1.164-.862L10.5 0z"/></symbol>
+
+<symbol id="twitter" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.37-1.337.64-2.085.79-.598-.64-1.45-1.04-2.396-1.04-1.812 0-3.282 1.47-3.282 3.28 0 .26.03.51.085.75-2.728-.13-5.147-1.44-6.766-3.42C.83 2.58.67 3.14.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.41-.02-.61-.058.42 1.304 1.63 2.253 3.07 2.28-1.12.88-2.54 1.404-4.07 1.404-.26 0-.52-.015-.78-.045 1.46.93 3.18 1.474 5.04 1.474 6.04 0 9.34-5 9.34-9.33 0-.14 0-.28-.01-.42.64-.46 1.2-1.04 1.64-1.7z" fill-rule="nonzero"/></symbol>
+
+<symbol id="youtube" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M0 7.345c0-1.294.16-2.59.16-2.59s.156-1.1.636-1.587c.608-.637 1.408-.617 1.764-.684C3.84 2.36 8 2.324 8 2.324s3.362.004 5.6.166c.314.038.996.04 1.604.678.48.486.636 1.588.636 1.588S16 6.05 16 7.346v1.258c0 1.296-.16 2.59-.16 2.59s-.156 1.102-.636 1.588c-.608.638-1.29.64-1.604.678-2.238.162-5.6.166-5.6.166s-4.16-.037-5.44-.16c-.356-.067-1.156-.047-1.764-.684-.48-.487-.636-1.587-.636-1.587S0 9.9 0 8.605v-1.26zm6.348 2.73V5.58l4.323 2.255-4.32 2.24z"/></symbol>
+
+<symbol id="discord" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414" viewBox="0 -3 24 24"><path d="M20.317 4.54101C18.7873 3.82774 17.147 3.30224 15.4319 3.00126C15.4007 2.99545 15.3695 3.00997 15.3534 3.039C15.1424 3.4203 14.9087 3.91774 14.7451 4.30873C12.9004 4.02808 11.0652 4.02808 9.25832 4.30873C9.09465 3.90905 8.85248 3.4203 8.64057 3.039C8.62448 3.01094 8.59328 2.99642 8.56205 3.00126C6.84791 3.30128 5.20756 3.82678 3.67693 4.54101C3.66368 4.54681 3.65233 4.5565 3.64479 4.56907C0.533392 9.29283 -0.31895 13.9005 0.0991801 18.451C0.101072 18.4733 0.11337 18.4946 0.130398 18.5081C2.18321 20.0401 4.17171 20.9701 6.12328 21.5866C6.15451 21.5963 6.18761 21.5847 6.20748 21.5585C6.66913 20.9179 7.08064 20.2424 7.43348 19.532C7.4543 19.4904 7.43442 19.441 7.39186 19.4246C6.73913 19.173 6.1176 18.8662 5.51973 18.5178C5.47244 18.4897 5.46865 18.421 5.51216 18.3881C5.63797 18.2923 5.76382 18.1926 5.88396 18.0919C5.90569 18.0736 5.93598 18.0697 5.96153 18.0813C9.88928 19.9036 14.1415 19.9036 18.023 18.0813C18.0485 18.0687 18.0788 18.0726 18.1015 18.091C18.2216 18.1916 18.3475 18.2923 18.4742 18.3881C18.5177 18.421 18.5149 18.4897 18.4676 18.5178C17.8697 18.8729 17.2482 19.173 16.5945 19.4236C16.552 19.4401 16.533 19.4904 16.5538 19.532C16.9143 20.2414 17.3258 20.9169 17.7789 21.5576C17.7978 21.5847 17.8319 21.5963 17.8631 21.5866C19.8241 20.9701 21.8126 20.0401 23.8654 18.5081C23.8834 18.4946 23.8948 18.4742 23.8967 18.452C24.3971 13.1911 23.0585 8.6212 20.3482 4.57004C20.3416 4.5565 20.3303 4.54681 20.317 4.54101ZM8.02002 15.6802C6.8375 15.6802 5.86313 14.577 5.86313 13.222C5.86313 11.8671 6.8186 10.7639 8.02002 10.7639C9.23087 10.7639 10.1958 11.8768 10.1769 13.222C10.1769 14.577 9.22141 15.6802 8.02002 15.6802ZM15.9947 15.6802C14.8123 15.6802 13.8379 14.577 13.8379 13.222C13.8379 11.8671 14.7933 10.7639 15.9947 10.7639C17.2056 10.7639 18.1705 11.8768 18.1516 13.222C18.1516 14.577 17.2056 15.6802 15.9947 15.6802Z"/></symbol>
+
+<symbol id="gmail" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414" viewBox="4 0 24 24">
+<path d="M22.0515 8.52295L16.0644 13.1954L9.94043 8.52295V8.52421L9.94783 8.53053V15.0732L15.9954 19.8466L22.0515 15.2575V8.52295Z" />
+<path d="M23.6231 7.38639L22.0508 8.52292V15.2575L26.9983 11.459V9.17074C26.9983 9.17074 26.3978 5.90258 23.6231 7.38639Z"/>
+<path d="M22.0508 15.2575V23.9924H25.8428C25.8428 23.9924 26.9219 23.8813 26.9995 22.6513V11.459L22.0508 15.2575Z" />
+<path d="M9.94811 24.0001V15.0732L9.94043 15.0669L9.94811 24.0001Z" />
+<path d="M9.94014 8.52404L8.37646 7.39382C5.60179 5.91001 5 9.17692 5 9.17692V11.4651L9.94014 15.0667V8.52404Z" />
+<path d="M9.94043 8.52441V15.0671L9.94811 15.0734V8.53073L9.94043 8.52441Z" />
+<path d="M5 11.4668V22.6591C5.07646 23.8904 6.15673 24.0003 6.15673 24.0003H9.94877L9.94014 15.0671L5 11.4668Z" /></symbol>
+
+<symbol id="3d4eLogo" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414" viewBox="0 0 23 23">
+<path d="M11.48,1.21v10.39s-10.37,0-10.37,0l.2-1.67c.04-.27.15-.35.6-.34h7.49s0-1.72,0-1.72h-3.57c-.1-.23-.12-.91.14-1.46.19-.41.46-.73,1.07-.72h2.35s0-2.07,0-2.07c-1.06.29-2.08.82-3.06,1.53l-1.37-1.49c1.8-1.45,3.92-2.36,6.53-2.44Z"/>
+<path d="M11.47,12.47v10.5s-1.65-.21-1.65-.21c-.41-.04-.38-.25-.39-.6v-3.69s-.39-.03-.39-.03l-5.19.04c-.5.02-.84-.06-1.12-.47-.99-1.54-1.47-3.3-1.6-5.22,0-.22.09-.33.38-.32.39.01.9,0,1.08,0,.25,0,.33.14.39.34.3,1.05.6,2.04.89,2.94.11.41.36.62.8.62,1.12-.02,2.89-.01,4.75,0v-3.37c0-.48.03-.51.49-.52h1.55Z"/>
+<path d="M12.42,12.49l.37-.02h9.75c.28,0,.39.03.36.31,0,.07-.13.88-.14,1.39-.03.39-.24.44-.53.44h-7.71s0,1.7,0,1.7h3.88c-.02.76-.22,1.42-.68,1.95-.11.11-.35.14-.68.14h-2.53s0,2.15,0,2.15c1.8-.56,2.16-.98,2.78-1.37.3-.23.48-.24.7.04l1.15,1.34c-2.4,1.54-3.56,2.17-6.36,2.4-.27,0-.35-.09-.38-.33v-9.91s.02-.23.02-.23Z"/>
+<path d="M12.43,1.28v10.33s10.44,0,10.44,0c.07-5.64-4.92-10.55-10.44-10.33ZM19.76,6.59h-.57v2.85l-1.14,1.13h-2.84l-1.14-1.13v-2.85h-.57v-1.71h2.85v1.71h-.57v2.27h1.71v-2.27h-.57v-1.71h2.85v1.71Z"/></symbol>
+
+<symbol id="mastodon" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+  <path transform="scale(0.07)" d="M211.80734 139.0875c-3.18125 16.36625-28.4925 34.2775-57.5625 37.74875-15.15875 1.80875-30.08375 3.47125-45.99875 2.74125-26.0275-1.1925-46.565-6.2125-46.565-6.2125 0 2.53375.15625 4.94625.46875 7.2025 3.38375 25.68625 25.47 27.225 46.39125 27.9425 21.11625.7225 39.91875-5.20625 39.91875-5.20625l.8675 19.09s-14.77 7.93125-41.08125 9.39c-14.50875.7975-32.52375-.365-53.50625-5.91875C9.23234 213.82 1.40609 165.31125.20859 116.09125c-.365-14.61375-.14-28.39375-.14-39.91875 0-50.33 32.97625-65.0825 32.97625-65.0825C49.67234 3.45375 78.20359.2425 107.86484 0h.72875c29.66125.2425 58.21125 3.45375 74.8375 11.09 0 0 32.975 14.7525 32.975 65.0825 0 0 .41375 37.13375-4.59875 62.915"/>
+  <path transform="scale(0.07)" fill="#FFF" d="M177.50984 80.077v60.94125h-24.14375v-59.15c0-12.46875-5.24625-18.7975-15.74-18.7975-11.6025 0-17.4175 7.5075-17.4175 22.3525v32.37625H96.20734V85.42325c0-14.845-5.81625-22.3525-17.41875-22.3525-10.49375 0-15.74 6.32875-15.74 18.7975v59.15H38.90484V80.077c0-12.455 3.17125-22.3525 9.54125-29.675 6.56875-7.3225 15.17125-11.07625 25.85-11.07625 12.355 0 21.71125 4.74875 27.8975 14.2475l6.01375 10.08125 6.015-10.08125c6.185-9.49875 15.54125-14.2475 27.8975-14.2475 10.6775 0 19.28 3.75375 25.85 11.07625 6.36875 7.3225 9.54 17.22 9.54 29.675"/>
+</symbol>
+
+
+</svg>
+</file>
+
+<file path="events.html">
+---
+layout: custom_page
+title: Events
+permalink: /events/
+---
+
+<style>
+  /* --- Layout for Sidebar + Content --- */
+  .events-wrapper {
+    display: flex;
+    min-height: 80vh;
+    background-image: url("/media/groupPhotos/meeting3.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+  }
+
+  .events-overlay {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    max-width: 1400px;
+    margin: 2rem auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* --- Sidebar Styles --- */
+  .year-sidebar {
+    width: 20%;
+    background-color: #1a1a1a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  .year-btn {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1.5rem 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 5px solid transparent;
+    width: 100%;
+    text-align: center;
+  }
+
+  .year-btn:hover {
+    color: white;
+    background-color: #333;
+  }
+
+  .year-btn.active-year {
+    color: white;
+    background-color: #ba0c2f;
+    border-left: 5px solid white;
+  }
+
+  /* --- Main Content Area --- */
+  .events-content {
+    width: 80%;
+    padding: 2rem;
+    overflow-y: auto;
+  }
+
+  .year-section {
+    display: none;
+    animation: fadeIn 0.5s;
+  }
+
+  .year-section.active-content {
+    display: block;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* --- Accordion Styles --- */
+  .event-accordion {
+    background-color: #eee;
+    color: #333;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: 0.4s;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+  }
+
+  .event-accordion:hover {
+    background-color: #ccc;
+  }
+
+  .event-accordion.active-accordion {
+    background-color: #ba0c2f;
+    color: white;
+  }
+
+  .event-accordion:after {
+    content: "\002B";
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+
+  .event-accordion.active-accordion:after {
+    content: "\2212";
+  }
+
+  .event-panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    margin-bottom: 10px;
+    border-left: 3px solid #ba0c2f;
+  }
+
+  /* --- Gallery Grid --- */
+  .event-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 20px 0;
+  }
+
+  .event-gallery-grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .event-gallery-grid img:hover {
+    transform: scale(1.05);
+  }
+
+  /* --- Lightbox Styles --- */
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .lightbox-active {
+    display: flex;
+  }
+  .lightbox img {
+    max-height: 85vh;
+    max-width: 90vw;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  .lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    .events-overlay {
+      flex-direction: column;
+      width: 95%;
+    }
+    .year-sidebar {
+      width: 100%;
+      flex-direction: row;
+      overflow-x: auto;
+      padding: 0;
+    }
+    .year-btn {
+      padding: 1rem;
+      border-left: none;
+      border-bottom: 5px solid transparent;
+    }
+    .year-btn.active-year {
+      border-left: none;
+      border-bottom: 5px solid white;
+    }
+    .events-content {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+</style>
+
+<section class="title-section">
+  <div>
+    <h1>Events</h1>
+  </div>
+</section>
+
+<div class="events-wrapper">
+  <div class="events-overlay">
+    <div class="year-sidebar">
+      <button class="year-btn" onclick="openYear('2026')">2026</button>
+      <button class="year-btn" onclick="openYear('2025')">2025</button>
+      <button class="year-btn" onclick="openYear('2024')">2024</button>
+    </div>
+
+    <div class="events-content">
+      {% for year in (2024..2026) reversed %}
+      <div id="year-{{ year }}" class="year-section">
+        <h2>{{ year }} Events</h2>
+        <hr style="margin-bottom: 20px; border: 1px solid #ddd" />
+
+        {% assign year_string = year | append: "" %} {% assign has_events =
+        false %} {% for event in site.events %} {% assign event_year =
+        event.date | date: "%Y" %} {% if event_year == year_string %} {% assign
+        has_events = true %}
+
+        <button class="event-accordion">
+          {{ event.date | date: "%m/%d/%Y" }} - {{ event.title }}
+        </button>
+
+        <div class="event-panel">
+          {% if event.images and event.images.size > 0 %}
+          <div class="event-gallery-grid">
+            {% assign base_path = "/media/events/" %} {% for img_name in
+            event.images %}
+            <img
+              src="{{ base_path }}{{ event.folder }}/{{ img_name }}"
+              alt="{{ event.title }}"
+              class="lightbox-trigger"
+            />
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          <div style="padding: 15px; color: #555">{{ event.content }}</div>
+        </div>
+        {% endif %} {% endfor %} {% if has_events == false %}
+        <p>No events archived for {{ year }} yet.</p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div id="lightbox" class="lightbox">
+  <button class="lightbox-close">&times;</button>
+  <img id="lightbox-img" src="" alt="Full screen event image" />
+</div>
+
+<script>
+  function openYear(year) {
+    var sections = document.getElementsByClassName("year-section");
+    for (var i = 0; i < sections.length; i++) {
+      sections[i].classList.remove("active-content");
+    }
+
+    var btns = document.getElementsByClassName("year-btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].classList.remove("active-year");
+    }
+
+    var section = document.getElementById("year-" + year);
+    if (section) {
+      section.classList.add("active-content");
+    }
+
+    for (var i = 0; i < btns.length; i++) {
+      if (btns[i].textContent.includes(year)) {
+        btns[i].classList.add("active-year");
+      }
+    }
+  }
+
+  var acc = document.getElementsByClassName("event-accordion");
+  for (var i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active-accordion");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+
+  var lightbox = document.getElementById("lightbox");
+  var lightboxImg = document.getElementById("lightbox-img");
+  var closeBtn = document.querySelector(".lightbox-close");
+  var triggers = document.querySelectorAll(".lightbox-trigger");
+
+  triggers.forEach((img) => {
+    img.addEventListener("click", () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add("lightbox-active");
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    lightbox.classList.remove("lightbox-active");
+  });
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove("lightbox-active");
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    openYear("2025");
+  });
+</script>
+</file>
+
+<file path="Gemfile">
+source "https://rubygems.org"
+# Hello! This is where you manage which Jekyll version is used to run.
+# When you want to use a different version, change it below, save the
+# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
+#
+#     bundle exec jekyll serve
+#
+# This will help ensure the proper Jekyll version is running.
+# Happy Jekylling!
+# gem "jekyll", "~> 4.3.3"
+# This is the default theme for new Jekyll sites. You may change this to anything you like.
+gem "minima", "~> 2.5"
+# If you want to use GitHub Pages, remove the "gem "jekyll"" above and
+# uncomment the line below. To upgrade, run `bundle update github-pages`.
+gem "github-pages", "~> 231", group: :jekyll_plugins
+# If you have any plugins, put them here!
+group :jekyll_plugins do
+  gem "jekyll-feed", "~> 0.12"
+  gem 'jekyll', '~> 3.9.5'
+  gem 'webrick'
+end
+
+# Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
+# and associated library.
+platforms :mingw, :x64_mingw, :mswin, :jruby do
+  gem "tzinfo", ">= 1", "< 3"
+  gem "tzinfo-data"
+end
+
+# Performance-booster for watching directories on Windows
+gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
+
+# Lock `http_parser.rb` gem to `v0.6.x` on JRuby builds since newer versions of the gem
+# do not have a Java counterpart.
+gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
+</file>
+
+<file path="index.html">
+---
+layout: custom_page
+title: Home
+---
+
+<section class="title-section">
+  <div>
+    <h1>Why Join 3D Printing Club?</h1>
+  </div>
+</section>
+
+<section
+  class="content-section parallax"
+  style="background-image: url('media/groupPhotos/meeting3.jpg')"
+>
+  <div class="content-grid">
+    <div class="content-box">
+      <h2>No Experience? No Problem!</h2>
+      <img src="media/cad.jpg" alt="Educational Workshops" />
+      <ul>
+        <li>Weekly CAD workshops for all skill levels.</li>
+        <li>Learn how to use industry tools and software.</li>
+      </ul>
+    </div>
+
+    <div class="content-box">
+      <h2>Industry Certifications</h2>
+      <img src="media/blankCertificate.png" alt="Industry Certifications" />
+      <ul>
+        <li>Free Access to CSWA Exam</li>
+        <li>One attempt per semester</li>
+      </ul>
+    </div>
+
+    <div class="content-box">
+      <h2>Increase Career Prospects</h2>
+      <img
+        src="media/groupPhotos/tabling1.jpg"
+        alt="Increase Career Prospects"
+      />
+      <ul>
+        <li>Working in a team environment</li>
+        <li>Additive manufacturing conferences</li>
+        <li>Opportunities with companies</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background-color: gray">
+  <div>
+    <h2>Join Us!</h2>
+  </div>
+</section>
+
+<section
+  class="content-section parallax"
+  style="background-image: url('media/groupPhotos/meeting3.jpg')"
+>
+  <div class="content-grid">
+    <div class="content-box">
+      <h2>Membership Includes:</h2>
+      <ul>
+        <li>Filament</li>
+        <li>CAD workshops</li>
+        <li>Career building</li>
+        <li>Solidworks CSWA exam vouchers</li>
+      </ul>
+      <p>Contact links can be found in the footer of the page.</p>
+    </div>
+
+    <div class="content-box">
+      <h2>For More Info:</h2>
+      <p>Join our Discord using the QR code below!</p>
+      <img
+        src="media/480.png"
+        alt="Join our Discord"
+        style="max-width: 150px; margin-top: 20px"
+      />
+    </div>
+    <div class="content-box">
+      <h2>Ready to Join?</h2>
+      <p>Click the link below to sign up on Campus Connect.</p>
+      <a
+        href="https://campusconnect.utah.edu/3D4E/club_signup"
+        class="btn-red"
+        style="margin-top: 1rem"
+      >
+        Join on Campus Connect
+      </a>
+    </div>
+  </div>
+</section>
+</file>
+
+<file path="optimize_images.py">
+# to run: python optimize_images.py
+
+import os
+from PIL import Image
+
+# Configuration
+TARGET_DIR = './media'
+MAX_DIMENSION = 1080
+EXTENSIONS = {'.jpg', '.jpeg', '.png', '.webp'}
+
+def resize_images():
+    count = 0
+    saved_space = 0
+
+    print(f"Scanning '{TARGET_DIR}' for images larger than {MAX_DIMENSION}px...")
+
+    for root, _, files in os.walk(TARGET_DIR):
+        for file in files:
+            ext = os.path.splitext(file)[1].lower()
+            if ext not in EXTENSIONS:
+                continue
+
+            file_path = os.path.join(root, file)
+            
+            try:
+                with Image.open(file_path) as img:
+                    # Check existing size
+                    width, height = img.size
+                    longest_side = max(width, height)
+
+                    # Only process if image is too big
+                    if longest_side > MAX_DIMENSION:
+                        original_size = os.path.getsize(file_path)
+                        
+                        # Calculate new dimensions
+                        ratio = MAX_DIMENSION / longest_side
+                        new_width = int(width * ratio)
+                        new_height = int(height * ratio)
+
+                        # Resize using high-quality resampling
+                        print(f"Resizing: {file} ({width}x{height} -> {new_width}x{new_height})")
+                        img = img.resize((new_width, new_height), Image.Resampling.LANCZOS)
+                        
+                        # Overwrite the original file
+                        # We convert to RGB to handle PNGs dropping transparency if converting to JPG, 
+                        # but here we keep original format usually. 
+                        # To be safe with PNG transparency, we just save it back.
+                        img.save(file_path, optimize=True, quality=85)
+                        
+                        new_size = os.path.getsize(file_path)
+                        saved_space += (original_size - new_size)
+                        count += 1
+                        
+            except Exception as e:
+                print(f"Error processing {file}: {e}")
+
+    print(f"\nDone! Resized {count} images.")
+    print(f"Disk space saved: {saved_space / (1024*1024):.2f} MB")
+
+if __name__ == "__main__":
+    resize_images()
+</file>
+
+<file path="people.html">
+---
+layout: custom_page
+title: People
+permalink: /people/
+---
+
+<style>
+  /* This grid mirrors the main .people-grid from custom_main.css 
+     but with narrower columns (200px vs 300px).
+     The gaps and padding match exactly to ensure consistent spacing.
+  */
+  .people-grid-small {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    
+    /* Exact spacing copied from .people-grid */
+    gap: 3vw;
+    row-gap: 2vw;
+    padding: 3vw;
+    padding-top: 0%;
+    padding-bottom: 0%;
+  }
+
+  /* Force the cards inside the small grid to be physically smaller */
+  .people-grid-small .people-box {
+    max-width: 250px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* Reduce font size slightly for the smaller cards */
+  .people-grid-small .people-box h2 {
+    font-size: 1.1rem;
+  }
+</style>
+
+<section class="title-section">
+  <div>
+    <h1>Executive Board</h1>
+  </div>
+</section>
+
+<section
+  class="content-section parallax"
+  style="background-image: url('/media/headshots/onWall.jpg')"
+>
+  <div class="people-grid">
+    
+    {% assign board_members = site.members | where: "group", "board" | sort: "order" %}
+    
+    {% for person in board_members %}
+    <div class="people-box">
+      <h2>{{ person.title }}</h2>
+      <p class="person-title">{{ person.role }}</p>
+      
+      <img src="{{ person.image | default: '/media/pfp.png' }}" alt="{{ person.title }}" />
+      
+      <a href="{{ person.url }}" class="btn-red">View Profile</a>
+    </div>
+    {% endfor %}
+
+    <div class="people-box">
+      <h2>Join Our Team</h2>
+      <p class="person-title">Technical Lead (Open)</p>
+      <img src="/media/pfp.png" alt="Coming Soon" />
+      <p>
+        We are currently accepting applications. See the link below to apply!
+      </p>
+      <a
+        href="https://www.instagram.com/p/DEf-iFSyTt0/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+        class="btn-red"
+        style="margin-top: 10px"
+        target="_blank"
+      >
+        Apply on Instagram
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" style="background-color: gray">
+  <div>
+    <h2>Advisors</h2>
+  </div>
+</section>
+
+<section
+  class="content-section parallax"
+  style="background-image: url('/media/headshots/onWall.jpg')"
+>
+  <div class="people-grid">
+    <div class="people-box">
+      <h2>Dr. Pan</h2>
+      <p class="person-title">Faculty Advisor</p>
+      <img src="/media/headshots/pan.jpg" alt="Dr. Pan" />
+      <a
+        href="https://faculty.utah.edu/u6043819-SHUAIHANG_PAN/hm/index.hml"
+        class="btn-red"
+        target="_blank"
+        >View Profile</a
+      >
+    </div>
+    <div class="people-box">
+      <h2>Dr. Wang</h2>
+      <p class="person-title">Faculty Advisor</p>
+      <img src="/media/headshots/wang.jpg" alt="Dr. Wang" />
+      <a
+        href="https://faculty.utah.edu/u6038520-CHEN_WANG/hm/index.hml"
+        class="btn-red"
+        target="_blank"
+        >View Profile</a
+      >
+    </div>
+  </div>
+</section>
+
+{% assign current_members = site.members | where: "group", "current_member" | sort: "title" %}
+
+{% if current_members.size > 0 %}
+<section class="section" style="background-color: #ba0c2f">
+  <div>
+    <h2>Current Members</h2>
+  </div>
+</section>
+
+<section
+  class="content-section parallax"
+  style="background-image: url('/media/groupPhotos/meeting1.jpg')"
+>
+  <div class="people-grid-small">
+    {% for person in current_members %}
+    <div class="people-box">
+      <h2>{{ person.title }}</h2>
+      
+      <img src="{{ person.image | default: '/media/pfp.png' }}" alt="{{ person.title }}" />
+      
+      <a href="{{ person.url }}" class="btn-red">View Profile</a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% assign past_members = site.members | where: "group", "past_member" | sort: "title" %}
+
+{% if past_members.size > 0 %}
+<section class="section" style="background-color: gray">
+  <div>
+    <h2>Past Members</h2>
+  </div>
+</section>
+
+<section
+  class="content-section parallax"
+  style="background-image: url('/media/groupPhotos/meeting1.jpg')"
+>
+  <div class="people-grid-small">
+    {% for person in past_members %}
+    <div class="people-box">
+      <h2>{{ person.title }}</h2>
+      
+      <img src="{{ person.image | default: '/media/pfp.png' }}" alt="{{ person.title }}" />
+      
+      <a href="{{ person.url }}" class="btn-red">View Profile</a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+</file>
+
+<file path="projects.html">
+---
+layout: custom_page
+title: Projects
+permalink: /projects/
+---
+
+<section class="title-section">
+  <div>
+    <h1>Current Projects</h1>
+  </div>
+</section>
+
+<section
+  class="parallax"
+  style="background-image: url('/media/groupPhotos/meeting1.jpg')"
+>
+  <div class="project-grid">
+    {% for project in site.current_projects %}
+    <div class="project-box">
+      <h3>{{ project.title }}</h3>
+      {% if project.thumbnail %}
+      <a href="{{ project.url | relative_url }}" class="project-image-link">
+        <img
+          src="{{ project.thumbnail }}"
+          alt="{{ project.title }} thumbnail"
+        />
+      </a>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section" style="background-color: gray">
+  <div>
+    <h2>Future Project Ideas</h2>
+  </div>
+</section>
+
+<section
+  class="content-section parallax"
+  style="background-image: url('/media/groupPhotos/meeting1.jpg')"
+>
+  <div class="project-grid">
+    {% for project in site.future_projects %}
+    <div class="project-box">
+      <h3>{{ project.title }}</h3>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section" style="background-color: #ba0c2f">
+  <div>
+    <h2>Past Projects</h2>
+  </div>
+</section>
+
+<section
+  class="content-section parallax"
+  style="background-image: url('/media/groupPhotos/meeting1.jpg')"
+>
+  <div class="project-grid">
+    {% for project in site.past_projects %}
+    <div class="project-box">
+      <h3>{{ project.title }}</h3>
+      {% if project.thumbnail %}
+      <a href="{{ project.url | relative_url }}" class="project-image-link">
+        <img
+          src="{{ project.thumbnail }}"
+          alt="{{ project.title }} thumbnail"
+        />
+      </a>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+</file>
+
+<file path="resources.html">
+---
+layout: custom_page
+title: Resources
+permalink: /resources/
+---
+
+<style>
+  /* Accordion Styles */
+  .accordion-container {
+    max-width: 90vw;
+    width: 800px;
+    margin: 0 auto;
+    padding: 1rem 0;
+  }
+
+  .accordion {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: 0.4s;
+    border-bottom: 1px solid #ddd;
+    border-radius: 5px 5px 0 0;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .accordion:last-of-type {
+    border-bottom: none;
+  }
+
+  .active, .accordion:hover {
+    background-color: #ba0c2f; /* University Red */
+    color: white;
+  }
+
+  .panel {
+    padding: 0 18px;
+    background-color: rgba(255, 255, 255, 0.95);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    margin-bottom: 0;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .panel-content {
+    padding: 20px 0;
+  }
+
+  /* --- SPACING FIXES START --- */
+  
+  /* Style the Headers inside the dropdowns */
+  .panel-content h3 {
+    margin-top: 2rem;      /* MORE space before a new header */
+    margin-bottom: 0.2rem; /* LESS space between header and its content */
+    color: #333;
+    font-size: 1.1rem;
+  }
+
+  /* Ensure the very first header doesn't have a big gap above it */
+  .panel-content h3:first-child {
+    margin-top: 0;
+  }
+
+  /* Standardize paragraph and list spacing */
+  .panel-content p,
+  .panel-content ul {
+    margin-top: 0;
+    margin-bottom: 1rem; /* Standard space after content blocks */
+    color: #333;
+  }
+  
+  /* --- SPACING FIXES END --- */
+
+  .panel a {
+    color: #ba0c2f;
+    font-weight: 600;
+  }
+
+  .accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+
+  .active:after {
+    content: "\2212";
+    color: white;
+  }
+  
+  .accordion:hover:after {
+    color: white;
+  }
+
+  h1.page-title {
+    color: white;
+    text-align: center;
+    background-color: black;
+    padding: 3rem 0;
+    margin: 0;
+  }
+</style>
+
+<section class="title-section">
+  <div>
+    <h1>Resources</h1>
+  </div>
+</section>
+
+<section
+  class="parallax"
+  style="background-image: url('/media/city.jpg'); min-height: 50vh; align-items: flex-start;"
+>
+  <div class="accordion-container">
+    
+    <button class="accordion">Weekly Club Meetings</button>
+    <div class="panel">
+      <div class="panel-content">
+        <p>
+          <strong>When:</strong> Every Monday at 5:30 pm
+          <br />
+          <strong>Where:</strong> The GIS room
+        </p>
+        <p>
+          <em>(This is the room with the big screen in the Marriott Library Protospace)</em>
+        </p>
+      </div>
+    </div>
+
+    <button class="accordion">Software Installation Links</button>
+    <div class="panel">
+      <div class="panel-content">
+        <h3>Install Solidworks</h3>
+        <ul>
+          <li>
+            <a
+              href="https://www.cade.utah.edu/faqs/can-i-get-a-student-version-of-solidworks-for-my-home-computerlaptop/"
+              target="_blank"
+            >
+              Students in Price College of Engineering
+            </a>
+          </li>
+          <li>
+            <a href="https://uofu.box.com/v/coe-solidworks" target="_blank">
+              Any student (Student Premium Version)
+            </a>
+          </li>
+        </ul>
+
+        <h3>Install Prusa Slicer</h3>
+        <ul>
+          <li>
+            <a href="https://www.prusa3d.com/page/prusaslicer_424/" target="_blank">
+              Prusa Slicer Download
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="accordion">Solidworks Workshop Recordings</button>
+    <div class="panel">
+      <div class="panel-content">
+        <p>Missed a workshop? Catch up on our YouTube playlist.</p>
+        <ul>
+          <li>
+            <a
+              href="https://www.youtube.com/playlist?list=PLj0oX0SU9Yb_5owS9Qdvnwa8B8CEAxUY1"
+              target="_blank"
+            >
+              View YouTube Playlist
+            </a>
+          </li>
+        </ul>
+        <blockquote>
+          <p style="font-size: 0.9em; font-style: italic; color: #666;">
+            Note: You must be signed into the account associated with the one which you paid dues.
+          </p>
+        </blockquote>
+      </div>
+    </div>
+
+    <button class="accordion">Stay Up to Date</button>
+    <div class="panel">
+      <div class="panel-content">
+        <h3>Public Club Google Calendar</h3>
+        <p>
+          Keep track of all the events and activities by using our
+          <a
+            href="https://calendar.google.com/calendar/u/5?cid=YThiZjk0YTc4ZjBhODBlYjFhYTVhMDc4NjVhMmQ1ZWE2M2FhNmFiMmNkZGJkNTAzMDQ2ZjdiN2Q1ODBiZjM3NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            public Google calendar link</a
+          >.
+        </p>
+
+        <h3>Join Campus Connect</h3>
+        <p>
+          Visit our
+          <a href="https://campusconnect.utah.edu/3D4E/club_signup" target="_blank"
+            >Campus Connect</a
+          >
+          page to join.
+        </p>
+
+        <h3>Find Us Online</h3>
+        <p>
+          Join the <strong>Discord</strong> to engage with others in the club and get updates for
+          social events, workshops, meetings, etc.
+        </p>
+        <p>Follow us on <strong>Instagram</strong> for updates on social events, and flyers.</p>
+        <p>Check out our <strong>GitHub</strong> for project files and models.</p>
+        <p><em>(All links found at the footer of the page)</em></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      } 
+    });
+  }
+</script>
+</file>
+
+<file path="unusedProjects/3d4e_tokens.md">
+---
+layout: project_page
+title: "3D4E Tokens"
+thumbnail: "/media/projects/3d4e_tokens/token.jpg"
+description: "The 3D4E logo printed on tokens and keychains."
+members:
+  - "Club"
+images:
+  - "3d4e_tokens/token.jpg"
+---
+</file>
+
+<file path="unusedProjects/kazoo.md">
+---
+layout: project_page
+title: "Kazoo"
+thumbnail: "/media/comingSoon.jpg"
+description: "Kazoo"
+members:
+  - "Lucas Bolster"
+images:
+
+---
+</file>
+
+</files>

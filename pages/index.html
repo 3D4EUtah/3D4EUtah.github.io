@@ -47,38 +47,6 @@ title: Home
   </div>
 </section>
 
-<section class="section" style="background-color: #ba0c2f">
-  <div>
-    <h2>See What We're Building</h2>
-  </div>
-</section>
-
-<section
-  class="content-section parallax"
-  style="background-image: url('media/groupPhotos/meeting3.jpg')"
->
-  <div class="project-grid">
-    {% assign random_projects = site.current_projects | sample: 5 %} {% for
-    project in random_projects %}
-    <div class="project-box">
-      <h3>{{ project.title }}</h3>
-      {% if project.thumbnail %}
-      <a href="{{ project.url | relative_url }}" class="project-image-link">
-        <img
-          src="{{ project.thumbnail }}"
-          alt="{{ project.title }} thumbnail"
-        />
-      </a>
-      {% endif %}
-    </div>
-    {% endfor %}
-  </div>
-
-  <a href="/projects/" class="btn-red" style="margin-top: 2rem">
-    See All Projects...
-  </a>
-</section>
-
 <section class="section" style="background-color: gray">
   <div>
     <h2>Join Us!</h2>

@@ -4,6 +4,39 @@ title: People
 permalink: /people/
 ---
 
+<style>
+  /* This grid mirrors the main .people-grid from custom_main.css 
+     but with narrower columns (200px vs 300px).
+     The gaps and padding match exactly to ensure consistent spacing.
+  */
+  .people-grid-small {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    
+    /* Exact spacing copied from .people-grid */
+    gap: 3vw;
+    row-gap: 2vw;
+    padding: 3vw;
+    padding-top: 0%;
+    padding-bottom: 0%;
+  }
+
+  /* Force the cards inside the small grid to be physically smaller */
+  .people-grid-small .people-box {
+    max-width: 250px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* Reduce font size slightly for the smaller cards */
+  .people-grid-small .people-box h2 {
+    font-size: 1.1rem;
+  }
+</style>
+
 <section class="title-section">
   <div>
     <h1>Executive Board</h1>
@@ -15,96 +48,24 @@ permalink: /people/
   style="background-image: url('/media/headshots/onWall.jpg')"
 >
   <div class="people-grid">
+    
+    {% assign board_members = site.members | where: "group", "board" | sort: "order" %}
+    
+    {% for person in board_members %}
     <div class="people-box">
-      <h2>Lucas Bolster</h2>
-      <p class="person-title">President</p>
-      <img src="/media/headshots/lucas.jpg" />
-      <p>
-        Lucas is a Senior Mechanical Engineering major. He became fascinated
-        with 3D printing after designing a water pump for ME EN 1000. When he
-        isn't in the Protospace, you can find him skipping legs at the gym,
-        keeping up his Duolingo streak, or being a foosball try-hard with his
-        roommates.
-      </p>
+      <h2>{{ person.title }}</h2>
+      <p class="person-title">{{ person.role }}</p>
+      
+      <img src="{{ person.image | default: '/media/pfp.png' }}" alt="{{ person.title }}" />
+      
+      <a href="{{ person.url }}" class="btn-red">View Profile</a>
     </div>
-    <div class="people-box">
-      <h2>Nathan Li</h2>
-      <p class="person-title">Vice President</p>
-      <img src="/media/headshots/nathan.jpg" />
-      <p>
-        Nathan Li, a Junior Physics major at the University of Utah, originally
-        from Shanghai, China, cultivated a passion for photography during high
-        school. At the U, he expanded his interests to cycling and hiking. As a
-        non-technical officer, he anticipates fruitful collaboration and
-        continued learning this semester.
-      </p>
-    </div>
-    <div class="people-box">
-      <h2>Alex Venezie</h2>
-      <p class="person-title">Vice President</p>
-      <img src="/media/headshots/alex.jpg" />
-      <p>
-        Alex Venezie is a Senior Mechanical Engineering Major with a Biomedical
-        Engineering Minor. In the past, Alex has participated in research,
-        interned for startups, and participated in many organizations where 3D
-        printing was a critical aspect in his daily life. Alex is greatly
-        fascinated in 3D printed instruments, medical innovation, and cool
-        tinker items.
-      </p>
-    </div>
-    <div class="people-box">
-      <h2>Brian Yu</h2>
-      <p class="person-title">Treasurer</p>
-      <img src="/media/headshots/brian.jpg" />
-      <p>
-        Brian Yu is a Junior Data Science major studying towards a QAMO minor,
-        coming from Utah most of his life but born in South Carolina. After
-        getting inspiration from his brother with an Ender Pro printer, he wants
-        to expand his knowledge on 3d modeling with Solidworks. His interests
-        include statistics, tennis, computer science, rock climbing, boxing, and
-        bowling, while aiming to develop a startup app.
-      </p>
-    </div>
-    <div class="people-box">
-      <h2>Alan Mo</h2>
-      <p class="person-title">Social Chair</p>
-      <img src="/media/headshots/alan.jpg" />
-      <p>
-        Alan is a Senior undergrad pursuing a 5-year BSMS in Software
-        Development and Computer Science. His career goals include Computational
-        Neurobiology, aiming to use technology for advancements in medicine. He
-        developed 3D design as a hobby from the ME EN 1000 class. In his free
-        time, Alan enjoys swimming, music, and playing with tech.
-      </p>
-    </div>
-    <div class="people-box">
-      <h2>Evan Falconer</h2>
-      <p class="person-title">Technical Lead</p>
-      <img src="/media/headshots/evan.jpg" />
-      <p>
-        Excited by the idea of tearing apart old equipment, and finding useful
-        components for future projects, Evan finds fun in stitching together new
-        devices from old ones. Still new to 3D printing, Evan makes up for it
-        with 3D modeling. Always eager to help, he wants to make sure people can
-        design anything they imagine.
-      </p>
-    </div>
-    <div class="people-box">
-      <h2>Eden Yau</h2>
-      <p class="person-title">Technical Lead</p>
-      <img src="/media/headshots/eden.jpg" />
-      <p>
-        Eden is studying Material Science at the University of Utah with a
-        particular interest in additive manufacturing. He has over 6 year of
-        experience with 3d printing and has over 3 years of CAD experience. In
-        his personal time, he likes to model and make iron man cosplays to wear.
-      </p>
-    </div>
+    {% endfor %}
 
     <div class="people-box">
       <h2>Join Our Team</h2>
       <p class="person-title">Technical Lead (Open)</p>
-      <img src="/media/comingSoon.jpg" />
+      <img src="/media/pfp.png" alt="Coming Soon" />
       <p>
         We are currently accepting applications. See the link below to apply!
       </p>
@@ -117,6 +78,7 @@ permalink: /people/
         Apply on Instagram
       </a>
     </div>
+
   </div>
 </section>
 
@@ -134,7 +96,7 @@ permalink: /people/
     <div class="people-box">
       <h2>Dr. Pan</h2>
       <p class="person-title">Faculty Advisor</p>
-      <img src="/media/headshots/pan.jpg" />
+      <img src="/media/headshots/pan.jpg" alt="Dr. Pan" />
       <a
         href="https://faculty.utah.edu/u6043819-SHUAIHANG_PAN/hm/index.hml"
         class="btn-red"
@@ -145,7 +107,7 @@ permalink: /people/
     <div class="people-box">
       <h2>Dr. Wang</h2>
       <p class="person-title">Faculty Advisor</p>
-      <img src="/media/headshots/wang.jpg" />
+      <img src="/media/headshots/wang.jpg" alt="Dr. Wang" />
       <a
         href="https://faculty.utah.edu/u6038520-CHEN_WANG/hm/index.hml"
         class="btn-red"
@@ -155,3 +117,57 @@ permalink: /people/
     </div>
   </div>
 </section>
+
+{% assign current_members = site.members | where: "group", "current_member" | sort: "title" %}
+
+{% if current_members.size > 0 %}
+<section class="section" style="background-color: #ba0c2f">
+  <div>
+    <h2>Current Members</h2>
+  </div>
+</section>
+
+<section
+  class="content-section parallax"
+  style="background-image: url('/media/groupPhotos/meeting1.jpg')"
+>
+  <div class="people-grid-small">
+    {% for person in current_members %}
+    <div class="people-box">
+      <h2>{{ person.title }}</h2>
+      
+      <img src="{{ person.image | default: '/media/pfp.png' }}" alt="{{ person.title }}" />
+      
+      <a href="{{ person.url }}" class="btn-red">View Profile</a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% assign past_members = site.members | where: "group", "past_member" | sort: "title" %}
+
+{% if past_members.size > 0 %}
+<section class="section" style="background-color: gray">
+  <div>
+    <h2>Past Members</h2>
+  </div>
+</section>
+
+<section
+  class="content-section parallax"
+  style="background-image: url('/media/groupPhotos/meeting1.jpg')"
+>
+  <div class="people-grid-small">
+    {% for person in past_members %}
+    <div class="people-box">
+      <h2>{{ person.title }}</h2>
+      
+      <img src="{{ person.image | default: '/media/pfp.png' }}" alt="{{ person.title }}" />
+      
+      <a href="{{ person.url }}" class="btn-red">View Profile</a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

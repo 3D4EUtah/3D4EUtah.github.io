@@ -4,7 +4,7 @@ title: "Tech Deck"
 thumbnail: "/media/projects/tech_deck/tech2.png"
 description: "Tech Deck"
 members:
-  - "Alex Venezie"
+  - alex_venezie
 images:
   - "tech_deck/tech1.png"
   - "tech_deck/tech2.png"
