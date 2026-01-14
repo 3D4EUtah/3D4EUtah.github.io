@@ -1,7 +1,7 @@
 ---
-title: "3D4E Annual Showcase 2024"
-date: 2024-05-02
-folder: "annual_showcase_2024"
+title: "3D4E Annual Showcase 2025"
+date: 2025-05-02
+folder: "annual_showcase_2025"
 images: 
     - "comingSoon.jpg"
 ---
