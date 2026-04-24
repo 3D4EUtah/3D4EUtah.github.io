@@ -11,7 +11,4 @@ members:
 images:
   - "human_anatomy_model/heart1.jpg"
   - "human_anatomy_model/heart2.jpg"
-  - "human_anatomy_model/vertebrae1.jpg"
-  - "human_anatomy_model/vertebrae2.jpg"
-  - "human_anatomy_model/vertebrae3.jpg"
 ---

@@ -35,6 +35,50 @@ permalink: /people/
   .people-grid-small .people-box h2 {
     font-size: 1.1rem;
   }
+
+  .past-members-list {
+    width: min(700px, 90%);
+    margin: 0 auto;
+    padding: 2rem;
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.88);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem 1.5rem;
+    align-items: start;
+  }
+
+  .past-members-list:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .past-members-list li {
+    width: 100%;
+    margin-bottom: 0;
+    font-size: 1.05rem;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 600px) {
+    .past-members-list {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .past-members-list a {
+    color: #111;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .past-members-list a:hover,
+  .past-members-list a:focus {
+    text-decoration: underline;
+  }
 </style>
 
 <section class="title-section">
@@ -158,16 +202,10 @@ permalink: /people/
   class="content-section parallax"
   style="background-image: url('/media/groupPhotos/meeting1.jpg')"
 >
-  <div class="people-grid-small">
+  <ul class="past-members-list">
     {% for person in past_members %}
-    <div class="people-box">
-      <h2>{{ person.title }}</h2>
-      
-      <img src="{{ person.image | default: '/media/pfp.png' }}" alt="{{ person.title }}" />
-      
-      <a href="{{ person.url }}" class="btn-red">View Profile</a>
-    </div>
+    <li><a href="{{ person.url }}">{{ person.title }}</a></li>
     {% endfor %}
-  </div>
+  </ul>
 </section>
 {% endif %}

@@ -39,22 +39,61 @@
     />
     <link rel="icon" type="image/png" href="/media/faviconRT.png" />
     <style>
+      .site-footer .wrapper {
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      .site-footer .footer-col-wrapper {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+      }
+
+      .site-footer .footer-col {
+        width: auto;
+        margin: 0;
+        padding-left: 0;
+      }
+
+      .social-media-list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1.5rem;
+        margin: 0;
+        padding: 0;
+      }
+
+      .social-media-list li {
+        display: flex;
+        align-items: center;
+        margin: 0;
+      }
+
       .social-media-list a {
-        /* This sets the color for the text (the <span> will inherit it) */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        line-height: 0;
         color: #828282;
-        text-decoration: none; /* Optional: removes the underline from links */
+        text-decoration: none;
+        vertical-align: middle;
       }
 
       .social-media-list .svg-icon {
-        /* This sets the color for the SVG icon */
-        fill: #828282;
+        width: 24px;
+        height: 24px;
+        display: block;
+        object-fit: contain;
+        object-position: center center;
+        vertical-align: middle;
       }
 
-      /* This rule changes the color of both the text and icon on hover */
-      .social-media-list a:hover,
-      .social-media-list a:hover .svg-icon {
-        color: #444444;
-        fill: #444444;
+      .social-media-list a:hover {
+        opacity: 0.75;
       }
     </style>
   </head>
@@ -92,38 +131,38 @@
             <ul class="social-media-list">
               <li>
                 <a href="mailto:3d4e.utah@gmail.com"
-                  ><svg class="svg-icon">
-                    <use
-                      xlink:href="/custom-minima-social-icons.svg#gmail"
-                    ></use></svg
-                  ><span class="username">3d4e.utah@gmail.com</span></a
+                  ><img
+                    src="/media/icons/footer-email.svg"
+                    alt="Email"
+                    class="svg-icon"
+                /></a
                 >
               </li>
               <li>
                 <a href="https://discord.gg/WdNJ7QduWY"
-                  ><svg class="svg-icon">
-                    <use
-                      xlink:href="/custom-minima-social-icons.svg#discord"
-                    ></use></svg
-                  ><span class="username">Discord</span></a
+                  ><img
+                    src="/media/icons/footer-discord.svg"
+                    alt="Discord"
+                    class="svg-icon"
+                /></a
                 >
               </li>
               <li>
                 <a href="https://www.instagram.com/3D4EUtah/"
-                  ><svg class="svg-icon">
-                    <use
-                      xlink:href="/custom-minima-social-icons.svg#instagram"
-                    ></use></svg
-                  ><span class="username">Instagram</span></a
+                  ><img
+                    src="/media/icons/footer-instagram.svg"
+                    alt="Instagram"
+                    class="svg-icon"
+                /></a
                 >
               </li>
               <li>
                 <a href="https://github.com/3D4EUtah"
-                  ><svg class="svg-icon">
-                    <use
-                      xlink:href="/custom-minima-social-icons.svg#github"
-                    ></use></svg
-                  ><span class="username">GitHub</span></a
+                  ><img
+                    src="/media/icons/footer-github.svg"
+                    alt="GitHub"
+                    class="svg-icon"
+                /></a
                 >
               </li>
             </ul>

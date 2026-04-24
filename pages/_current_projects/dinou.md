@@ -1,7 +1,7 @@
 ---
 layout: project_page
 title: "DinoU"
-thumbnail: "/media/projects/dino_u/dino2.jpg"
+thumbnail: "/media/projects/dino_u/dinohead.jpg"
 description: "Project details coming soon!"
 members:
   - nathan_li
@@ -18,4 +18,7 @@ images:
   - "dino_u/dinoboard.jpg"
   - "dino_u/dinoeat.jpg"
   - "dino_u/dinohead.jpg"
+  - "dino_u/vertebrae1.jpg"
+  - "dino_u/vertebrae2.jpg"
+  - "dino_u/vertebrae3.jpg"
 ---

@@ -3,14 +3,8 @@ layout: custom_page
 title: Home
 ---
 
-<section class="title-section">
-  <div>
-    <h1>Why Join 3D Printing Club?</h1>
-  </div>
-</section>
-
 <section
-  class="content-section parallax video-parallax"
+  class="content-section parallax video-parallax home-hero-parallax"
 >
   <video
     class="parallax-bg-video"
@@ -25,6 +19,23 @@ title: Home
     <source src="/media/videos/benchyRotate.mp4" type="video/mp4" />
   </video>
   <div class="parallax-video-overlay"></div>
+  <div class="home-hero-copy">
+    <p class="home-hero-kicker">University of Utah</p>
+    <h2>Design. Print. Build.</h2>
+    <p>Hands-on CAD, fabrication, and collaborative engineering projects.</p>
+  </div>
+</section>
+
+<section class="title-section">
+  <div>
+    <h1>Why Join 3D4E?</h1>
+  </div>
+</section>
+
+<section
+  class="content-section parallax"
+  style="background-image: url('media/groupPhotos/meeting3.jpg')"
+>
   <div class="content-grid">
     <div class="content-box">
       <h2>No Experience? No Problem!</h2>
@@ -99,18 +110,18 @@ title: Home
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    var heroVideo = document.querySelector(".parallax-bg-video");
-    if (!heroVideo) return;
+    var heroVideos = document.querySelectorAll(".parallax-bg-video");
+    heroVideos.forEach(function (heroVideo) {
+      heroVideo.muted = true;
+      heroVideo.defaultMuted = true;
+      heroVideo.loop = true;
 
-    heroVideo.muted = true;
-    heroVideo.defaultMuted = true;
-    heroVideo.loop = true;
-
-    var playPromise = heroVideo.play();
-    if (playPromise && typeof playPromise.catch === "function") {
-      playPromise.catch(function () {
-        heroVideo.setAttribute("autoplay", "");
-      });
-    }
+      var playPromise = heroVideo.play();
+      if (playPromise && typeof playPromise.catch === "function") {
+        playPromise.catch(function () {
+          heroVideo.setAttribute("autoplay", "");
+        });
+      }
+    });
   });
 </script>
