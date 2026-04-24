@@ -10,9 +10,21 @@ title: Home
 </section>
 
 <section
-  class="content-section parallax"
-  style="background-image: url('media/groupPhotos/meeting3.jpg')"
+  class="content-section parallax video-parallax"
 >
+  <video
+    class="parallax-bg-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    webkit-playsinline="true"
+    preload="auto"
+    defaultmuted
+  >
+    <source src="/media/videos/benchyRotate.mp4" type="video/mp4" />
+  </video>
+  <div class="parallax-video-overlay"></div>
   <div class="content-grid">
     <div class="content-box">
       <h2>No Experience? No Problem!</h2>
@@ -45,18 +57,11 @@ title: Home
       </ul>
     </div>
   </div>
-</section>
-
-<section class="section" style="background-color: gray">
-  <div>
-    <h2>Join Us!</h2>
+  <div class="section home-parallax-separator">
+    <div>
+      <h2>Join Us!</h2>
+    </div>
   </div>
-</section>
-
-<section
-  class="content-section parallax"
-  style="background-image: url('media/groupPhotos/meeting3.jpg')"
->
   <div class="content-grid">
     <div class="content-box">
       <h2>Membership Includes:</h2>
@@ -91,3 +96,21 @@ title: Home
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var heroVideo = document.querySelector(".parallax-bg-video");
+    if (!heroVideo) return;
+
+    heroVideo.muted = true;
+    heroVideo.defaultMuted = true;
+    heroVideo.loop = true;
+
+    var playPromise = heroVideo.play();
+    if (playPromise && typeof playPromise.catch === "function") {
+      playPromise.catch(function () {
+        heroVideo.setAttribute("autoplay", "");
+      });
+    }
+  });
+</script>

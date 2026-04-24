@@ -253,16 +253,30 @@ permalink: /events/
         </button>
 
         <div class="event-panel">
-          {% if event.images and event.images.size > 0 %}
+          {% assign display_images = event.images | where_exp: "img", "img != 'comingSoon.jpg'" %}
+          {% if display_images and display_images.size > 0 %}
           <div class="event-gallery-grid">
             {% assign base_path = "/media/events/" %} {% for img_name in
-            event.images %}
+            display_images %}
             <img
               src="{{ base_path }}{{ event.folder }}/{{ img_name }}"
               alt="{{ event.title }}"
               class="lightbox-trigger"
             />
             {% endfor %}
+          </div>
+          {% endif %}
+
+          {% if event.photo_link %}
+          <div style="padding: 15px 15px 0 15px">
+            <a
+              href="{{ event.photo_link }}"
+              class="btn-red"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ event.photo_link_text | default: "View Photos" }}
+            </a>
           </div>
           {% endif %}
 
@@ -342,6 +356,6 @@ permalink: /events/
   });
 
   document.addEventListener("DOMContentLoaded", function () {
-    openYear("2025");
+    openYear("2026");
   });
 </script>

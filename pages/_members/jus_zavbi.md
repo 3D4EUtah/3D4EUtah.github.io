@@ -3,8 +3,8 @@ layout: member_page
 title: Jus Zavbi
 role: Club Member
 group: current_member
-image: 
-contact_link: 
-contact_text: 
+image: /media/headshots/jus.jpg
+contact_link: mailto:jus.zavbi@gmail.com
+contact_text: Email
 ---
-Member of the 3D4E Utah team.
+Jus studies neuroscience and bioengineering and is interested in miniatures.
